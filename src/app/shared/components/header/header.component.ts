@@ -10,13 +10,22 @@ import { AppService } from '../../services/app.service';
 export class HeaderComponent implements OnInit {
 
   public isHomeClicked = false;
+  public isDarkModeEnabled = true;
+  public languageSelected: string = 'es';
 
   constructor(private appService: AppService, private router: Router) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.changeLanguage(this.appService.translocoService.getActiveLang());
+  }
 
   public onClickHomeHeaderButton(): void {
     this.isHomeClicked = !this.isHomeClicked;
+  }
+
+  public changeLanguage(lang: string): void {
+    this.appService.translocoService.setActiveLang(lang);
+    this.languageSelected = lang;
   }
 
 }

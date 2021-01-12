@@ -5,6 +5,11 @@
         "about": "About us",
         "gallery": "Gallery",
         "contact": "Contact"
+    },
+
+    "mainPage": {
+        "title": "Main page",
+        "subtitle": "main page"
     }
 
 }

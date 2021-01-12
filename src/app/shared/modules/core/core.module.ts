@@ -7,6 +7,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { LayoutComponent } from '../../components/layout/layout.component';
 import { AppService } from '../../services/app.service';
 import { MaterialModule } from '../material/material.module';
+import { PrimeNgModule } from '../primeng/primeng.module';
 
 @NgModule({
     declarations: [
@@ -18,13 +19,15 @@ import { MaterialModule } from '../material/material.module';
         CommonModule,
         TranslocoRootModule,
         RouterModule,
-        MaterialModule
+        MaterialModule,
+        PrimeNgModule
     ],
     exports: [
         TranslocoRootModule,
         HeaderComponent,
         LayoutComponent,
-        MaterialModule
+        MaterialModule,
+        PrimeNgModule
     ],
     providers: [],
 

@@ -5,6 +5,11 @@
         "about": "Conócenos",
         "gallery": "Galería",
         "contact": "Contacto"
+    },
+
+    "mainPage": {
+        "title": "Página principal",
+        "subtitle": "página principal"
     }
 
 }
