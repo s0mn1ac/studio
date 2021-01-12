@@ -1,0 +1,39 @@
+<ng-container *transloco="let t">
+
+    <header class="header-layout">
+
+        <div class="header-bar-container">
+
+            <div class="left-container flex-row">
+                LOGO
+            </div>
+    
+            <div class="middle-container flex-row">
+
+                <div class="header-item flex-row" [ngClass]="{ 'click' : isHomeClicked }" (click)="onClickHomeHeaderButton()">
+                    <span class="header-item-text"> {{ t('header.home')}} </span>
+                </div>
+
+                <div class="header-item flex-row">
+                    <span class="header-item-text"> {{ t('header.about')}} </span>
+                </div>
+                
+                <div class="header-item flex-row">
+                    <span class="header-item-text"> {{ t('header.gallery')}} </span>
+                </div>
+
+                <div class="header-item flex-row">
+                    <span class="header-item-text"> {{ t('header.contact')}} </span>
+                </div>
+                
+            </div>
+    
+            <div class="right-container flex-row">
+
+            </div>
+
+        </div>
+
+    </header>
+
+</ng-container>
