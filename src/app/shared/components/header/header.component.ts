@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { AppService } from '../../services/app.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public isHomeClicked = false;
+  public headerConfiguration: HeaderItem[] = [];
+
   public isDarkModeEnabled = true;
   public languageSelected: string = 'es';
 
@@ -17,15 +19,36 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.changeLanguage(this.appService.translocoService.getActiveLang());
+    this.initHeaderConfiguration();
   }
 
-  public onClickHomeHeaderButton(): void {
-    this.isHomeClicked = !this.isHomeClicked;
+  public onClickHeaderOption(name: string): void {
+    this.navigateTo(name);
+    this.headerConfiguration.forEach((header: HeaderItem) => {
+      if (header.id === name) {
+        header.active = true;
+      } else {
+        header.active = false;
+      }
+    });
   }
 
   public changeLanguage(lang: string): void {
     this.appService.translocoService.setActiveLang(lang);
     this.languageSelected = lang;
+  }
+
+  private initHeaderConfiguration(): void {
+    this.headerConfiguration = [
+      { id: 'home', active: true },
+      { id: 'about', active: false },
+      { id: 'gallery', active: false },
+      { id: 'contact', active: false }
+    ];
+  }
+
+  public navigateTo(name: string): void {
+    this.appService.headerService.navigateTo(name);
   }
 
 }

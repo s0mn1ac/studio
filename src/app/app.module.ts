@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +15,7 @@ import { MaterialModule } from './shared/modules/material/material.module';
 @NgModule({
   declarations: [AppComponent],
   exports: [BrowserAnimationsModule],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, RouterModule, CoreModule.forRoot(), HttpClientModule, MaterialModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, RouterModule, CoreModule.forRoot(), HttpClientModule, MaterialModule, NgxPageScrollModule],
   providers: [
     TranslocoInitializer,
     {provide: ErrorHandler, useClass: GlobalErrorHandler}

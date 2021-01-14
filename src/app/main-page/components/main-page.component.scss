@@ -1,20 +1,14 @@
 @import '../../../assets/scss/main-styles.scss';
 
 .main-page-layout {
-    padding-top: 78px;
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-top: 50px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: block;
+}
 
-    .content-container {
-        text-align: center;
-
-        .section {
-
-            mat-card {
-                margin: 1em;
-                width: 100%;
-            }
-        }
-    }
+.footer-layout {
+    height: 100px;
+    background-color: black;
 }
   

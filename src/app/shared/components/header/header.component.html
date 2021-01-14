@@ -10,26 +10,13 @@
     
             <div class="middle-container flex-row">
 
-                <div class="header-item flex-row" [ngClass]="{ 'click' : isHomeClicked }" (click)="onClickHomeHeaderButton()">
-                    <span class="header-item-text"> {{ t('header.home')}} </span>
-                </div>
-
-                <div class="header-item flex-row">
-                    <span class="header-item-text"> {{ t('header.about')}} </span>
-                </div>
-                
-                <div class="header-item flex-row">
-                    <span class="header-item-text"> {{ t('header.gallery')}} </span>
-                </div>
-
-                <div class="header-item flex-row">
-                    <span class="header-item-text"> {{ t('header.contact')}} </span>
+                <div class="header-item flex-row" [ngClass]="{ 'click' : header.active }" *ngFor="let header of headerConfiguration" (click)="onClickHeaderOption(header.id)">
+                    <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
                 </div>
                 
             </div>
     
             <div class="right-container flex-row">
-
 
                 <div class="dark-mode-slider flex-row">
                     <mat-slide-toggle color="#E40066" [checked]="isDarkModeEnabled"> </mat-slide-toggle>
