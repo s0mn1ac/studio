@@ -5,22 +5,41 @@
         <div class="header-bar-container">
 
             <div class="left-container flex-row">
-                LOGO
+                <div class="logo-container">
+                    <img src="../../../../assets/images/main-logo.svg" alt="blue-brush-logo">
+                </div>
             </div>
     
             <div class="middle-container flex-row">
 
-                <div class="header-item flex-row" [ngClass]="{ 'click' : header.active }" *ngFor="let header of headerConfiguration" (click)="onClickHeaderOption(header.id)">
-                    <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
+                <div class="left-row flex-row">
+                    <div class="menu-container">
+                        <div class="header-item flex-row" [ngClass]="{ 'click' : header.active }" *ngFor="let header of headerConfiguration" (click)="onClickHeaderOption(header.id)">
+                            <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-row flex-row">
+                    <div class="menu-container flex-row">
+                        <button mat-icon-button [matMenuTriggerFor]="headerMenu">
+                            <mat-icon> menu </mat-icon>
+                        </button>
+                        <mat-menu #headerMenu="matMenu" xPosition="before">        
+                            <button mat-menu-item *ngFor="let header of headerConfiguration" (click)="onClickHeaderOption(header.id)">
+                                <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
+                            </button>
+                        </mat-menu>
+                    </div>
                 </div>
                 
             </div>
     
             <div class="right-container flex-row">
 
-                <div class="dark-mode-slider flex-row">
+                <!-- <div class="dark-mode-slider flex-row">
                     <mat-slide-toggle color="#E40066" [checked]="isDarkModeEnabled"> </mat-slide-toggle>
-                </div>
+                </div> -->
 
                 <div class="language-container">
 

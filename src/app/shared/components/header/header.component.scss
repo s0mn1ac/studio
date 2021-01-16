@@ -15,8 +15,8 @@
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        padding-left: 10em;
-        padding-right: 10em;
+        padding-left: 2rem;
+        padding-right: 2rem;
 
         .left-container, .middle-container, .right-container {
             text-align: center;
@@ -24,50 +24,87 @@
             height: 100%;
 
             &.left-container {
-                width: 20%;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
+                // background-color: orange;
+
+                .logo-container {
+
+                    img {
+                        width: 50px;
+                    }
+                }
             }
 
             &.middle-container {
-                width: 60%;
-                // justify-content: space-between;
+                width: 100%;
+                // background-color: orchid;
+                justify-content: space-between;
 
-                .header-item {
-                    cursor: pointer;
-                    align-items: center;
-                    padding: 0.5rem 1rem;
-                    // border-bottom: 2px solid $transparent;
-                    position: relative;
-                    transition:all 200ms ease;
+                .left-row {
 
-                    &::after {
-                        position: absolute;
-                        left: 50%;
-                        content: '';
-                        height: 3px;
-                        background: $pink;
-                        transition: all 200ms linear;
-                        width: 0;
-                        bottom: 0; 
+                    .menu-container {
+                        display: flex;
+
+                        .header-item {
+                            cursor: pointer;
+                            align-items: center;
+                            padding: 0.5rem 1rem;
+                            // border-bottom: 2px solid $transparent;
+                            position: relative;
+                            transition:all 200ms ease;
+        
+                            &::after {
+                                position: absolute;
+                                left: 50%;
+                                content: '';
+                                height: 3px;
+                                background: $blue;
+                                transition: all 200ms linear;
+                                width: 0;
+                                bottom: 0; 
+                            }
+        
+                            &:hover::after {
+                                width: 100%;
+                                left:0;
+                            }
+        
+                            &.click {
+                                color: $blue;
+                                transition:all 200ms ease;
+                            }
+                        }
                     }
 
-                    &:hover::after {
-                        width: 100%;
-                        left:0;
+                    @media only screen and (max-width: 600px) {
+
+                        .menu-container {
+                            display: none;
+                        }
+                    }
+                }
+
+                .right-row {
+
+                    .menu-container {
+                        display: none;
+                        align-items: center;
                     }
 
-                    &.click {
-                        color: $pink;
-                        transition:all 200ms ease;
+                    @media only screen and (max-width: 600px) {
+
+                        .menu-container {
+                            display: flex;
+                        }
                     }
                 }
             }
 
             &.right-container {
-                width: 20%;
                 justify-content: space-between;
                 align-items: center;
+                // background-color: turquoise;
             }
         }
     }
