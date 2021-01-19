@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainPageComponent } from './main-page/components/main-page.component';
 import { LayoutComponent } from './shared/components/layout/layout.component';
 
 const routes: Routes = [
@@ -8,15 +9,38 @@ const routes: Routes = [
         component: LayoutComponent,
         children: [
             {
-                path: 'main',
+                path: 'home',
+                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            },
+            {
+                path: 'about',
+                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            },
+            {
+                path: 'gallery',
+                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            },
+            {
+                path: 'contact',
+                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            },
+            // {
+            //     path: 'main',
+            //     loadChildren: () =>
+            //         import('./main-page/main-page.module').then(
+            //             m => m.MainPageModule
+            //         )
+            // },
+            {
+                path: 'projects',
                 loadChildren: () =>
-                import('./main-page/main-page.module').then(
-                    m => m.MainPageModule
-                )
+                    import('./projects-page/projects-page.module').then(
+                        m => m.ProjectsPageModule
+                    )
             },
             {
                 path: '',
-                redirectTo: '/main',
+                redirectTo: 'home',
                 pathMatch: 'full'
             }
         ]
@@ -24,7 +48,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled'})],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

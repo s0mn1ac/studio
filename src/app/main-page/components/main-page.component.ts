@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/shared/services/app.service';
 
@@ -14,29 +15,23 @@ export class MainPageComponent implements OnInit {
 
   private headerSubscription!: Subscription;
 
-  public moveToFirstBlock():void {
-    this.firstBlock.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
-  }
-
-  public moveToSecondBlock():void {
-    this.secondBlock.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
-  }
-
-
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService, private router: Router) { }
 
   ngOnInit(): void {
     this.headerSubscription = this.appService.headerService.navigationObservable.subscribe( async (route: string) => {
+      console.log('SCROLL');
       this.navigateTo(route);
     });
   }
 
   public navigateTo(route: string): void {
-    document.getElementById(route)?.scrollIntoView({behavior: 'smooth'});
+    // this.router.navigate(['main']).then(() => {
+    //   document.getElementById(route)?.scrollIntoView({behavior: 'smooth'});
+    // });
   }
 
   ngOnDestroy(): void {
-    this.headerSubscription.unsubscribe();
+    // this.headerSubscription.unsubscribe();
   }
 
 }

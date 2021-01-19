@@ -11,6 +11,7 @@ import { CoreModule } from './shared/modules/core/core.module';
 import { GlobalErrorHandler } from './config/error-handler.service';
 import { TranslocoInitializer } from './config/initializers/transloco.initializer';
 import { MaterialModule } from './shared/modules/material/material.module';
+import { ProjectsPageComponent } from './projects-page/components/projects-page.component';
 
 @NgModule({
   declarations: [AppComponent],

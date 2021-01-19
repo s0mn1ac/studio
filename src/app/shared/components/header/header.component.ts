@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
 
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   public isDarkModeEnabled = true;
   public languageSelected: string = 'es';
 
-  constructor(private appService: AppService, private router: Router) { }
+  constructor(private appService: AppService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.changeLanguage(this.appService.translocoService.getActiveLang());
@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public onClickHeaderOption(name: string): void {
-    this.navigateTo(name);
     this.headerConfiguration.forEach((header: HeaderItem) => {
       if (header.id === name) {
         header.active = true;
@@ -31,6 +30,8 @@ export class HeaderComponent implements OnInit {
         header.active = false;
       }
     });
+    // this.router.navigate(['/home'], {fragment: name});
+    this.router.navigate([name]);
   }
 
   public changeLanguage(lang: string): void {
@@ -47,8 +48,12 @@ export class HeaderComponent implements OnInit {
     ];
   }
 
-  public navigateTo(name: string): void {
-    this.appService.headerService.navigateTo(name);
+  public async navigateTo(name: string): Promise<void> {
+    // this.appService.headerService.navigateTo(name);
+  }
+
+  public navigateToProjectsPage(): void {
+    this.router.navigate(['/projects']);
   }
 
 }

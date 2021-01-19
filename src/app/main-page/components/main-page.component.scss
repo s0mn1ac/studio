@@ -1,14 +1,10 @@
 @import '../../../assets/scss/main-styles.scss';
 
 .main-page-layout {
-    padding-top: 50px;
-    padding-left: 2rem;
-    padding-right: 2rem;
     display: block;
-}
 
-.footer-layout {
-    height: 100px;
-    background-color: black;
+    #home, #about, #gallery, #contact {
+        padding-top: 80px;
+    }
 }
   

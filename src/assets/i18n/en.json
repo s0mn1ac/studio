@@ -4,7 +4,8 @@
         "home": "Home",
         "about": "About us",
         "gallery": "Gallery",
-        "contact": "Contact"
+        "contact": "Contact",
+        "projects": "Projects"
     },
 
     "mainPage": {
