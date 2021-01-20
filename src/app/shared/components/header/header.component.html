@@ -17,9 +17,9 @@
                         <div class="header-item flex-row" [ngClass]="{ 'click' : header.active }" *ngFor="let header of headerConfiguration" (click)="onClickHeaderOption(header.id)">
                             <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
                         </div>
-                        <div class="header-item flex-row" (click)="navigateToProjectsPage()">
+                        <!-- <div class="header-item flex-row" (click)="navigateToProjectsPage()">
                             <span class="header-item-text"> {{ t('header.projects') }} </span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 

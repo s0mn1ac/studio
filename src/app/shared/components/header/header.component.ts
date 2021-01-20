@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   public headerConfiguration: HeaderItem[] = [];
 
   public isDarkModeEnabled = true;
-  public languageSelected: string = 'es';
+  public languageSelected = 'es';
 
   constructor(private appService: AppService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -30,8 +30,12 @@ export class HeaderComponent implements OnInit {
         header.active = false;
       }
     });
-    // this.router.navigate(['/home'], {fragment: name});
-    this.router.navigate([name]);
+    if (name === 'projects') {
+      this.router.navigate([name]);
+    } else {
+      if (this.router.url === '/projects') { this.router.navigate(['home']); }
+      this.navigateTo(name);
+    }
   }
 
   public changeLanguage(lang: string): void {
@@ -41,15 +45,23 @@ export class HeaderComponent implements OnInit {
 
   private initHeaderConfiguration(): void {
     this.headerConfiguration = [
-      { id: 'home', active: true },
+      { id: 'home', active: false },
       { id: 'about', active: false },
       { id: 'gallery', active: false },
-      { id: 'contact', active: false }
+      { id: 'contact', active: false },
+      { id: 'projects', active: false }
     ];
+    const activeItem = this.headerConfiguration.find((headerItem: HeaderItem) => this.router.url.endsWith(headerItem.id));
+    if (activeItem) {
+      activeItem.active = true;
+      this.navigateTo(activeItem.id);
+    } else {
+      this.headerConfiguration[0].active = true;
+    }
   }
 
   public async navigateTo(name: string): Promise<void> {
-    // this.appService.headerService.navigateTo(name);
+    this.appService.headerService.navigateTo(name);
   }
 
   public navigateToProjectsPage(): void {
