@@ -11,12 +11,22 @@ import { CoreModule } from './shared/modules/core/core.module';
 import { GlobalErrorHandler } from './config/error-handler.service';
 import { TranslocoInitializer } from './config/initializers/transloco.initializer';
 import { MaterialModule } from './shared/modules/material/material.module';
-import { ProjectsPageComponent } from './projects-page/components/projects-page.component';
+import { IvyGalleryModule } from 'angular-gallery';
 
 @NgModule({
   declarations: [AppComponent],
   exports: [BrowserAnimationsModule],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, RouterModule, CoreModule.forRoot(), HttpClientModule, MaterialModule, NgxPageScrollModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    RouterModule,
+    CoreModule.forRoot(),
+    HttpClientModule,
+    MaterialModule,
+    NgxPageScrollModule,
+    IvyGalleryModule
+  ],
   providers: [
     TranslocoInitializer,
     {provide: ErrorHandler, useClass: GlobalErrorHandler}

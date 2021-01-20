@@ -1,6 +1,6 @@
 export class HeaderItem {
     id!: string;
-    active!: boolean
+    active!: boolean;
 
     constructor() { }
 }

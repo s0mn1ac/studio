@@ -5,6 +5,7 @@ import { TranslocoService } from '@ngneat/transloco';
 import { TranslocoRootModule } from 'src/app/config/transloco-root.module';
 import { HeaderComponent } from '../../components/header/header.component';
 import { LayoutComponent } from '../../components/layout/layout.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 import { AppService } from '../../services/app.service';
 import { MaterialModule } from '../material/material.module';
 import { PrimeNgModule } from '../primeng/primeng.module';
@@ -12,7 +13,8 @@ import { PrimeNgModule } from '../primeng/primeng.module';
 @NgModule({
     declarations: [
         HeaderComponent,
-        LayoutComponent
+        LayoutComponent,
+        FooterComponent
     ],
     entryComponents: [],
     imports: [
@@ -26,6 +28,7 @@ import { PrimeNgModule } from '../primeng/primeng.module';
         TranslocoRootModule,
         HeaderComponent,
         LayoutComponent,
+        FooterComponent,
         MaterialModule,
         PrimeNgModule
     ],
