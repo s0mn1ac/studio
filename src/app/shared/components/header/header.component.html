@@ -40,9 +40,9 @@
     
             <div class="right-container flex-row">
 
-                <!-- <div class="dark-mode-slider flex-row">
-                    <mat-slide-toggle color="#E40066" [checked]="isDarkModeEnabled"> </mat-slide-toggle>
-                </div> -->
+                <div class="dark-mode-slider flex-row">
+                    <mat-slide-toggle color="#E40066" [checked]="isDarkModeEnabled" (change)="changeTheme($event.checked)"> </mat-slide-toggle>
+                </div>
 
                 <div class="language-container">
 

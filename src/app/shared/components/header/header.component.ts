@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
+import { ThemingService } from '../../services/theming.service';
 
 @Component({
   selector: 'app-header',
@@ -12,14 +13,21 @@ export class HeaderComponent implements OnInit {
 
   public headerConfiguration: HeaderItem[] = [];
 
-  public isDarkModeEnabled = true;
+  public isDarkModeEnabled = false;
   public languageSelected = 'es';
 
-  constructor(private appService: AppService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private appService: AppService, private router: Router, private themingService: ThemingService) { }
 
   ngOnInit(): void {
     this.changeLanguage(this.appService.translocoService.getActiveLang());
     this.initHeaderConfiguration();
+    this.setDarkMode();
+  }
+
+  private setDarkMode(): void {
+    const darkModeOn = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    this.isDarkModeEnabled = darkModeOn ? true : false;
   }
 
   public onClickHeaderOption(name: string): void {
@@ -41,7 +49,6 @@ export class HeaderComponent implements OnInit {
   public changeLanguage(lang: string): void {
     this.appService.translocoService.setActiveLang(lang);
     this.languageSelected = lang;
-    console.log(lang);
   }
 
   private initHeaderConfiguration(): void {
@@ -58,6 +65,16 @@ export class HeaderComponent implements OnInit {
       this.navigateTo(activeItem.id);
     } else {
       this.headerConfiguration[0].active = true;
+    }
+  }
+
+  public changeTheme(checked: boolean): void {
+    console.log('change');
+    this.isDarkModeEnabled = checked;
+    if (this.isDarkModeEnabled) {
+      this.themingService.theme.next('dark-theme');
+    } else {
+      this.themingService.theme.next('light-theme');
     }
   }
 

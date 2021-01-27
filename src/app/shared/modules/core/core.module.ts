@@ -9,12 +9,14 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { AppService } from '../../services/app.service';
 import { MaterialModule } from '../material/material.module';
 import { PrimeNgModule } from '../primeng/primeng.module';
+import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
     declarations: [
         HeaderComponent,
         LayoutComponent,
-        FooterComponent
+        FooterComponent,
+        ScrollToTopComponent
     ],
     entryComponents: [],
     imports: [
@@ -29,6 +31,7 @@ import { PrimeNgModule } from '../primeng/primeng.module';
         HeaderComponent,
         LayoutComponent,
         FooterComponent,
+        ScrollToTopComponent,
         MaterialModule,
         PrimeNgModule
     ],
