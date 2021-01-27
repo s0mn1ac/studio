@@ -1,3 +1,5 @@
+@import './assets/scss/main-styles.scss';
+
 html, body {
     height: 100%;
 }
@@ -5,7 +7,10 @@ html, body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: #FAFAFA;
+    background-color: $background-light-mode;
+    color: $text-black;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
 
     img {
         object-fit: contain !important;

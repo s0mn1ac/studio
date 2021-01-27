@@ -1,1 +1,7 @@
-<div style="height: 700px; background-color: tomato;"> ABOUT </div>
+<div class="about-layout flex-column" *transloco="let t">
+    <mat-card data-aos="fade-left">
+        <h2 class="subtitle"> {{ t('mainPage.about.subtitle').toUpperCase() }} </h2>
+        <h1 class="title"> {{ t('mainPage.about.title').toUpperCase() }} </h1>
+        <div class="content"> {{ t('mainPage.about.mainText') }} </div>
+    </mat-card>
+</div>

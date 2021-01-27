@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy, AfterViewI
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/shared/services/app.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-main-page',
@@ -18,6 +19,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
   constructor(private appService: AppService, private router: Router) { }
 
   ngOnInit(): void {
+    AOS.init();
     this.initSubscriptions();
   }
 

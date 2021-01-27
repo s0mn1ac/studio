@@ -1,1 +1,7 @@
-<div style="height: 700px; background-color: thistle; margin-bottom: 30px;"> CONTACT </div>
+<div class="contact-layout flex-column" *transloco="let t">
+    <mat-card data-aos="fade-left">
+        <h2 class="subtitle"> {{ t('mainPage.contact.subtitle').toUpperCase() }} </h2>
+        <h1 class="title"> {{ t('mainPage.contact.title').toUpperCase() }} </h1>
+        <div class="content"> {{ t('mainPage.contact.mainText') }} </div>
+    </mat-card>
+</div>

@@ -41,6 +41,7 @@ export class HeaderComponent implements OnInit {
   public changeLanguage(lang: string): void {
     this.appService.translocoService.setActiveLang(lang);
     this.languageSelected = lang;
+    console.log(lang);
   }
 
   private initHeaderConfiguration(): void {
