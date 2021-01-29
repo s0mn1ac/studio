@@ -1,10 +1,21 @@
 @import '../../../assets/scss/main-styles.scss';
 
-.main-page-layout {
-    display: block;
+@mixin main-theme($theme) {
+    $primary: map-get($theme, primary);
+    $warn: map-get($theme, warn);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
 
-    #home, #about, #gallery, #contact {
-        padding-top: 80px;
+    .main-page-layout {
+        display: block;
+
+        background-color: mat-color($background);
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        #home, #about, #gallery, #contact {
+            padding-top: 80px;
+        }
     }
 }
   

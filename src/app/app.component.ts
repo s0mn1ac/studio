@@ -1,6 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ThemeType } from './shared/enums/theme-type.enum';
 import { ThemingService } from './shared/services/theming.service';
 
 @Component({
@@ -21,9 +22,8 @@ export class AppComponent implements OnInit {
   }
 
   private initThemeConfiguration(): void {
-    this.themingService.theme.subscribe((theme: string) => {
+    this.themingService.theme.subscribe((theme: ThemeType) => {
       this.cssClass = theme;
-      console.log('CHANGE:', theme);
     });
   }
 }

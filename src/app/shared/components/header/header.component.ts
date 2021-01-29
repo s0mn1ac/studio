@@ -1,5 +1,6 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ThemeType } from '../../enums/theme-type.enum';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
 import { ThemingService } from '../../services/theming.service';
@@ -22,12 +23,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.changeLanguage(this.appService.translocoService.getActiveLang());
     this.initHeaderConfiguration();
-    this.setDarkMode();
+    this.getInitialTheme();
   }
 
-  private setDarkMode(): void {
-    const darkModeOn = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.isDarkModeEnabled = darkModeOn ? true : false;
+  private getInitialTheme(): void {
+    const theme = this.themingService.getTheme();
+    this.isDarkModeEnabled = theme === ThemeType.DARK ? true : false;
   }
 
   public onClickHeaderOption(name: string): void {
@@ -72,9 +73,9 @@ export class HeaderComponent implements OnInit {
     console.log('change');
     this.isDarkModeEnabled = checked;
     if (this.isDarkModeEnabled) {
-      this.themingService.theme.next('dark-theme');
+      this.themingService.setTheme(ThemeType.DARK);
     } else {
-      this.themingService.theme.next('light-theme');
+      this.themingService.setTheme(ThemeType.LIGHT);
     }
   }
 

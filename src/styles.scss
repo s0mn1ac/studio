@@ -1,12 +1,14 @@
 @import './assets/scss/main-styles.scss';
 @import '~@angular/material/theming';
 @import "app/shared/components/header/header.component";
+@import "app/main-page/components/main-page.component";
 
 @include mat-core();
 
 // Custom themes
 @mixin custom-components-theme($theme) {
     @include header-theme($theme);
+    @include main-theme($theme);
 }
 
 // Light theme
