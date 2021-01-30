@@ -1,5 +1,6 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProjectsPageComponent } from 'src/app/shared/components/header/projects-dialog/projects-page.component';
 import { ThemeType } from '../../enums/theme-type.enum';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
@@ -40,10 +41,15 @@ export class HeaderComponent implements OnInit {
       }
     });
     if (name === 'projects') {
-      this.router.navigate([name]);
+      this.projectsPageComponent.showDialog();
+
+      // this.router.navigate([name]);
     } else {
-      if (this.router.url === '/projects') { this.router.navigate(['home']); }
-      this.navigateTo(name);
+      if (this.router.url === '/projects') {
+        this.router.navigate(['']).then(() => this.navigateTo(name));
+      } else {
+        this.navigateTo(name);
+      }
     }
   }
 
@@ -70,7 +76,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public changeTheme(checked: boolean): void {
-    console.log('change');
     this.isDarkModeEnabled = checked;
     if (this.isDarkModeEnabled) {
       this.themingService.setTheme(ThemeType.DARK);
@@ -84,7 +89,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public navigateToProjectsPage(): void {
-    this.router.navigate(['/projects']);
+    // this.router.navigate(['/projects']);
   }
 
 }

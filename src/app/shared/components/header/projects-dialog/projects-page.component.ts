@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Gallery, GalleryProperties } from 'angular-gallery';
 import { AppService } from 'src/app/shared/services/app.service';
-import { ImageItem } from '../models/image-item.model';
+import { ImageItem } from '../../../models/image-item.model';
 
 @Component({
   selector: 'app-projects-page',
@@ -10,13 +10,21 @@ import { ImageItem } from '../models/image-item.model';
 })
 export class ProjectsPageComponent implements OnInit {
 
+  public isDialogVisible = false;
   public imageItems: ImageItem[] = [];
   private prop!: any;
 
   constructor(public appService: AppService, private gallery: Gallery) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  public showDialog(): void {
     this.loadImageItems();
+    this.isDialogVisible = true;
+  }
+
+  public hideDialog(): void {
+    this.isDialogVisible = false;
   }
 
   public showGallery(index: number, route: string): void {
@@ -25,7 +33,6 @@ export class ProjectsPageComponent implements OnInit {
 }
 
   private loadImageItems(): void {
-    console.log('LOAD');
     this.prop = { images: [], index: 0 };
     for (let index = 0; index < 20; index++) {
       const imageItem = new ImageItem();

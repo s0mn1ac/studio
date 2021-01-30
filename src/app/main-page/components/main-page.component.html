@@ -3,7 +3,7 @@
     <div class="main-page-layout flex-column">
 
         <section id="home">
-            <app-home></app-home>
+            <app-home (scrollDownEmitter)="scrollDown()"></app-home>
         </section>
 
         <section id="about">
@@ -20,6 +20,6 @@
 
     </div>
 
-
+    <app-projects-page #projectsPageComponent></app-projects-page>
 
 </ng-container>

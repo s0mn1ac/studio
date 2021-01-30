@@ -1,0 +1,102 @@
+@import '~@angular/material/theming';
+@import "../../app/shared/components/header/header.component";
+@import "../../app/main-page/components/main-page.component";
+
+@include mat-core();
+
+@mixin custom-components-theme($theme) {
+    @include header-theme($theme);
+    @include main-theme($theme);
+}
+
+// Primary Colors
+$white: #FFFFFF;
+$black: #000000;
+$grey: #CBCBCB;
+$dark-grey: #888888;
+$transparent: #FFFFFF00;
+$background-transparent: #FFFFFFB8;
+$background-light-mode: #FAFAFA;
+$background-dark-mode: #1D1D1F;
+
+// Text Colors
+$text-black: #1D1D1F;
+$text-white: #F5F5F7;
+$text-grey: #A1A1A6;
+
+// App Color Palette
+$yellow: #EAC435;
+$blue: #345995;
+$pink: #E40066;
+$green: #03CEA4;
+$orange: #FB4D3D;
+
+$mat-custom-primary: (
+    main: #345995,
+    lighter: #c2cddf,
+    darker: #213e78,
+    200: #345995,
+    contrast : (
+        main: $light-primary-text,
+        lighter: $dark-primary-text,
+        darker: $light-primary-text,
+    )
+);
+
+$mat-custom-accent: (
+    main: #eac435,
+    lighter: #f9edc2,
+    darker: #e1af22,
+    200: #eac435,
+    contrast : (
+        main: $dark-primary-text,
+        lighter: $dark-primary-text,
+        darker: $dark-primary-text,
+    )
+);
+
+$mat-custom-warn: (
+    main: #d50000,
+    lighter: #f2b3b3,
+    darker: #c40000,
+    200: #d50000,
+    contrast : (
+        main: $light-primary-text,
+        lighter: $dark-primary-text,
+        darker: $light-primary-text,
+    )
+);
+
+// Light theme
+$light-primary: mat-palette($mat-custom-primary, main, lighter, darker);
+$light-accent: mat-palette($mat-custom-accent, main, lighter, darker);
+$light-theme: mat-light-theme((
+    color: (
+        primary: $light-primary,
+        accent: $light-accent,
+    ),
+    background: ($background-light-mode)
+));
+
+.light-theme {
+    @include angular-material-theme($light-theme);
+    @include custom-components-theme($light-theme);
+}
+
+// Dark theme
+$dark-primary: mat-palette($mat-custom-primary, main, lighter, darker);
+$dark-accent: mat-palette($mat-custom-accent, main, lighter, darker);
+$dark-theme: mat-dark-theme((
+    color: (
+        primary: $dark-primary,
+        accent: $dark-accent
+    ),
+    background: ($background-dark-mode)
+));
+
+.dark-theme {
+    @include angular-material-theme($dark-theme);
+    @include custom-components-theme($dark-theme);
+}
+
+

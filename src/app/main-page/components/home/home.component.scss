@@ -1,1 +1,8 @@
 @import '../../../../assets/scss/main-styles.scss';
+
+.home-container {
+    background-color: orange;
+    height: calc(100vh);
+    justify-content: flex-end;
+    align-items: center;
+}

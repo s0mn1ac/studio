@@ -1,0 +1,32 @@
+<ng-container *transloco="let t">
+
+    <p-dialog header="Header" [(visible)]="isDialogVisible" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+
+        <div class="projects-page-layout flex-column">
+
+            <div class="filter-container flex-row">
+    
+                <mat-card>
+                    <!-- TODO: Implementar filtro -->
+                    FILTRO
+                </mat-card>
+    
+            </div>
+    
+            <div class="gallery-container flex-row">
+    
+                <!-- <mat-card>
+                    <div class="gallery flex-row">
+                        <div class="image-item zoom" *ngFor="let imageItem of imageItems">
+                            <img [src]="imageItem.image" [alt]="imageItem.image" (click)="showGallery(imageItem.id, imageItem.image)">
+                        </div>
+                    </div>
+                </mat-card> -->
+    
+            </div>
+    
+        </div>
+
+    </p-dialog>
+    
+</ng-container>

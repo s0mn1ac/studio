@@ -9,40 +9,41 @@ const routes: Routes = [
         component: LayoutComponent,
         children: [
             {
-                path: 'home',
-                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
-            },
-            {
-                path: 'about',
-                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
-            },
-            {
-                path: 'gallery',
-                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
-            },
-            {
-                path: 'contact',
-                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
-            },
-            // {
-            //     path: 'main',
-            //     loadChildren: () =>
-            //         import('./main-page/main-page.module').then(
-            //             m => m.MainPageModule
-            //         )
-            // },
-            {
-                path: 'projects',
-                loadChildren: () =>
-                    import('./projects-page/projects-page.module').then(
-                        m => m.ProjectsPageModule
-                    )
-            },
-            {
                 path: '',
-                redirectTo: 'home',
-                pathMatch: 'full'
+                loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
             }
+            // {
+            //     path: 'home',
+            //     loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            // },
+            // {
+            //     path: 'about',
+            //     loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            // },
+            // {
+            //     path: 'gallery',
+            //     loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            // },
+            // {
+            //     path: 'contact',
+            //     loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+            // },
+            // // {
+            // //     path: 'main',
+            // //     loadChildren: () =>
+            // //         import('./main-page/main-page.module').then(
+            // //             m => m.MainPageModule
+            // //         )
+            // // },
+            // {
+            //     path: 'projects',
+            //     loadChildren: () => import('./projects-page/projects-page.module').then(m => m.ProjectsPageModule)
+            // }
+            // {
+            //     path: '',
+            //     redirectTo: 'home',
+            //     pathMatch: 'full'
+            // }
         ]
     }
 ];

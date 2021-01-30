@@ -10,10 +10,12 @@ import { AppService } from '../../services/app.service';
 import { MaterialModule } from '../material/material.module';
 import { PrimeNgModule } from '../primeng/primeng.module';
 import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-top.component';
+import { ProjectsPageComponent } from '../../components/header/projects-dialog/projects-page.component';
 
 @NgModule({
     declarations: [
         HeaderComponent,
+        ProjectsPageComponent,
         LayoutComponent,
         FooterComponent,
         ScrollToTopComponent
@@ -29,6 +31,7 @@ import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-t
     exports: [
         TranslocoRootModule,
         HeaderComponent,
+        ProjectsPageComponent,
         LayoutComponent,
         FooterComponent,
         ScrollToTopComponent,

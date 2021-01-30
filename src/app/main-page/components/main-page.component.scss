@@ -7,14 +7,12 @@
     $foreground: map-get($theme, foreground);
 
     .main-page-layout {
-        display: block;
-
         background-color: mat-color($background);
-        padding-left: 2rem;
-        padding-right: 2rem;
 
-        #home, #about, #gallery, #contact {
+        #about, #gallery, #contact {
             padding-top: 80px;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
     }
 }
