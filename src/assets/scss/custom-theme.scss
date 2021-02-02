@@ -1,35 +1,16 @@
+@import 'shared/colors.scss';
 @import '~@angular/material/theming';
 @import "../../app/shared/components/header/header.component";
 @import "../../app/main-page/components/main-page.component";
+@import "../../app/main-page/components/projects/projects-page.component";
 
 @include mat-core();
 
-@mixin custom-components-theme($theme) {
-    @include header-theme($theme);
-    @include main-theme($theme);
+@mixin custom-components-theme($theme, $background-selector) {
+    @include header-theme($theme, $background-selector);
+    // @include main-theme($theme);
+    // @include projects-dialog-theme($theme);
 }
-
-// Primary Colors
-$white: #FFFFFF;
-$black: #000000;
-$grey: #CBCBCB;
-$dark-grey: #888888;
-$transparent: #FFFFFF00;
-$background-transparent: #FFFFFFB8;
-$background-light-mode: #FAFAFA;
-$background-dark-mode: #1D1D1F;
-
-// Text Colors
-$text-black: #1D1D1F;
-$text-white: #F5F5F7;
-$text-grey: #A1A1A6;
-
-// App Color Palette
-$yellow: #EAC435;
-$blue: #345995;
-$pink: #E40066;
-$green: #03CEA4;
-$orange: #FB4D3D;
 
 $mat-custom-primary: (
     main: #345995,
@@ -75,12 +56,12 @@ $light-theme: mat-light-theme((
         primary: $light-primary,
         accent: $light-accent,
     ),
-    background: ($background-light-mode)
+    background: (white)
 ));
 
 .light-theme {
     @include angular-material-theme($light-theme);
-    @include custom-components-theme($light-theme);
+    @include custom-components-theme($light-theme, $background-light-mode);
 }
 
 // Dark theme
@@ -91,12 +72,12 @@ $dark-theme: mat-dark-theme((
         primary: $dark-primary,
         accent: $dark-accent
     ),
-    background: ($background-dark-mode)
+    background: (black)
 ));
 
 .dark-theme {
-    @include angular-material-theme($dark-theme);
-    @include custom-components-theme($dark-theme);
+    @include angular-material-color($dark-theme);
+    @include custom-components-theme($dark-theme, $background-dark-mode);
 }
 
 

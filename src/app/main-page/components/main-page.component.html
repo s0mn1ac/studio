@@ -1,6 +1,6 @@
 <ng-container *transloco="let t">
 
-    <div class="main-page-layout flex-column">
+    <div class="main-page-layout flex-column mat-app-background">
 
         <section id="home">
             <app-home (scrollDownEmitter)="scrollDown()"></app-home>
@@ -13,13 +13,11 @@
         <section id="gallery">
             <app-gallery></app-gallery>
         </section>
-        <!-- <div  [@fadeInOnEnter] [@fadeOutOnLeave] style="width: 100px; height: 100px; background-color: brown;"></div> -->
+
         <section id="contact">
             <app-contact></app-contact>
         </section>
 
     </div>
-
-    <app-projects-page #projectsPageComponent></app-projects-page>
 
 </ng-container>

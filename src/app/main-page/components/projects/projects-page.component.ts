@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Gallery, GalleryProperties } from 'angular-gallery';
 import { AppService } from 'src/app/shared/services/app.service';
-import { ImageItem } from '../../../models/image-item.model';
+import { ImageItem } from '../../../shared/models/image-item.model';
 
 @Component({
   selector: 'app-projects-page',
@@ -10,7 +10,7 @@ import { ImageItem } from '../../../models/image-item.model';
 })
 export class ProjectsPageComponent implements OnInit {
 
-  public isDialogVisible = false;
+  public isDialogVisible = true;
   public imageItems: ImageItem[] = [];
   private prop!: any;
 

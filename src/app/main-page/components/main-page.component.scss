@@ -1,19 +1,23 @@
 @import '../../../assets/scss/main-styles.scss';
 
-@mixin main-theme($theme) {
-    $primary: map-get($theme, primary);
-    $warn: map-get($theme, warn);
-    $background: map-get($theme, background);
-    $foreground: map-get($theme, foreground);
+// @mixin main-theme($theme) {
+//     $primary: map-get($theme, primary);
+//     $warn: map-get($theme, warn);
+//     $background: map-get($theme, background);
+//     $foreground: map-get($theme, foreground);
 
     .main-page-layout {
-        background-color: mat-color($background);
+        // background-color: mat-color($background);
 
         #about, #gallery, #contact {
             padding-top: 80px;
             padding-left: 2rem;
             padding-right: 2rem;
+
+            &#contact {
+                padding-bottom: 80px;
+            }
         }
     }
-}
+// }
   

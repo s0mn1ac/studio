@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { SectionName } from '../../enums/section-name.enum';
 
 @Injectable({
   providedIn: 'root'

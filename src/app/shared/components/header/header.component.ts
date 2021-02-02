@@ -1,6 +1,7 @@
-import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ProjectsPageComponent } from 'src/app/shared/components/header/projects-dialog/projects-page.component';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ProjectsPageComponent } from 'src/app/main-page/components/projects/projects-page.component';
+import { SectionName } from '../../enums/section-name.enum';
 import { ThemeType } from '../../enums/theme-type.enum';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
@@ -14,12 +15,10 @@ import { ThemingService } from '../../services/theming.service';
 export class HeaderComponent implements OnInit {
 
   public headerConfiguration: HeaderItem[] = [];
-
   public isDarkModeEnabled = false;
   public languageSelected = 'es';
 
-  constructor(
-    private appService: AppService, private router: Router, private themingService: ThemingService) { }
+  constructor(private appService: AppService, private themingService: ThemingService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.changeLanguage(this.appService.translocoService.getActiveLang());
@@ -40,16 +39,10 @@ export class HeaderComponent implements OnInit {
         header.active = false;
       }
     });
-    if (name === 'projects') {
-      this.projectsPageComponent.showDialog();
-
-      // this.router.navigate([name]);
+    if (name === SectionName.PROJECTS) {
+      this.openProjectsDialog();
     } else {
-      if (this.router.url === '/projects') {
-        this.router.navigate(['']).then(() => this.navigateTo(name));
-      } else {
-        this.navigateTo(name);
-      }
+      this.navigateTo(name);
     }
   }
 
@@ -60,19 +53,12 @@ export class HeaderComponent implements OnInit {
 
   private initHeaderConfiguration(): void {
     this.headerConfiguration = [
-      { id: 'home', active: false },
-      { id: 'about', active: false },
-      { id: 'gallery', active: false },
-      { id: 'contact', active: false },
-      { id: 'projects', active: false }
+      { id: SectionName.HOME, active: true },
+      { id: SectionName.ABOUT, active: false },
+      { id: SectionName.GALLERY, active: false },
+      { id: SectionName.CONTACT, active: false },
+      { id: SectionName.PROJECTS, active: false }
     ];
-    const activeItem = this.headerConfiguration.find((headerItem: HeaderItem) => this.router.url.endsWith(headerItem.id));
-    if (activeItem) {
-      activeItem.active = true;
-      this.navigateTo(activeItem.id);
-    } else {
-      this.headerConfiguration[0].active = true;
-    }
   }
 
   public changeTheme(checked: boolean): void {
@@ -88,8 +74,12 @@ export class HeaderComponent implements OnInit {
     this.appService.headerService.navigateTo(name);
   }
 
-  public navigateToProjectsPage(): void {
-    // this.router.navigate(['/projects']);
+  public openProjectsDialog(): void {
+    const dialogRef = this.dialog.open(ProjectsPageComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      // TODO: Acción al cerrar el modal
+    });
   }
 
 }

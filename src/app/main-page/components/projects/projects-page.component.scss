@@ -1,0 +1,50 @@
+@import '../../../../assets/scss/main-styles.scss';
+
+// @mixin projects-dialog-theme($theme) {
+//     $primary: map-get($theme, primary);
+//     $warn: map-get($theme, warn);
+//     $background: map-get($theme, background);
+//     $foreground: map-get($theme, foreground);
+
+    .projects-page-layout {
+        // display: block;
+        // height: 100%;
+        // padding-top: 80px;
+
+        .filter-container {
+
+            mat-card {
+                width: 100%;
+            }
+        }
+
+        .gallery-container {
+            margin-top: 1rem;
+            flex-wrap: wrap;
+
+            .mat-card {
+
+                .gallery {
+                    flex-wrap: wrap;
+
+                    .image-item {
+                        width: 100px;
+                        height: 100px;
+                        margin: 0.5rem;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        
+                        img {
+                            border-radius: 10px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        object-fit: contain !important;
+    }
+// }

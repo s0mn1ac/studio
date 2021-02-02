@@ -8,9 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProjectsPageComponent } from './components/projects/projects-page.component';
 
 @NgModule({
-    declarations: [MainPageComponent, HomeComponent, GalleryComponent, ContactComponent, AboutComponent],
+    declarations: [MainPageComponent, HomeComponent, GalleryComponent, ContactComponent, AboutComponent, ProjectsPageComponent],
     imports: [
         CommonModule,
         CoreModule,

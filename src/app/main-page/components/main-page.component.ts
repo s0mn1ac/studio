@@ -1,9 +1,9 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/shared/services/app.service';
 import * as AOS from 'aos';
-import { ProjectsPageComponent } from 'src/app/shared/components/header/projects-dialog/projects-page.component';
+import { SectionName } from 'src/app/shared/enums/section-name.enum';
 
 @Component({
   selector: 'app-main-page',
@@ -14,19 +14,17 @@ export class MainPageComponent implements OnInit, OnDestroy {
 
   @ViewChild('firstblock') public firstBlock!: ElementRef;
   @ViewChild('secondblock') public secondBlock!: ElementRef;
-  @ViewChild('projectsPageComponent')projectsPageComponent!: ProjectsPageComponent;
 
   private headerSubscription!: Subscription;
 
   constructor(private appService: AppService, private router: Router) { }
 
   ngOnInit(): void {
-    AOS.init();
+    AOS.init({ once: true });
     this.initSubscriptions();
   }
 
   public scrollDown(): void {
-    this.openProjectsDialog();
     document.getElementById('about')?.scrollIntoView({behavior: 'smooth'});
   }
 
@@ -36,7 +34,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
     });
   }
 
-  private navigateTo(route: string, previousRoute?: string): void {
+  private navigateTo(route: string): void {
     this.router.navigate(['']).then(() => {
       document.getElementById(route)?.scrollIntoView({behavior: 'smooth'});
     });
@@ -44,10 +42,6 @@ export class MainPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.headerSubscription.unsubscribe();
-  }
-
-  public openProjectsDialog(): void {
-    this.projectsPageComponent.showDialog();
   }
 
 }
