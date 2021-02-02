@@ -6,18 +6,5 @@
 //     $background: map-get($theme, background);
 //     $foreground: map-get($theme, foreground);
 
-    .main-page-layout {
-        // background-color: mat-color($background);
-
-        #about, #gallery, #contact {
-            padding-top: 80px;
-            padding-left: 2rem;
-            padding-right: 2rem;
-
-            &#contact {
-                padding-bottom: 80px;
-            }
-        }
-    }
 // }
   
