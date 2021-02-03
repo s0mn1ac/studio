@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectsPageComponent } from 'src/app/main-page/components/projects/projects-page.component';
 import { SectionName } from '../../enums/section-name.enum';
@@ -13,6 +13,8 @@ import { ThemingService } from '../../services/theming.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Output() toggleSidebarEmitter: EventEmitter<void> = new EventEmitter();
 
   public headerConfiguration: HeaderItem[] = [];
   public isDarkModeEnabled = false;
@@ -80,6 +82,10 @@ export class HeaderComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       // TODO: Acción al cerrar el modal
     });
+  }
+
+  public toggleSidebar(): void {
+    this.toggleSidebarEmitter.emit();
   }
 
 }

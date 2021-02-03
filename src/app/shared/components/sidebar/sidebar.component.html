@@ -1,0 +1,41 @@
+<p-sidebar [(visible)]="isOpen" position="right" [baseZIndex]="10000" [showCloseIcon]="false">
+
+    <div class="custom-sidebar-layout flex-column">
+        <div class="menu">
+            
+        </div>
+        <div class="tools flex-row">
+
+            <div class="dark-mode-slider flex-row">
+                <mat-icon> light_mode </mat-icon>
+                <mat-slide-toggle color="primary"> </mat-slide-toggle>
+                <mat-icon> dark_mode </mat-icon>
+            </div>
+            
+
+            <div class="language-container">
+
+                <button mat-icon-button [matMenuTriggerFor]="languageMenu">
+                    <mat-icon svgIcon="custom-flag-es"></mat-icon>
+                </button>
+
+                <mat-menu #languageMenu="matMenu" xPosition="before">
+
+                    <button mat-menu-item>
+                        <mat-icon svgIcon="custom-flag-es"></mat-icon>
+                        <span>ES</span>
+                    </button>
+
+                    <button mat-menu-item>
+                        <mat-icon svgIcon="custom-flag-en"></mat-icon>
+                        <span>EN</span>
+                    </button>
+                    
+                </mat-menu>
+
+            </div>
+
+        </div>
+    </div>
+
+</p-sidebar>

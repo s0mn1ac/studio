@@ -9,6 +9,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { AppService } from '../../services/app.service';
 import { MaterialModule } from '../material/material.module';
 import { PrimeNgModule } from '../primeng/primeng.module';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-t
         HeaderComponent,
         LayoutComponent,
         FooterComponent,
+        SidebarComponent,
         ScrollToTopComponent
     ],
     entryComponents: [],
@@ -31,6 +33,7 @@ import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-t
         HeaderComponent,
         LayoutComponent,
         FooterComponent,
+        SidebarComponent,
         ScrollToTopComponent,
         MaterialModule,
         PrimeNgModule

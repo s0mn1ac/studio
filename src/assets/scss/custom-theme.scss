@@ -1,6 +1,7 @@
 @import 'shared/colors.scss';
 @import '~@angular/material/theming';
 @import "../../app/shared/components/header/header.component";
+@import "../../app/shared/components/sidebar/sidebar.component";
 @import "../../app/main-page/components/main-page.component";
 @import "../../app/main-page/components/projects/projects-page.component";
 
@@ -8,6 +9,7 @@
 
 @mixin custom-components-theme($theme, $background-selector) {
     @include header-theme($theme, $background-selector);
+    @include sidebar-theme($theme, $background-selector);
     // @include main-theme($theme);
     // @include projects-dialog-theme($theme);
 }
@@ -61,7 +63,7 @@ $light-theme: mat-light-theme((
 
 .light-theme {
     @include angular-material-theme($light-theme);
-    @include custom-components-theme($light-theme, $background-light-mode);
+    @include custom-components-theme($light-theme, $material-light);
 }
 
 // Dark theme
@@ -77,7 +79,7 @@ $dark-theme: mat-dark-theme((
 
 .dark-theme {
     @include angular-material-color($dark-theme);
-    @include custom-components-theme($dark-theme, $background-dark-mode);
+    @include custom-components-theme($dark-theme, $material-dark);
 }
 
 

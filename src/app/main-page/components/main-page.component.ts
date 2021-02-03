@@ -15,6 +15,8 @@ export class MainPageComponent implements OnInit, OnDestroy {
   @ViewChild('firstblock') public firstBlock!: ElementRef;
   @ViewChild('secondblock') public secondBlock!: ElementRef;
 
+  public shouldRun = false;
+
   private headerSubscription!: Subscription;
 
   constructor(private appService: AppService, private router: Router) { }
@@ -38,6 +40,11 @@ export class MainPageComponent implements OnInit, OnDestroy {
     this.router.navigate(['']).then(() => {
       document.getElementById(route)?.scrollIntoView({behavior: 'smooth'});
     });
+  }
+
+  test(): void {
+    this.shouldRun = !this.shouldRun;
+    console.log('OPEN');
   }
 
   ngOnDestroy(): void {

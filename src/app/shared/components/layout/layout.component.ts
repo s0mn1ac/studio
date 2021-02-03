@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-layout',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class LayoutComponent {
 
+  @ViewChild('mainSidebar') public mainSidebar!: SidebarComponent;
+
   constructor() { }
+
+  public toggleSidebar(): void {
+    this.mainSidebar.toggleSidebar();
+  }
 
 }

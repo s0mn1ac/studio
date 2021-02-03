@@ -2,6 +2,10 @@
 @import 'shared/text.scss';
 @import 'shared/colors.scss';
 
+.p-sidebar-mask {
+    z-index: 0 !important;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;

@@ -22,14 +22,33 @@
 
                 <div class="right-row flex-row">
                     <div class="menu-container flex-row">
-                        <button mat-icon-button [matMenuTriggerFor]="headerMenu">
+
+                        <!-- <mat-drawer-container class="example-container" autosize>
+
+                            <mat-drawer #drawer class="example-sidenav" mode="side">
+                                <p> SIDENAV </p>
+                            </mat-drawer>
+
+                            <div class="example-sidenav-content">
+                                <button mat-icon-button (click)="drawer.toggle()">
+                                    <mat-icon> menu </mat-icon>
+                                </button>
+                            </div>
+
+                        </mat-drawer-container> -->
+
+                        <button mat-icon-button (click)="toggleSidebar()">
+                            <mat-icon> menu </mat-icon>
+                        </button>
+                        
+                        <!-- <button mat-icon-button [matMenuTriggerFor]="headerMenu">
                             <mat-icon> menu </mat-icon>
                         </button>
                         <mat-menu #headerMenu="matMenu" xPosition="before">        
                             <button mat-menu-item *ngFor="let header of headerConfiguration" (click)="onClickHeaderOption(header.id)">
                                 <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
                             </button>
-                        </mat-menu>
+                        </mat-menu> -->
                     </div>
                 </div>
                 
