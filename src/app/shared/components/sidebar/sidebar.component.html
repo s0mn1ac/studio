@@ -1,32 +1,41 @@
 <p-sidebar [(visible)]="isOpen" position="right" [baseZIndex]="10000" [showCloseIcon]="false">
 
-    <div class="custom-sidebar-layout flex-column">
+    <div class="custom-sidebar-layout flex-column mat-app-background" *transloco="let t">
+
         <div class="menu">
+
+            <mat-selection-list #menuItems [multiple]="false">
+                <mat-list-option *ngFor="let menuItem of headerConfiguration" [selected]="menuItem.active" (click)="onClickMenuItem(menuItem.id)">
+                    {{ t('header.' + menuItem.id) }}
+                </mat-list-option>
+            </mat-selection-list>
             
         </div>
+        <mat-divider></mat-divider>
+
         <div class="tools flex-row">
 
             <div class="dark-mode-slider flex-row">
                 <mat-icon> light_mode </mat-icon>
-                <mat-slide-toggle color="primary"> </mat-slide-toggle>
+                <mat-slide-toggle color="primary" [checked]="isDarkModeEnabled" (change)="changeTheme($event.checked)"> </mat-slide-toggle>
                 <mat-icon> dark_mode </mat-icon>
             </div>
-            
 
             <div class="language-container">
 
                 <button mat-icon-button [matMenuTriggerFor]="languageMenu">
-                    <mat-icon svgIcon="custom-flag-es"></mat-icon>
+                    <mat-icon svgIcon="custom-flag-es" *ngIf="languageSelected === 'es'"></mat-icon>
+                    <mat-icon svgIcon="custom-flag-en" *ngIf="languageSelected === 'en'"></mat-icon>
                 </button>
 
                 <mat-menu #languageMenu="matMenu" xPosition="before">
 
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="changeLanguage('es')">
                         <mat-icon svgIcon="custom-flag-es"></mat-icon>
                         <span>ES</span>
                     </button>
 
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="changeLanguage('en')">
                         <mat-icon svgIcon="custom-flag-en"></mat-icon>
                         <span>EN</span>
                     </button>

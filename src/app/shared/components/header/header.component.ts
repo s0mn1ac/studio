@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectsPageComponent } from 'src/app/main-page/components/projects/projects-page.component';
 import { SectionName } from '../../enums/section-name.enum';
@@ -6,6 +6,7 @@ import { ThemeType } from '../../enums/theme-type.enum';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
 import { ThemingService } from '../../services/theming.service';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,8 @@ import { ThemingService } from '../../services/theming.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @ViewChild('mainSidebar') public mainSidebar!: SidebarComponent;
 
   @Output() toggleSidebarEmitter: EventEmitter<void> = new EventEmitter();
 
@@ -85,7 +88,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public toggleSidebar(): void {
-    this.toggleSidebarEmitter.emit();
+    this.mainSidebar.toggleSidebar();
   }
 
 }

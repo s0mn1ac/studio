@@ -1,4 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SectionName } from '../../enums/section-name.enum';
+import { HeaderItem } from '../../models/header-item.model';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
@@ -6,14 +8,10 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent {
-
-  @ViewChild('mainSidebar') public mainSidebar!: SidebarComponent;
+export class LayoutComponent implements OnInit {
 
   constructor() { }
 
-  public toggleSidebar(): void {
-    this.mainSidebar.toggleSidebar();
-  }
+  ngOnInit(): void { }
 
 }

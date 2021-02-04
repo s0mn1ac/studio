@@ -16,9 +16,19 @@
                 height: 100%;
                 justify-content: space-between;
 
+                .menu {
+                    height: 100%;
+                }
+
+                mat-divider {
+                    margin-bottom: 1rem;
+                }
+
                 .tools {
                     justify-content: space-between;
                     align-items: center;
+                    padding: 0.5rem;
+                    // background-color: #ffffff80;
                 }
             }
         }
