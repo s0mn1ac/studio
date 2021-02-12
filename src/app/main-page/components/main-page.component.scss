@@ -5,5 +5,20 @@
 //     $warn: map-get($theme, warn);
 //     $background: map-get($theme, background);
 //     $foreground: map-get($theme, foreground);
+.main-page-layout {
 
+    .parallax-container {
+        /* The image used */
+        background-image: url("https://previews.dropbox.com/p/thumb/ABFrE5l5CSZmmfUIFxNvQVJWcNpEYu9V5h4A9hZsTw1D3wzktHs9M4R4_kUw5XhQA3RkU1Z7L9sH3Yi-G7GoOYrAJCzpRs0n0874CcKnr3IW5EM4Qg5U2PolY0unlhXsW9CLi3493BMLZTj2BPq3j0k6mjRCYXLj-7-TH69ryjySj-ZSEqeIUNwdCymjQaHAtuKU3M82PWtRHlOGepw6mXF_z_UMMMz1ASPxwXONBXWuPLobiyvl7Oazoih4ZJi2zjraunuGNJh8LS28vjuvQp9sROyLynBdESYT7ZVKTujIk42TIS6uIjX9ySsqqVbtj4z6sDbABONYn6cgdxwPbBbKZiq6miULs432yWq2QGC0Tg/p.jpeg?fv_content=true&size_mode=5");
+      
+        /* Set a specific height */
+        min-height: 500px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
 // }

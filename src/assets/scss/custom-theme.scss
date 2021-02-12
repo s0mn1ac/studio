@@ -15,10 +15,10 @@
 }
 
 $mat-custom-primary: (
-    main: #345995,
-    lighter: #c2cddf,
-    darker: #213e78,
-    200: #345995,
+    main: #065A82,
+    lighter: #4a87b2,
+    darker: #003155,
+    200: #87d5e6,
     contrast : (
         main: $light-primary-text,
         lighter: $dark-primary-text,
@@ -27,10 +27,10 @@ $mat-custom-primary: (
 );
 
 $mat-custom-accent: (
-    main: #eac435,
-    lighter: #f9edc2,
-    darker: #e1af22,
-    200: #eac435,
+    main: #F4AC45,
+    lighter: #ffde75,
+    darker: #bd7d0f,
+    200: #fff4a7,
     contrast : (
         main: $dark-primary-text,
         lighter: $dark-primary-text,

@@ -34,7 +34,7 @@
                     .logo-container {
 
                         img {
-                            width: 50px;
+                            width: 40px;
                         }
                     }
                 }
@@ -61,7 +61,7 @@
                                     left: 50%;
                                     content: '';
                                     height: 3px;
-                                    background: $blue;
+                                    background: $primary-color;
                                     transition: all 200ms linear;
                                     width: 0;
                                     bottom: 0; 
@@ -73,7 +73,7 @@
                                 }
             
                                 &.click {
-                                    color: $blue;
+                                    color: $primary-color;
                                     transition:all 200ms ease;
                                 }
                             }
