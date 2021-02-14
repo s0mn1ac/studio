@@ -9,9 +9,22 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsPageComponent } from './components/projects/projects-page.component';
+import { ServicesComponent } from './components/services/services.component';
+import { PaintServicesComponent } from './components/services/components/paint-services/paint-services.component';
+import { PrintServicesComponent } from './components/services/components/print-services/print-services.component';
 
 @NgModule({
-    declarations: [MainPageComponent, HomeComponent, GalleryComponent, ContactComponent, AboutComponent, ProjectsPageComponent],
+    declarations: [
+        MainPageComponent,
+        HomeComponent,
+        GalleryComponent,
+        ContactComponent,
+        AboutComponent,
+        ProjectsPageComponent,
+        ServicesComponent,
+        PaintServicesComponent,
+        PrintServicesComponent
+    ],
     imports: [
         CommonModule,
         CoreModule,
