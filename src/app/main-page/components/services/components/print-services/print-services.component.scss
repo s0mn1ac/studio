@@ -16,11 +16,11 @@
 
     .content-container {
         margin-top: 20px;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
 
         .description-container {
             flex-grow: 1;
-            max-width: 900px;
+            width: 100%;
 
             .card-container {
                 margin: 25px 0px;
@@ -74,11 +74,23 @@
         .img-container {
             justify-content: center;
             flex-grow: 1;
+            width: 100%;
             padding: 0rem 5rem;
 
             img {
                 width: 100%;
-                max-width: 500px;
+                max-width: 700px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1625px) {
+
+        .content-container {
+            flex-wrap: wrap;
+
+            .img-container {
+                padding: 0rem 1rem;
             }
         }
     }
