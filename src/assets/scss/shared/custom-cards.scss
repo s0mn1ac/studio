@@ -1,0 +1,46 @@
+.custom-card-container {
+    margin: 25px 0px;
+    justify-content: center;
+    flex-wrap: wrap !important;
+}
+
+.card {
+    width: 300px;
+    margin: 2rem;
+    padding: 3rem 1rem 2rem 1rem;
+    background-color: $primary-color;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+
+    .icon-container {
+        position: absolute;
+        left: calc(50% - 45px);
+        top: -45px;
+        padding: 10px;
+        border-radius: 100%;
+        line-height: 0px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 5px solid $white;
+
+        mat-icon {
+            height: auto;
+            width: auto;
+            font-size: 30px;
+            // font-weight: bold;
+            background-color: $white;
+            color: $primary-color;
+            border-radius: 100%;
+            padding: 10px;
+        }
+    }
+    
+    .text-container {
+        text-align: center;
+
+        span.title {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 25px;
+        }
+    }
+}

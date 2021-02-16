@@ -16,6 +16,94 @@
 
     .content-container {
         margin-top: 20px;
+        // flex-wrap: wrap;
 
+        .description-container {
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        .card {
+            background-color: $accent-color;
+
+            .icon-container {
+        
+                mat-icon {
+                    color: $accent-color;
+                }
+            }
+        }
+
+        .img-container {
+            justify-content: center;
+            flex-grow: 1;
+            width: 100%;
+            padding: 0rem 5rem;
+
+            img {
+                width: 100%;
+                max-width: 700px;
+            }
+        }
+    }
+
+    .paint-card-container {
+
+        .card {
+            width: 100%;
+            background-color: $accent-color;
+
+            .icon-container {
+        
+                mat-icon {
+                    color: $accent-color;
+                }
+            }
+
+            .medals-container {
+                margin: 80px 0;
+
+                .medal-container {
+                    width: 100%;
+                    margin: 30px;
+                    // background-color: rgba(0, 0, 0, 0.445);
+                    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border-radius: 6px;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 100px;
+    
+                    .medal {
+                        position: absolute;
+                        bottom: -110px;
+                        z-index: 1;
+    
+                        img {
+                            width: 200px;
+                        }
+                    }
+    
+                    .crown {
+                        position: absolute;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1625px) {
+
+        .content-container {
+            flex-wrap: wrap-reverse;
+
+            .img-container {
+                padding: 0rem 1rem;
+            }
+        }
     }
 }
