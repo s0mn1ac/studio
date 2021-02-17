@@ -23,15 +23,13 @@
             width: 100%;
         }
 
-        .card {
+        .custom-card-front {
             background-color: $accent-color;
+        }
 
-            .icon-container {
-        
-                mat-icon {
-                    color: $accent-color;
-                }
-            }
+        .custom-card-back {
+            background-color: $material-dark;
+            color: $white;
         }
 
         .img-container {
@@ -47,10 +45,13 @@
         }
     }
 
-    .paint-card-container {
+    .paint-custom-card-container {
+        justify-content: center;
 
-        .card {
+        .paint-custom-card {
             width: 100%;
+            max-width: 1600px;
+            margin: 5rem 2rem 2rem 2rem;
             background-color: $accent-color;
 
             .icon-container {
@@ -66,8 +67,6 @@
                 .medal-container {
                     width: 100%;
                     margin: 30px;
-                    // background-color: rgba(0, 0, 0, 0.445);
-                    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                     border-radius: 6px;
                     position: relative;
                     align-items: center;
