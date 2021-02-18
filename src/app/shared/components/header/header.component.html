@@ -2,11 +2,7 @@
 
     <header class="header-layout">
 
-        <div class="header-bar-container mat-app-background">
-
-            <!-- <div class="left-container flex-row">
-                
-            </div> -->
+        <div class="header-bar-container mat-app-background" [ngClass]="{'on-scroll': windowScrolled}">
     
             <div class="middle-container flex-row">
 
@@ -19,7 +15,7 @@
                 </div>
 
                 <div class="middle-row">
-                    <div class="outer-logo-container">
+                    <div class="outer-logo-container" [ngClass]="{'on-scroll': windowScrolled}">
                         <div class="logo-container"> </div>
                     </div>
                 </div>
@@ -31,24 +27,10 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="right-row flex-row">
-                    <div class="menu-container flex-row">
-                        <button mat-icon-button (click)="toggleSidebar()">
-                            <mat-icon> menu </mat-icon>
-                        </button>
-                    </div>
-                </div> -->
                 
             </div>
     
             <div class="right-container flex-row">
-                
-                <!-- <div class="dark-mode-slider flex-row">
-                    <mat-icon> light_mode </mat-icon>
-                    <mat-slide-toggle color="primary" [checked]="isDarkModeEnabled" (change)="changeTheme($event.checked)"> </mat-slide-toggle>
-                    <mat-icon> dark_mode </mat-icon>
-                </div> -->
 
                 <div class="menu-container">
                     <button mat-icon-button (click)="toggleSidebar()">

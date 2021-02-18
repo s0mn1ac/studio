@@ -13,17 +13,21 @@
 
         .header-bar-container {
             height: 50px;
-            // background-color: $background-selector;
-            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-            backdrop-filter: saturate(180%) blur(20px);
+            // box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             align-items: center;
             padding-left: 0.5rem;
             padding-right: 0.5rem;
-            // border-bottom-left-radius: 6px;
-            // border-bottom-right-radius: 6px;
+            background-color: $transparent;
+            transition: background-color 0.2s linear;
+
+            &.on-scroll {
+                transition: background-color 0.2s linear;
+                background-color: $material-dark;
+                box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+            }
 
             .left-container, .middle-container, .right-container {
                 text-align: center;
@@ -116,9 +120,15 @@
                             height: 70px;
                             top: 0px;
                             left: calc(50% - 35px);
-                            background-color: $material-dark;
+                            background-color: $transparent;
                             padding: 10px;
                             border-radius: 100%;
+                            transition: background-color 0.2s linear;
+
+                            &.on-scroll {
+                                transition: background-color 0.2s linear;
+                                background-color: $material-dark;
+                            }
     
                             .logo-container {
                                 cursor: pointer;

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectsPageComponent } from 'src/app/main-page/components/projects/projects-page.component';
 import { SectionName } from '../../enums/section-name.enum';
@@ -19,13 +19,24 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSidebarEmitter: EventEmitter<void> = new EventEmitter();
 
-  // public headerConfiguration: HeaderItem[] = [];
   public allHeaderItems: HeaderItem[] = [];
   public leftSideHeaderItems: HeaderItem[] = [];
   public rightSideHeaderItems: HeaderItem[] = [];
 
   public isDarkModeEnabled = false;
   public languageSelected = 'es';
+
+  public windowScrolled!: boolean;
+
+  @HostListener('window:scroll', [])
+  public onWindowScroll(): void {
+      if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
+          this.windowScrolled = true;
+      }
+      else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+          this.windowScrolled = false;
+      }
+  }
 
   constructor(private appService: AppService, private themingService: ThemingService, public dialog: MatDialog) { }
 
@@ -41,13 +52,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public onClickHeaderOption(name: string): void {
-    // this.headerConfiguration.forEach((header: HeaderItem) => {
-    //   if (header.id === name) {
-    //     header.active = true;
-    //   } else {
-    //     header.active = false;
-    //   }
-    // });
     if (name === SectionName.PROJECTS) {
       this.openProjectsDialog();
     } else {
