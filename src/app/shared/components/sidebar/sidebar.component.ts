@@ -9,7 +9,7 @@ import { HeaderItem } from '../../models/header-item.model';
 })
 export class SidebarComponent implements OnInit {
 
-  @Input() headerConfiguration!: HeaderItem[];
+  @Input() allHeaderItems!: HeaderItem[];
   @Input() languageSelected!: string;
   @Input() isDarkModeEnabled!: boolean;
 

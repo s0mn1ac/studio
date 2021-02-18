@@ -1,7 +1,9 @@
+$title: 'Kaushan Script', cursive;
+$text: 'Oswald', sans-serif;
 
 h1 {
     font-weight: bold;
-    font-family: 'Kaushan Script', cursive;
+    font-family: $title;
     font-size: 35px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -9,7 +11,8 @@ h1 {
 
 h2 {
     // font-weight: bold;
-    font-family: 'Oswald', sans-serif;
+    font-family: $text;
     font-size: 20px;
     margin-bottom: 0px;
 }
+

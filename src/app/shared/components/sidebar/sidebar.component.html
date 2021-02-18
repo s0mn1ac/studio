@@ -5,7 +5,7 @@
         <div class="menu">
 
             <mat-selection-list #menuItems [multiple]="false">
-                <mat-list-option *ngFor="let menuItem of headerConfiguration" [selected]="menuItem.active" (click)="onClickMenuItem(menuItem.id)">
+                <mat-list-option *ngFor="let menuItem of allHeaderItems" [selected]="menuItem.active" (click)="onClickMenuItem(menuItem.id)">
                     {{ t('header.' + menuItem.id) }}
                 </mat-list-option>
             </mat-selection-list>

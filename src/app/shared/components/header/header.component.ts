@@ -19,7 +19,11 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSidebarEmitter: EventEmitter<void> = new EventEmitter();
 
-  public headerConfiguration: HeaderItem[] = [];
+  // public headerConfiguration: HeaderItem[] = [];
+  public allHeaderItems: HeaderItem[] = [];
+  public leftSideHeaderItems: HeaderItem[] = [];
+  public rightSideHeaderItems: HeaderItem[] = [];
+
   public isDarkModeEnabled = false;
   public languageSelected = 'es';
 
@@ -37,13 +41,13 @@ export class HeaderComponent implements OnInit {
   }
 
   public onClickHeaderOption(name: string): void {
-    this.headerConfiguration.forEach((header: HeaderItem) => {
-      if (header.id === name) {
-        header.active = true;
-      } else {
-        header.active = false;
-      }
-    });
+    // this.headerConfiguration.forEach((header: HeaderItem) => {
+    //   if (header.id === name) {
+    //     header.active = true;
+    //   } else {
+    //     header.active = false;
+    //   }
+    // });
     if (name === SectionName.PROJECTS) {
       this.openProjectsDialog();
     } else {
@@ -57,13 +61,19 @@ export class HeaderComponent implements OnInit {
   }
 
   private initHeaderConfiguration(): void {
-    this.headerConfiguration = [
-      { id: SectionName.HOME, active: true },
+
+    this.leftSideHeaderItems = [
       { id: SectionName.ABOUT, active: false },
-      { id: SectionName.GALLERY, active: false },
-      { id: SectionName.CONTACT, active: false },
-      { id: SectionName.PROJECTS, active: false }
+      { id: SectionName.SERVICES, active: true }
     ];
+
+    this.rightSideHeaderItems = [
+      { id: SectionName.GALLERY, active: false },
+      { id: SectionName.CONTACT, active: false }
+    ];
+
+    this.allHeaderItems = this.leftSideHeaderItems.concat(this.rightSideHeaderItems);
+
   }
 
   public changeTheme(checked: boolean): void {
