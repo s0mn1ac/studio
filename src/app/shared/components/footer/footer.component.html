@@ -1,3 +1,56 @@
-<div class="footer-layout">
+<div class="footer-layout" *transloco="let t">
     
+    <div class="footer-container flex-column">
+
+        <div class="main-row flex-row">
+
+            <div class="footer-about flex-column">
+
+                <p class="title"> {{ t('footer.about').toUpperCase() }} </p>
+
+                <span> {{ t('mainPage.about.content.firstParagraph') }} </span>
+
+            </div>
+
+            <mat-divider vertical="true"></mat-divider>
+
+            <div class="footer-last-projects flex-column">
+
+                <p class="title"> {{ t('footer.lastProjects').toUpperCase() }} </p>
+
+                <p class="link"> Link </p>
+                <p class="link"> Link </p>
+                <p class="link"> Link </p>
+                <p class="link"> Link </p>
+
+            </div>
+
+            <mat-divider vertical="true"></mat-divider>
+
+            <div class="footer-links flex-column">
+
+                <p class="title"> {{ t('footer.maginkLinks').toUpperCase() }} </p>
+
+                <p class="link"> Link </p>
+                <p class="link"> Link </p>
+                <p class="link"> Link </p>
+                <p class="link"> Link </p>
+
+            </div>
+
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="social-row flex-row">
+            <fa-icon [icon]="faFacebook" class="zoom pointer"></fa-icon>
+            <fa-icon [icon]="faInstagram" class="zoom pointer"></fa-icon>
+            <fa-icon [icon]="faYoutube" class="zoom pointer"></fa-icon>
+        </div>
+
+        <div class="copy-row flex-row">
+            <p> &copy; 2021 TEIDEV BY JUANMI GONZÁLEZ </p>
+        </div>
+
+    </div>
 </div>

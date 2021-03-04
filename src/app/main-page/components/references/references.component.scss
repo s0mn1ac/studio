@@ -1,0 +1,59 @@
+@import '../../../../assets/scss/main-styles.scss';
+
+.references-layout {
+    padding: 80px 2rem 50px 2rem;
+    text-align: center;
+
+    .carousel-container {
+        margin-top: 4rem;
+
+        .customer-item {
+
+            .customer-item-content {
+
+                .customer-face-container {
+                    justify-content: center;
+
+                    .customer-face {
+                        background-color: $semi-transparent-white;
+                        border-radius: 100%;
+                        width: 100px;
+                        height: 100px;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+                        mat-icon {
+                            font-size: 70px;
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+                }
+
+                .customer-info {
+
+                    p.customer-name {
+                        font-weight: bold;
+                        font-size: 25px;
+                    }
+
+                    p.customer-opinion {
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator {
+
+    button {
+        border-radius: 10px;
+    }
+
+    &.p-highlight button {
+        background-color: $accent-color;
+    }
+}

@@ -2,5 +2,19 @@
 
 .contact-layout {
     padding: 80px 2rem 50px 2rem;
-    background-color: $blue;
+    text-align: center;
+
+    .icon-container {
+        justify-content: center;
+
+        fa-icon {
+            margin: 1rem;
+            font-size: 50px;
+        }
+    }
+
+    .second-paragraph {
+        font-family: $title;
+        font-size: 25px;
+    }
 }

@@ -82,7 +82,8 @@
                                     position: absolute;
                                     left: 50%;
                                     content: '';
-                                    height: 3px;
+                                    height: 5px;
+                                    border-radius: 5px;
                                     background: $primary-color;
                                     transition: all 200ms linear;
                                     width: 0;

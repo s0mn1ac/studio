@@ -1,0 +1,28 @@
+<div class="references-layout flex-column" *transloco="let t">
+    <div data-aos="fade-left">
+        <h2 class="subtitle"> {{ t('mainPage.references.subtitle').toUpperCase() }} </h2>
+        <h1 class="title"> {{ t('mainPage.references.title') }} </h1>
+
+        <div class="carousel-container">
+            <p-carousel [value]="customers" styleClass="references-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+                <ng-template let-customer pTemplate="item">
+                    <div class="customer-item">
+                        <div class="customer-item-content">
+                            <div class="customer-face-container flex-row">
+                                <div class="customer-face flex-column">
+                                    <mat-icon> person_outline </mat-icon>
+                                </div>
+                            </div>
+                            <div class="customer-info">
+                                <p class="customer-name"> {{ customer.name }} </p>
+                                <p class="customer-ocupation"> {{ customer.ocupation }} </p>
+                                <p class="customer-opinion"> {{ customer.opinion }} </p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+
+    </div>
+</div>

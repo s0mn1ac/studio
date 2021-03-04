@@ -12,6 +12,7 @@ import { ProjectsPageComponent } from './components/projects/projects-page.compo
 import { ServicesComponent } from './components/services/services.component';
 import { PaintServicesComponent } from './components/services/components/paint-services/paint-services.component';
 import { PrintServicesComponent } from './components/services/components/print-services/print-services.component';
+import { ReferencesComponent } from './components/references/references.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { PrintServicesComponent } from './components/services/components/print-s
         ProjectsPageComponent,
         ServicesComponent,
         PaintServicesComponent,
-        PrintServicesComponent
+        PrintServicesComponent,
+        ReferencesComponent
     ],
     imports: [
         CommonModule,

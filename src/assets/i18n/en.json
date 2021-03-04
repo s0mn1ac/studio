@@ -9,6 +9,7 @@
         "projects": "Projects"
     },
 
+
     "mainPage": {
         "title": "Main page",
         "subtitle": "main page",
@@ -18,6 +19,7 @@
         },
 
         "about": {
+            "aboutUs": "About us",
             "subtitle": "About us",
             "title": "We are",
             "content": {
@@ -58,6 +60,11 @@
             }
         },
 
+        "references": {
+            "subtitle": "References",
+            "title": "Have trusted us"
+        },
+
         "gallery": {
             "subtitle": "Gallery",
             "title": "We make your dreams come true",
@@ -67,8 +74,21 @@
         "contact": {
             "subtitle": "Contact",
             "title": "We make your dreams come true",
-            "mainText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt leo consequat nunc vestibulum lobortis. Vivamus eu odio convallis, auctor ex nec, tincidunt diam. Mauris libero mi, blandit ut urna et, faucibus aliquet ligula. Fusce non bibendum sapien, sit amet elementum velit. Ut id ultricies enim. In ac neque gravida, interdum lacus viverra, placerat neque. Pellentesque eu ornare neque, vitae pretium eros. Integer in viverra erat. Etiam tempor et sem non malesuada. Nulla a ullamcorper ligula. Mauris lobortis nibh in nunc tempus, ac semper ipsum feugiat. Fusce nibh neque, porta vel dolor vitae, aliquet pretium erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel nunc sit amet nunc pellentesque luctus eget ut erat. Nulla facilisi. Fusce accumsan metus nec orci condimentum gravida. Quisque nec rutrum odio, vulputate pellentesque magna. Donec dictum sem enim, et elementum tellus porttitor vitae. Nam malesuada, ipsum nec pellentesque consequat, turpis quam consequat velit, nec euismod dui sem vel eros. Sed rhoncus massa suscipit arcu egestas, eu bibendum turpis convallis. Suspendisse suscipit posuere dui vitae dictum. Quisque vel placerat elit, in suscipit ligula. Sed sed imperdiet lacus. Mauris tincidunt enim sed sem elementum suscipit. Proin nec urna quis neque posuere facilisis ac vitae dolor. Donec consectetur massa non erat tempus, aliquet aliquet dolor tempor. Nam tempor, metus et pharetra volutpat, neque arcu finibus nisl, quis efficitur erat tellus ac tortor. Sed consequat ligula eget nibh interdum, eleifend mollis lacus pretium. Sed velit enim, dapibus at leo sed, posuere varius nisl. Donec sed suscipit erat. Aliquam ornare lorem vel placerat accumsan. Quisque non sem congue, ullamcorper justo id, consequat quam. Nunc elementum vehicula lorem hendrerit rhoncus. Curabitur nec interdum ante. Morbi est nulla, accumsan vitae magna quis, porttitor efficitur enim. Vestibulum sagittis felis eu mauris mollis volutpat. Vestibulum eu faucibus orci. Sed sed interdum erat. Curabitur vitae libero tincidunt, congue orci quis, commodo tellus. Ut blandit metus urna, ac bibendum lorem pellentesque ac. Nunc arcu ante, malesuada vel urna a, sodales pellentesque ex. Curabitur eros ipsum, faucibus eget sollicitudin in, vulputate nec justo. Fusce suscipit porta ex, sit amet porttitor nibh aliquam vehicula. Integer rutrum mauris a justo laoreet, sit amet finibus nunc iaculis. Nam pharetra nec tortor non fringilla. Sed nisi ipsum, ornare vitae luctus a, viverra a diam. Fusce interdum tortor vitae feugiat feugiat. Fusce pharetra ipsum mi, non laoreet lorem ultrices vitae. Etiam egestas nec orci quis euismod. Donec consequat nunc pulvinar, blandit nulla in, convallis eros. Maecenas sed ornare urna, tempus sagittis metus. Nunc eu consequat orci, id pretium lectus."
+            "content": {
+                "firstParagraph": "If you need to contact us, you can do so through the following communication channels:",
+                "secondParagraph": "We are looking forward to help you!"
+            },
+            "email": "eMail",
+            "whatsapp": "WhatsApp",
+            "telegram": "Telegram"
         }
+    },
+
+
+    "footer": {
+        "about": "About us",
+        "lastProjects": "Last projects",
+        "maginkLinks": "Magink Studio"
     }
 
 }

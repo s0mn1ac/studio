@@ -1,11 +1,19 @@
 <div class="contact-layout flex-column" *transloco="let t">
     <div data-aos="fade-left">
         <h2 class="subtitle"> {{ t('mainPage.contact.subtitle').toUpperCase() }} </h2>
-        <h1 class="title"> {{ t('mainPage.contact.title').toUpperCase() }} </h1>
-        <div class="content"> {{ t('mainPage.contact.mainText') }} </div>
-        <p></p>
-        <div class="content"> {{ t('mainPage.contact.mainText') }} </div>
-        <p></p>
-        <div class="content"> {{ t('mainPage.contact.mainText') }} </div>
+        <h1 class="title"> {{ t('mainPage.contact.title') }} </h1>
+
+        <p> {{ t('mainPage.contact.content.firstParagraph') }} </p>
+
+        <div class="icon-container flex-row">
+
+            <fa-icon [icon]="faEnvelope" class="zoom pointer"></fa-icon>
+            <fa-icon [icon]="faWhatsapp" class="zoom pointer"></fa-icon>
+            <fa-icon [icon]="faTelegram" class="zoom pointer"></fa-icon>
+            
+        </div>
+        
+        <p class="second-paragraph"> {{ t('mainPage.contact.content.secondParagraph') }} </p>
+
     </div>
 </div>

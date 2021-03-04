@@ -1,4 +1,53 @@
+@import '../../../../assets/scss/main-styles.scss';
+
 .footer-layout {
-    height: 100px;
-    background-color: black;
+    color: $white;
+    font-size: 15px;
+    background-color: $material-dark;
+    padding-top: 2rem;
+
+    .footer-container {
+
+        mat-divider {
+            margin: 1rem 2rem;
+        }
+
+        .main-row {
+            padding: 0 2rem;
+
+            .footer-about, .footer-last-projects, .footer-links {
+                width: 100%;
+                padding: 0.5rem;
+
+                .title {
+                    font-weight: bold;
+                }
+
+                p.link {
+                    margin: 5px 0px;
+                }
+            }
+
+            mat-divider {
+                margin: 0 1rem;
+            }
+        }
+
+        .social-row {
+            padding: 0 2rem;
+            justify-content: center;
+
+            fa-icon {
+                font-size: 30px;
+                margin: 0.5rem;
+            }
+        }
+
+        .copy-row {
+            font-size: 12px;
+            justify-content: center;
+            padding-top: 0.5rem;
+            background: linear-gradient($transparent, black);
+        }
+    }
 }

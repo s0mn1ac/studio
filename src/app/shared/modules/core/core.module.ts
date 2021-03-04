@@ -11,6 +11,7 @@ import { MaterialModule } from '../material/material.module';
 import { PrimeNgModule } from '../primeng/primeng.module';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-top.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-t
         TranslocoRootModule,
         RouterModule,
         MaterialModule,
-        PrimeNgModule
+        PrimeNgModule,
+        FontAwesomeModule
     ],
     exports: [
         TranslocoRootModule,
@@ -36,7 +38,8 @@ import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-t
         SidebarComponent,
         ScrollToTopComponent,
         MaterialModule,
-        PrimeNgModule
+        PrimeNgModule,
+        FontAwesomeModule
     ],
     providers: [],
 

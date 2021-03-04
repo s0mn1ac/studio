@@ -2,34 +2,20 @@
 
     <div class="home-container flex-column">
 
-        <!-- <div class="video-container">
-            <video loop autoplay class="html-video" poster>
+        <div class="video-container">
+            <video loop autoplay muted class="html-video">
                 <source type="video/mp4" src="../../../../assets/videos/demo-video.mp4">
                 <source type="video/ogg" src="../../../../assets/videos/demo-video.mp4">
                 <source type="video/webm" src="../../../../assets/videos/demo-video.mp4">
             </video>
-        </div> -->
-
-        <div class="title-container">
-            <div class="container">
-                <p> {{ t('mainPage.home.title') }} </p>
-            </div>
         </div>
 
-        <div class="area" >
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div >
+        <div class="background-title-container"> </div>
+        <div class="title-container">
+            <div class="container">
+                <span> {{ t('mainPage.home.title') }} </span>
+            </div>
+        </div>
 
         <div class="scroll-down-button zoom" (click)="scrollDown()">
             <div class="arrow bounce">
