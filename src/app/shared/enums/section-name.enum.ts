@@ -4,5 +4,7 @@ export enum SectionName {
     GALLERY = 'gallery',
     CONTACT = 'contact',
     PROJECTS = 'projects',
-    SERVICES = 'services'
+    REFERENCES = 'references',
+    PRINT_SERVICES = 'printServices',
+    PAINT_SERVICES = 'paintServices'
 }

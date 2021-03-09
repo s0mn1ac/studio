@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faMagnet, faMountain, faPalette, faTools } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-paint-services',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaintServicesComponent implements OnInit {
 
+  public faMagnet = faMagnet;
+  public faTools = faTools;
+  public faMountain = faMountain;
+  public faPalette = faPalette;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

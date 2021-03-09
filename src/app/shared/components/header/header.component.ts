@@ -68,10 +68,12 @@ export class HeaderComponent implements OnInit {
 
     this.leftSideHeaderItems = [
       { id: SectionName.ABOUT, active: false },
-      { id: SectionName.SERVICES, active: true }
+      { id: SectionName.PRINT_SERVICES, active: false },
+      { id: SectionName.PAINT_SERVICES, active: false }
     ];
 
     this.rightSideHeaderItems = [
+      { id: SectionName.REFERENCES, active: false },
       { id: SectionName.GALLERY, active: false },
       { id: SectionName.CONTACT, active: false }
     ];

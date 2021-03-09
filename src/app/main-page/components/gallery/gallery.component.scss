@@ -2,4 +2,22 @@
 
 .gallery-layout {
     padding: 80px 2rem 50px 2rem;
+    text-align: center;
+
+    .gallery-container {
+        margin: 20px 0;
+
+        .gallery-block, .text-block {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .gallery-block {
+            justify-content: center;
+        }
+
+        .text-block {
+
+        }
+    }
 }

@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 $title: 'Kaushan Script', cursive;
 $text: 'Oswald', sans-serif;
 
@@ -14,5 +16,14 @@ h2 {
     font-family: $text;
     font-size: 20px;
     margin-bottom: 0px;
+}
+
+.text-clickable {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: $text-grey;
+    }
 }
 

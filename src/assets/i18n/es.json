@@ -5,7 +5,9 @@
         "about": "Conócenos",
         "gallery": "Galería",
         "contact": "Contacto",
-        "services": "Servicios",
+        "printServices": "Impresión 3D",
+        "paintServices": "Pintura",
+        "references": "Referencias",
         "projects": "Proyectos"
     },
 
@@ -88,7 +90,10 @@
     "footer": {
         "about": "Sobre nosotros",
         "lastProjects": "Últimos proyectos",
-        "maginkLinks": "Magink Studio"
+        "maginkLinks": "Magink Studio",
+        "copy": "{{yearRange}} Magink Studio by Juanmi González",
+        "privacyPolicy": "Política de privacidad",
+        "terms": "Términos y condiciones"
     }
 
 }

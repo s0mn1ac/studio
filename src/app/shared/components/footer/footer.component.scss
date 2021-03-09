@@ -47,7 +47,11 @@
             font-size: 12px;
             justify-content: center;
             padding-top: 0.5rem;
-            background: linear-gradient($transparent, black);
+            // background: linear-gradient($transparent, black);
+
+            .separator {
+                margin: 0 0.5rem;
+            }
         }
     }
 }

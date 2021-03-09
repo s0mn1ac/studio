@@ -18,24 +18,18 @@
 
                 <p class="title"> {{ t('footer.lastProjects').toUpperCase() }} </p>
 
-                <p class="link"> Link </p>
-                <p class="link"> Link </p>
-                <p class="link"> Link </p>
-                <p class="link"> Link </p>
+                <p class="link text-clickable"> Link </p>
+                <p class="link text-clickable"> Link </p>
+                <p class="link text-clickable"> Link </p>
+                <p class="link text-clickable"> Link </p>
 
             </div>
 
             <mat-divider vertical="true"></mat-divider>
 
             <div class="footer-links flex-column">
-
                 <p class="title"> {{ t('footer.maginkLinks').toUpperCase() }} </p>
-
-                <p class="link"> Link </p>
-                <p class="link"> Link </p>
-                <p class="link"> Link </p>
-                <p class="link"> Link </p>
-
+                <p class="link text-clickable" *ngFor="let footer of footerItems" (click)="onClickFooterOption(footer.id)"> {{ t('header.' + footer.id) }} </p>
             </div>
 
         </div>
@@ -49,7 +43,11 @@
         </div>
 
         <div class="copy-row flex-row">
-            <p> &copy; 2021 TEIDEV BY JUANMI GONZÁLEZ </p>
+            <span> &copy; {{ t('footer.copy', { yearRange: yearRange }).toUpperCase() }} </span>
+            <span class="separator"> | </span>
+            <span class="text-clickable"> {{ t('footer.privacyPolicy').toUpperCase() }} </span>
+            <span class="separator"> | </span>
+            <span class="text-clickable"> {{ t('footer.terms').toUpperCase() }} </span>
         </div>
 
     </div>

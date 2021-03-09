@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCube, faLayerGroup, faUserEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-print-services',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrintServicesComponent implements OnInit {
 
+  public faCube = faCube;
+  public faUserEdit = faUserEdit;
+  public faLayerGroup = faLayerGroup;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
