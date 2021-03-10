@@ -1,0 +1,33 @@
+@import '../../../../../../../assets/scss/main-styles.scss';
+
+.quality-badge-layout {
+    width: 100%;
+    height: 100%;
+
+    .quality-badge-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .crown-img-block {
+            position: absolute;
+            width: 100%;
+
+            img {
+                width: 100%;
+                mix-blend-mode: overlay;
+            }
+        }
+
+        .badge-img-block{
+            position: absolute;
+            width: 100%;
+            bottom: -50px;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}
+   

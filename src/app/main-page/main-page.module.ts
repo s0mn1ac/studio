@@ -13,6 +13,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { PaintServicesComponent } from './components/services/components/paint-services/paint-services.component';
 import { PrintServicesComponent } from './components/services/components/print-services/print-services.component';
 import { ReferencesComponent } from './components/references/references.component';
+import { QualityBadgeComponent } from './components/services/components/paint-services/quality-badge/quality-badge.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { ReferencesComponent } from './components/references/references.componen
         ServicesComponent,
         PaintServicesComponent,
         PrintServicesComponent,
+        QualityBadgeComponent,
         ReferencesComponent
     ],
     imports: [

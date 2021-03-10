@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  public images: any[] = [];
+  public imagesFirstRow: any[] = [];
+  public imagesSecondRow: any[] = [];
   public responsiveOptions!: any[];
 
   constructor() { }
@@ -18,10 +19,17 @@ export class GalleryComponent implements OnInit {
 
   private getImages(): void {
 
-    for (let i = 0; i < 20; i++) {
-      this.images.push({
-        previewImageSrc: `../../../../assets/images/miniatures/image-${i}.jpg`,
-        thumbnailImageSrc: `../../../../assets/images/miniatures/image-${i}.jpg`,
+    for (let i = 0; i < 3; i++) {
+      this.imagesFirstRow.push({
+        title: `image${i}`,
+        url: `url(../../../../assets/images/miniatures/full-size/image-${i}.jpeg)`,
+      });
+    }
+
+    for (let i = 3; i < 6; i++) {
+      this.imagesSecondRow.push({
+        title: `image${i}`,
+        url: `url(../../../../assets/images/miniatures/full-size/image-${i}.jpeg)`,
       });
     }
 

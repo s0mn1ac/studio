@@ -3,12 +3,12 @@
         <h2 class="subtitle"> {{ t('mainPage.gallery.subtitle').toUpperCase() }} </h2>
         <h1 class="title"> {{ t('mainPage.gallery.title') }} </h1>
 
-        <div class="gallery-container flex-row">
+        <!-- <div class="gallery-container flex-row">
 
             <div class="gallery-block flex-row">
                 <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '660px'}" [numVisible]="5">
                     <ng-template pTemplate="item" let-item>
-                        <img [src]="item.previewImageSrc" style="width: 100%;" />
+                        <img [src]="item.previewImageSrc" class="custom-shadow" style="width: 100%;" />
                     </ng-template>
                     <ng-template pTemplate="thumbnail" let-item>
                         <div class="p-grid p-nogutter p-justify-center">
@@ -20,8 +20,30 @@
 
             <div class="text-block flex-row">
 
+                <p> <span>  </span> </p>
+
+            </div>
+
+        </div> -->
+
+        <div class="main-gallery-block flex-column">
+
+            <div class="first-row flex-row">
+                <div class="img-container pointer custom-shadow" *ngFor="let image of imagesFirstRow" [ngStyle]="{'background-image': image.url}">
+                    <div class="text-container flex-column">
+                        <span> {{ t('mainPage.gallery.galleryTitles.' + image.title).toUpperCase() }} </span>
+                    </div>
+                </div>
             </div>
             
+            <div class="second-row flex-row">
+                <div class="img-container pointer custom-shadow" *ngFor="let image of imagesSecondRow" [ngStyle]="{'background-image': image.url}">
+                    <div class="text-container flex-column">
+                        <span> {{ t('mainPage.gallery.galleryTitles.' + image.title).toUpperCase() }} </span>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>

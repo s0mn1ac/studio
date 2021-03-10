@@ -1,21 +1,12 @@
 @import '../../../assets/scss/main-styles.scss';
 
-// @mixin main-theme($theme) {
-//     $primary: map-get($theme, primary);
-//     $warn: map-get($theme, warn);
-//     $background: map-get($theme, background);
-//     $foreground: map-get($theme, foreground);
 .main-page-layout {
+    font-family: $text;
 
     .parallax-container {
         position: relative;
-        /* The image used */
-        background-image: url("https://www.diariodesevilla.es/2020/12/29/deportes/Levante-Betis-Horario-television-Liga_1533156670_129909020_667x375.jpg");
-      
-        /* Set a specific height */
+        background-image: url("../../../assets/images/miniatures/full-size/image-4.jpeg");
         min-height: 500px; 
-      
-        /* Create the parallax scrolling effect */
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -26,8 +17,6 @@
             height: 200px;
             top: -1px;
             left: -1px;
-
         }
     }
 }
-// }
