@@ -21,11 +21,14 @@ export class FooterComponent implements OnInit {
 
   public footerItems!: HeaderItem[];
 
+  public images: any[] = [];
+
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
     this.setCopyYear();
     this.initFooterItems();
+    this.getImages();
   }
 
   public onClickFooterOption(name: string): void {
@@ -50,6 +53,17 @@ export class FooterComponent implements OnInit {
       { id: SectionName.GALLERY, active: false },
       { id: SectionName.CONTACT, active: false }
     ];
+
+  }
+
+  private getImages(): void {
+
+    for (let i = 0; i < 6; i++) {
+      this.images.push({
+        title: `image${i}`,
+        url: `url(../../../../assets/images/miniatures/full-size/image-${i}.jpeg)`,
+      });
+    }
 
   }
 

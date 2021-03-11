@@ -64,12 +64,14 @@
 
         "references": {
             "subtitle": "Referencias",
-            "title": "Han confiado en nosotros"
+            "titleFirstPart": "Han confiado ",
+            "titleSecondPart": "en nosotros"
         },
 
         "gallery": {
             "subtitle": "Galería",
-            "title": "Echa un vistazo a nuestros últimos proyectos",
+            "titleFirstPart": "Echa un vistazo a ",
+            "titleSecondPart": "nuestros últimos proyectos",
             "galleryTitles": {
                 "image0": "Título 1",
                 "image1": "Título 2",
@@ -82,7 +84,8 @@
 
         "contact": {
             "subtitle": "Contacto",
-            "title": "Contacta con nosotros",
+            "titleFirstPart": "Contacta ",
+            "titleSecondPart": "con nosotros",
             "content": {
                 "firstParagraph": "Si necesitas ponerte en contacto con nosotros puedes hacerlo a través de los siguientes canales de comunicación:",
                 "secondParagraph": "¡Estamos deseando ayudarte!"
@@ -98,7 +101,8 @@
         "about": "Sobre nosotros",
         "lastProjects": "Últimos proyectos",
         "maginkLinks": "Magink Studio",
-        "copy": "{{yearRange}} Magink Studio by Juanmi González",
+        "copy": "{{yearRange}} Magink Studio by",
+        "developer": "Juanmi González",
         "privacyPolicy": "Política de privacidad",
         "terms": "Términos y condiciones"
     }

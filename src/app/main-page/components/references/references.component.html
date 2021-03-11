@@ -1,7 +1,10 @@
 <div class="references-layout flex-column" *transloco="let t">
     <div data-aos="fade-left">
         <h2 class="subtitle"> {{ t('mainPage.references.subtitle').toUpperCase() }} </h2>
-        <h1 class="title"> {{ t('mainPage.references.title') }} </h1>
+        <h1 class="title">
+            <span class="first-part"> {{ t('mainPage.references.titleFirstPart') }} </span>
+            <span class="second-part"> {{ t('mainPage.references.titleSecondPart') }} </span>
+        </h1>
 
         <div class="carousel-container">
             <p-carousel [value]="customers" styleClass="references-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">

@@ -64,12 +64,14 @@
 
         "references": {
             "subtitle": "References",
-            "title": "Have trusted us"
+            "titleFirstPart": "Have ",
+            "titleSecondPart": "trusted us"
         },
 
         "gallery": {
             "subtitle": "Gallery",
-            "title": "We make your dreams come true",
+            "titleFirstPart": "Check our ",
+            "titleSecondPart": "last projects",
             "galleryTitles": {
                 "image0": "Title 1",
                 "image1": "Title 2",
@@ -82,7 +84,8 @@
 
         "contact": {
             "subtitle": "Contact",
-            "title": "We make your dreams come true",
+            "titleFirstPart": "Contact ",
+            "titleSecondPart": "with us",
             "content": {
                 "firstParagraph": "If you need to contact us, you can do so through the following communication channels:",
                 "secondParagraph": "We are looking forward to help you!"
@@ -98,7 +101,8 @@
         "about": "About us",
         "lastProjects": "Last projects",
         "maginkLinks": "Magink Studio",
-        "copy": "{{yearRange}} Magink Studio by Juanmi González",
+        "copy": "{{yearRange}} Magink Studio by ",
+        "developer": "Juanmi González",
         "privacyPolicy": "Privacy policy",
         "terms": "Terms and conditions"
     }

@@ -18,10 +18,9 @@
 
                 <p class="title"> {{ t('footer.lastProjects').toUpperCase() }} </p>
 
-                <p class="link text-clickable"> Link </p>
-                <p class="link text-clickable"> Link </p>
-                <p class="link text-clickable"> Link </p>
-                <p class="link text-clickable"> Link </p>
+                <div class="img-row flex-row">
+                    <div class="img-container pointer custom-shadow zoom" *ngFor="let image of images" [ngStyle]="{'background-image': image.url}"></div>
+                </div>
 
             </div>
 
@@ -44,6 +43,7 @@
 
         <div class="copy-row flex-row">
             <span> &copy; {{ t('footer.copy', { yearRange: yearRange }).toUpperCase() }} </span>
+            <span class="text-clickable" style="margin-left: 4px;"> {{ t('footer.developer').toUpperCase() }} </span>
             <span class="separator"> | </span>
             <span class="text-clickable"> {{ t('footer.privacyPolicy').toUpperCase() }} </span>
             <span class="separator"> | </span>

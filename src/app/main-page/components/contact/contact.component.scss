@@ -5,13 +5,25 @@
     text-align: center;
     font-family: $text;
 
+    .title {
+
+        .second-part {
+            color: $accent-color;
+        }
+    }
+
     .icon-container {
         justify-content: center;
 
-        fa-icon {
-            margin: 1rem;
-            font-size: 50px;
+        a {
+            color: $white !important;
+            
+            fa-icon {
+                margin: 1rem;
+                font-size: 50px;
+            }
         }
+
     }
 
     .second-paragraph {

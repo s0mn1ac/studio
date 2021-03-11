@@ -20,6 +20,27 @@
                 width: 100%;
                 padding: 0.5rem;
 
+                .img-row {
+                    width: 100%;
+                    flex-wrap: wrap;
+
+                    .img-container {
+                        width: 50px;
+                        margin: 5px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        transition: all .5s !important;
+                        justify-content: center;
+
+                        &:before {
+                            content: "";
+                            float: left;
+                            padding-top: 100%;
+                        }
+                    }
+                }
+
                 .title {
                     font-weight: bold;
                 }
@@ -47,12 +68,19 @@
         .copy-row {
             font-size: 12px;
             justify-content: center;
-            padding-top: 0.5rem;
-            // background: linear-gradient($transparent, black);
+            padding: 0.5rem 0;
+            flex-wrap: wrap;
 
             .separator {
                 margin: 0 0.5rem;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .main-row {
+        flex-wrap: wrap;
     }
 }
