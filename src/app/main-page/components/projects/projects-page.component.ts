@@ -38,7 +38,7 @@ export class ProjectsPageComponent implements OnInit {
       const imageItem = new ImageItem();
       const route = `../../../assets/images/miniatures/image-${index}.jpg`;
       imageItem.id = index;
-      imageItem.image = route;
+      imageItem.url = route;
       this.imageItems.push(imageItem);
       this.prop.images.push({path: route});
     }

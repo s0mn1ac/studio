@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ImageItem } from 'src/app/shared/models/image-item.model';
+import { FullScreenDialogComponent } from './full-screen-dialog/full-screen-dialog.component';
 
 @Component({
   selector: 'app-gallery',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  public imagesFirstRow: any[] = [];
-  public imagesSecondRow: any[] = [];
+  @ViewChild('fullScreenDialog') public fullScreenDialog!: FullScreenDialogComponent;
+
+  public imagesFirstRow: ImageItem[] = [];
+  public imagesSecondRow: ImageItem[] = [];
   public responsiveOptions!: any[];
+
+  public imageSelected!: ImageItem;
+  public isDialogVisible = false;
 
   constructor() { }
 
@@ -20,17 +27,17 @@ export class GalleryComponent implements OnInit {
   private getImages(): void {
 
     for (let i = 0; i < 3; i++) {
-      this.imagesFirstRow.push({
-        title: `image${i}`,
-        url: `url(../../../../assets/images/miniatures/full-size/image-${i}.jpeg)`,
-      });
+      const imageItem = new ImageItem();
+      imageItem.title =  `image${i}`;
+      imageItem.url = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
+      this.imagesFirstRow.push(imageItem);
     }
 
     for (let i = 3; i < 6; i++) {
-      this.imagesSecondRow.push({
-        title: `image${i}`,
-        url: `url(../../../../assets/images/miniatures/full-size/image-${i}.jpeg)`,
-      });
+      const imageItem = new ImageItem();
+      imageItem.title =  `image${i}`;
+      imageItem.url = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
+      this.imagesSecondRow.push(imageItem);
     }
 
     this.responsiveOptions = [
@@ -47,6 +54,11 @@ export class GalleryComponent implements OnInit {
           numVisible: 1
       }
     ];
+  }
+
+  public selectImage(image: ImageItem): void {
+    this.imageSelected = image;
+    this.fullScreenDialog.showDialog();
   }
 
 }

@@ -3,13 +3,13 @@
         
         <div class="title-container">
             <h2 class="subtitle"> {{ t('mainPage.about.subtitle').toUpperCase() }} </h2>
-            <h1 class="text-animation-container">    
+            <h1 class="text-animation-container flex-row">    
                 <span class="title"> {{ t('mainPage.about.title') }} </span> 
                 <div> 
                     <ul class="flip-animation"> 
-                        <li> {{ t('mainPage.about.content.list.professional') }} </li>
-                        <li> {{ t('mainPage.about.content.list.enthusiastic') }} </li>
-                        <li> {{ t('mainPage.about.content.list.passionate') }} </li>
+                        <li> {{ t('mainPage.about.content.list.professional.title') }} </li>
+                        <li> {{ t('mainPage.about.content.list.enthusiastic.title') }} </li>
+                        <li> {{ t('mainPage.about.content.list.passionate.title') }} </li>
                     </ul>
                 </div>
             </h1>
@@ -23,21 +23,9 @@
             
             <div class="card-container flex-row">
 
-                <div class="card">
-                    Actitud
-                </div>
-
-                <div class="card">
-                    Ganas de currar
-                </div>
-
-                <div class="card">
-                    Profesionalidad
-                </div>
+                <app-presentation-card class="card" [image]="image" *ngFor="let image of images"></app-presentation-card>
 
             </div>
-
-            <p> <span> {{ t('mainPage.about.mainText') }} </span> </p>
 
         </div>
 

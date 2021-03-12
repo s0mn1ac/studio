@@ -19,8 +19,9 @@ export class AppComponent implements OnInit {
     private themingService: ThemingService,
     private overlayContainer: OverlayContainer
   ) {
-    this.matIconRegistry.addSvgIcon('custom-flag-es', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/es.svg'));
-    this.matIconRegistry.addSvgIcon('custom-flag-en', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/en.svg'));
+    this.matIconRegistry.addSvgIcon('custom-flag-es', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/spain-flag.svg'));
+    this.matIconRegistry.addSvgIcon('custom-flag-en', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/united-kingdom-flag.svg'));
+    this.matIconRegistry.addSvgIcon('custom-flag-de', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/germany-flag.svg'));
   }
 
   ngOnInit(): void {

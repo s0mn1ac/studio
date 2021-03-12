@@ -27,11 +27,13 @@
 
         .custom-card-front {
             background-color: $accent-color;
+            border-radius: 4px;
         }
 
         .custom-card-back {
             background-color: $material-dark;
             color: $white;
+            border-radius: 4px;
         }
 
         .img-container {
@@ -53,7 +55,8 @@
         .paint-custom-card {
             width: 100%;
             max-width: 1600px;
-            margin: 5rem 2rem 2rem 2rem;
+            margin: 5rem 0 2rem 0;
+            border-radius: 4px;
             background-color: $accent-color;
 
             .icon-container {

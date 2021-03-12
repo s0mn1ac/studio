@@ -14,6 +14,8 @@ import { PaintServicesComponent } from './components/services/components/paint-s
 import { PrintServicesComponent } from './components/services/components/print-services/print-services.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { QualityBadgeComponent } from './components/services/components/paint-services/quality-badge/quality-badge.component';
+import { PresentationCardComponent } from './components/about/presentation-card/presentation-card.component';
+import { FullScreenDialogComponent } from './components/gallery/full-screen-dialog/full-screen-dialog.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,9 @@ import { QualityBadgeComponent } from './components/services/components/paint-se
         PaintServicesComponent,
         PrintServicesComponent,
         QualityBadgeComponent,
-        ReferencesComponent
+        ReferencesComponent,
+        PresentationCardComponent,
+        FullScreenDialogComponent
     ],
     imports: [
         CommonModule,

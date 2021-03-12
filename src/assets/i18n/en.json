@@ -26,9 +26,18 @@
             "title": "We are",
             "content": {
                 "list": {
-                    "professional": "professional",
-                    "enthusiastic": "enthusiastic",
-                    "passionate": "passionate"
+                    "professional": {
+                        "title": "professional",
+                        "description": "Aquí va un texto explicando un poco el concepto"
+                    },
+                    "enthusiastic": {
+                        "title": "enthusiastic",
+                        "description": "Aquí va un texto explicando un poco el concepto"
+                    },
+                    "passionate": {
+                        "title": "passionate",
+                        "description": "Aquí va un texto explicando un poco el concepto"
+                    }
                 },
                 "firstParagraph": "Nuestro principal objetivo es ayudarte a sacar del gris tus minis y darles vida. ¿Que no tienes minis? No te preocupes, pues también somos unos auténticos frikis de la impresión 3D y podemos ayudarte con eso.",
                 "secondParagraph": "Contamos con las mejores herramientas para dar vida a tus proyectos:"
