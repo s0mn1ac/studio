@@ -1,0 +1,28 @@
+<div class="cookie-policy-layout" *transloco="let t">
+
+    <p-dialog #cookiePolicyDialog [showHeader]="false" *ngIf="isDialogVisible" [(visible)]="isDialogVisible" [modal]="true" [draggable]="false" [dismissableMask]="true" [resizable]="false" (onHide)="hideDialog()">
+    
+        <div class="sections flex-column">
+            <h1> {{ t('footer.cookiePolicy.title') }} </h1>
+            <p> <span> {{ t('footer.cookiePolicy.description') }} </span> </p>
+            <h1> {{ t('footer.cookiePolicy.sections.firstSection.title') }} </h1>
+            <p> <span> {{ t('footer.cookiePolicy.sections.firstSection.firstParagraph') }} </span> </p>
+            <p> <span> {{ t('footer.cookiePolicy.sections.firstSection.secondParagraph') }} </span> </p>
+            <h1> {{ t('footer.cookiePolicy.sections.secondSection.title') }} </h1>
+            <p> <span> {{ t('footer.cookiePolicy.sections.secondSection.firstParagraph') }} </span> </p>
+            <ul>
+                <li class="text-clickable"> <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank"> {{ t('footer.cookiePolicy.explorers.firefox') }} </a> </li>
+                <li class="text-clickable"> <a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank"> {{ t('footer.cookiePolicy.explorers.chrome') }} </a> </li>
+                <li class="text-clickable"> <a href="https://support.microsoft.com/es-es/topic/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank"> {{ t('footer.cookiePolicy.explorers.internetExplorer') }} </a> </li>
+                <li class="text-clickable"> <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank"> {{ t('footer.cookiePolicy.explorers.safari') }} </a> </li>
+            </ul>
+            <h1> {{ t('footer.cookiePolicy.sections.thirdSection.title') }} </h1>
+            <p>
+                <span> {{ t('footer.cookiePolicy.sections.thirdSection.firstParagraph') }} </span>
+                <span class="text-clickable"> {{ t('footer.cookiePolicy.clickHere') }} </span>
+            </p>
+        </div>
+
+    </p-dialog>
+    
+</div>

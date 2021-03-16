@@ -45,10 +45,13 @@
             <span> &copy; {{ t('footer.copy', { yearRange: yearRange }).toUpperCase() }} </span>
             <span class="text-clickable" style="margin-left: 4px;"> {{ t('footer.developer').toUpperCase() }} </span>
             <span class="separator"> | </span>
-            <span class="text-clickable"> {{ t('footer.privacyPolicy').toUpperCase() }} </span>
+            <span class="text-clickable" (click)="showCookiePolicyDialog()"> {{ t('footer.cookiePolicy.title').toUpperCase() }} </span>
             <span class="separator"> | </span>
-            <span class="text-clickable"> {{ t('footer.terms').toUpperCase() }} </span>
+            <span class="text-clickable"> {{ t('footer.termsAndConditions.title').toUpperCase() }} </span>
         </div>
 
     </div>
+
+    <app-cookie-policy #cookiePolicyDialog></app-cookie-policy>
+
 </div>

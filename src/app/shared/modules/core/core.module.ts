@@ -12,6 +12,8 @@ import { PrimeNgModule } from '../primeng/primeng.module';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-top.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { CookiePolicyComponent } from '../../components/footer/cookie-policy/cookie-policy.component';
+import { TermsAndConditionsComponent } from '../../components/footer/terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +21,9 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
         LayoutComponent,
         FooterComponent,
         SidebarComponent,
-        ScrollToTopComponent
+        ScrollToTopComponent,
+        CookiePolicyComponent,
+        TermsAndConditionsComponent
     ],
     entryComponents: [],
     imports: [
@@ -37,6 +41,8 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
         FooterComponent,
         SidebarComponent,
         ScrollToTopComponent,
+        CookiePolicyComponent,
+        TermsAndConditionsComponent,
         MaterialModule,
         PrimeNgModule,
         FontAwesomeModule

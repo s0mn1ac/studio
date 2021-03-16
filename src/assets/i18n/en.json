@@ -113,7 +113,35 @@
         "copy": "{{yearRange}} Magink Studio by ",
         "developer": "Juanmi González",
         "privacyPolicy": "Privacy policy",
-        "terms": "Terms and conditions"
+        "termsAndConditions": {
+            "title": "Terms and conditions"
+        },
+        "cookiePolicy": {
+            "title": "Cookies policy",
+            "description": "Cookies are small amounts of information that are stored in the browser used by each user so that the server remembers certain information that it can use later.",
+            "sections": {
+                "firstSection": {
+                    "title": "Cookies used on this website",
+                    "firstParagraph": "This website uses third-party cookies, which are those that are sent to your computer or terminal from a domain or a website that is not managed by us, but by another entity that processes the data obtained through cookies.",
+                    "secondParagraph": "In this case, Cookies are used for statistical purposes related to the visits it receives and the pages that are consulted, their use being accepted when browsing it."
+                },
+                "secondSection": {
+                    "title": "Cookies deactivation",
+                    "firstParagraph": "To find out how to delete cookies from your browser:"
+                },
+                "thirdSection": {
+                    "title": "Additional notes",
+                    "firstParagraph": "For more information about the types of Google data analysis and tracking cookies,"
+                }
+            },
+            "explorers": {
+                "firefox": "Firefox",
+                "chrome": "Chrome",
+                "internetExplorer": "Internet Explorer",
+                "safari": "Safari"
+            },
+            "clickHere": "click here"
+        }
     }
 
 }

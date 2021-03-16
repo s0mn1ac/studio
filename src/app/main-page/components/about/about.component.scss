@@ -47,7 +47,13 @@
             margin: 1rem 0;
 
             .card {
-                margin: 2rem;
+                margin: 3rem;
+
+                &:hover {
+                    -ms-transform: scale(1.03);
+                    -webkit-transform: scale(1.03);
+                    transform: scale(1.03);
+                }
             }
         }
     }

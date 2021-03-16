@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { SectionName } from '../../enums/section-name.enum';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +11,8 @@ import { AppService } from '../../services/app.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+
+  @ViewChild('cookiePolicyDialog') public cookiePolicyDialog!: CookiePolicyComponent;
 
   public faInstagram = faInstagram;
   public faFacebook = faFacebook;
@@ -37,6 +40,10 @@ export class FooterComponent implements OnInit {
 
   public async navigateTo(name: string): Promise<void> {
     this.appService.headerService.navigateTo(name);
+  }
+
+  public showCookiePolicyDialog(): void {
+    this.cookiePolicyDialog.showDialog();
   }
 
   private setCopyYear(): void {

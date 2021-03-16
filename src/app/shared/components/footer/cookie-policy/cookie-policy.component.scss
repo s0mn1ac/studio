@@ -1,0 +1,50 @@
+@import '../../../../../assets/scss/main-styles.scss';
+
+:host ::ng-deep .cookie-policy-layout {
+
+    .p-dialog {
+        width: 100%;
+        max-width: calc(100vw - 120px);
+        // height: 100%;
+        max-height: calc(100vh - 120px);
+
+        .p-dialog-content {
+            height: 100%;
+            padding: 2rem;
+            border-radius: 4px;
+
+            .sections {
+                color: $material-dark;
+                font-family: $text;
+                font-size: 20px;
+                
+                h1 {
+                    margin-top: 2rem;
+                }
+
+                ul li {
+                    margin: 1rem 0;
+
+                    a {
+                        text-decoration: none;
+                        color: $material-dark;
+    
+                        transition: all .2s ease-in-out;
+    
+                        &:hover {
+                            color: $text-grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .p-dialog {
+            max-width: calc(100vw - 50px);
+            max-height: calc(100vh - 50px);
+        }
+    }
+
+}
