@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-cookie-policy',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CookiePolicyComponent implements OnInit {
 
-  public isDialogVisible = true;
+  public isDialogVisible = false;
+
+  public faCookieBite = faCookieBite;
 
   constructor() { }
 
