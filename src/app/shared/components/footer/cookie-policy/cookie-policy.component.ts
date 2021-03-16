@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CookiePolicyComponent implements OnInit {
 
-  public isDialogVisible = false;
+  public isDialogVisible = true;
 
   constructor() { }
 
