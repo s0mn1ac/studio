@@ -47,11 +47,12 @@
             <span class="separator"> | </span>
             <span class="text-clickable" (click)="showCookiePolicyDialog()"> {{ t('footer.cookiePolicy.title').toUpperCase() }} </span>
             <span class="separator"> | </span>
-            <span class="text-clickable"> {{ t('footer.termsAndConditions.title').toUpperCase() }} </span>
+            <span class="text-clickable" (click)="showTermsAndConditionsDialog()"> {{ t('footer.termsAndConditions.title').toUpperCase() }} </span>
         </div>
 
     </div>
 
     <app-cookie-policy #cookiePolicyDialog></app-cookie-policy>
+    <app-terms-and-conditions #termsAndConditionsDialog></app-terms-and-conditions>
 
 </div>

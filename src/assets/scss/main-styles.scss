@@ -23,4 +23,9 @@
     cursor: pointer;
 }
 
+.p-overlaypanel {
 
+    &:after, &:before {
+        content: none !important;
+    }
+}

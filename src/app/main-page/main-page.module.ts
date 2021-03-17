@@ -16,6 +16,7 @@ import { ReferencesComponent } from './components/references/references.componen
 import { QualityBadgeComponent } from './components/services/components/paint-services/quality-badge/quality-badge.component';
 import { PresentationCardComponent } from './components/about/presentation-card/presentation-card.component';
 import { FullScreenDialogComponent } from './components/gallery/full-screen-dialog/full-screen-dialog.component';
+import { ExtendedGalleryComponent } from './components/gallery/extended-gallery/extended-gallery.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { FullScreenDialogComponent } from './components/gallery/full-screen-dial
         QualityBadgeComponent,
         ReferencesComponent,
         PresentationCardComponent,
-        FullScreenDialogComponent
+        FullScreenDialogComponent,
+        ExtendedGalleryComponent
     ],
     imports: [
         CommonModule,

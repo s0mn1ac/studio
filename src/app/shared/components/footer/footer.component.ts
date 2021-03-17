@@ -4,6 +4,7 @@ import { SectionName } from '../../enums/section-name.enum';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 @Component({
   selector: 'app-footer',
@@ -13,6 +14,7 @@ import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 export class FooterComponent implements OnInit {
 
   @ViewChild('cookiePolicyDialog') public cookiePolicyDialog!: CookiePolicyComponent;
+  @ViewChild('termsAndConditionsDialog') public termsAndConditionsDialog!: TermsAndConditionsComponent;
 
   public faInstagram = faInstagram;
   public faFacebook = faFacebook;
@@ -44,6 +46,10 @@ export class FooterComponent implements OnInit {
 
   public showCookiePolicyDialog(): void {
     this.cookiePolicyDialog.showDialog();
+  }
+
+  public showTermsAndConditionsDialog(): void {
+    this.termsAndConditionsDialog.showDialog();
   }
 
   private setCopyYear(): void {

@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermsAndConditionsComponent implements OnInit {
 
+  public isDialogVisible = false;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  public showDialog(): void {
+    this.isDialogVisible = true;
+  }
+
+  public hideDialog(): void {
+    this.isDialogVisible = false;
   }
 
 }

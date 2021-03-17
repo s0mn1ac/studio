@@ -1,0 +1,51 @@
+@import '../../../../../assets/scss/main-styles.scss';
+
+.extended-gallery-layout {
+
+    .extended-gallery-container {
+        width: 100%;
+        height: 600px;
+        background-color: $white;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .filter-container {
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 4px;
+            padding: 1rem;
+
+            .filter-item {
+                padding: 0.5rem;
+                background-color: $material-dark;
+                margin: 0 0.5rem;
+                border-radius: 4px;
+            }
+        }
+
+        .gallery-container {
+            margin: 1rem 0;
+        }
+
+        .chip-container {
+            background-color: $material-dark;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 4px;
+            padding: 1rem;
+
+            p-chip {
+                margin: 0 0.5rem;
+            }
+        }
+    }
+}
+
+.filter-item {
+    color: $white;
+    padding: 0.5rem;
+    background-color: $material-dark;
+    margin: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}

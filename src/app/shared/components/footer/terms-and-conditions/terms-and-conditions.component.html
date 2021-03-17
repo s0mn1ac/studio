@@ -1,1 +1,11 @@
-<p>terms-and-conditions works!</p>
+<div class="terms-and-conditions-layout" *transloco="let t">
+
+    <p-dialog #termsAndConditionsDialog *ngIf="isDialogVisible" [(visible)]="isDialogVisible" [draggable]="false" [dismissableMask]="true" [resizable]="false" (onHide)="hideDialog()">
+
+        <div class="sections flex-column">
+            <h1 style="margin-top: 0;"> {{ t('footer.termsAndConditions.title') }} </h1>
+        </div>
+
+    </p-dialog>
+    
+</div>
