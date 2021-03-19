@@ -17,6 +17,7 @@ import { QualityBadgeComponent } from './components/services/components/paint-se
 import { PresentationCardComponent } from './components/about/presentation-card/presentation-card.component';
 import { FullScreenDialogComponent } from './components/gallery/full-screen-dialog/full-screen-dialog.component';
 import { ExtendedGalleryComponent } from './components/gallery/extended-gallery/extended-gallery.component';
+import { ChipComponent } from './components/gallery/extended-gallery/chip/chip.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { ExtendedGalleryComponent } from './components/gallery/extended-gallery/
         ReferencesComponent,
         PresentationCardComponent,
         FullScreenDialogComponent,
-        ExtendedGalleryComponent
+        ExtendedGalleryComponent,
+        ChipComponent
     ],
     imports: [
         CommonModule,

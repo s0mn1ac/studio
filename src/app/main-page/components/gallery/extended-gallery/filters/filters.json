@@ -1,0 +1,86 @@
+{
+    "mainFilterItem": [
+        {
+            "id": 1,
+            "title": "Humano",
+            "img": "Humano",
+            "subFilterItems": [
+                {
+                    "id": 2,
+                    "selected": false,
+                    "label": "Hombre",
+                    "subFilterItems": [
+                        {
+                            "id": 3,
+                            "selected": false,
+                            "label": "Verde"
+                        },
+                        {
+                            "id": 4,
+                            "selected": false,
+                            "label": "Azul"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "selected": false,
+                    "label": "Mujer",
+                    "subFilterItems": [
+                        {
+                            "id": 6,
+                            "selected": false,
+                            "label": "Verde"
+                        },
+                        {
+                            "id": 7,
+                            "selected": false,
+                            "label": "Azul"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Orco",
+            "img": "Orco",
+            "subFilterItems": [
+                {
+                    "id": 9,
+                    "selected": false,
+                    "label": "Macho",
+                    "subFilterItems": [
+                        {
+                            "id": 10,
+                            "selected": false,
+                            "label": "Verde"
+                        },
+                        {
+                            "id": 11,
+                            "selected": false,
+                            "label": "Azul"
+                        }
+                    ]
+                },
+                {
+                    "id": 12,
+                    "selected": false,
+                    "label": "Hembra",
+                    "subFilterItems": [
+                        {
+                            "id": 13,
+                            "selected": false,
+                            "label": "Verde"
+                        },
+                        {
+                            "id": 14,
+                            "selected": false,
+                            "label": "Azul"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

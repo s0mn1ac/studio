@@ -3,11 +3,11 @@
     <div class="extended-gallery-container flex-column">
 
         <div class="filter-container flex-row">
-            <div class="filter-item pointer" *ngFor="let filter of filters" (click)="filterOverlayPanel.toggle($event)">
-                {{ filter.label }}
+            <div class="filter-item pointer" *ngFor="let filter of filters.mainFilterItem" (click)="filterOverlayPanel.toggle($event)">
+                {{ filter.title }}
                 <p-overlayPanel #filterOverlayPanel appendTo="body" [style]="{width: '450px'}">
                     <ng-template pTemplate>
-                        <div class="filter-item" *ngFor="let subFilterItem of filter.subFilterItems">
+                        <div class="filter-item" *ngFor="let subFilterItem of filter.subFilterItems" (click)="onClickFilterItem(subFilterItem)">
                             {{ subFilterItem.label }}
                         </div>
                     </ng-template>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="chip-container flex-row">
-            <p-chip *ngFor="let chip of chips" [label]="chip.title" [removable]="true" (onRemove)="removeChip(chip)"></p-chip>
+            <app-chip [chips]="chips" (hideChipEmitter)="onClickHideChip($event)" #chipsListContainer></app-chip>
         </div>
 
     </div>

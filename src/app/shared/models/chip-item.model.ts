@@ -1,6 +1,7 @@
 export class ChipItem {
+    id!: number;
     active!: boolean;
-    title!: string;
+    label!: string;
 
     constructor() { }
 }

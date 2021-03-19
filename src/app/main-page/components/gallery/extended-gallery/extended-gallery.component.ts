@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TreeNode } from 'primeng/api';
+import { Chip } from 'primeng/chip';
 import { ChipItem } from 'src/app/shared/models/chip-item.model';
-import { FilterItem } from 'src/app/shared/models/filter-item.model';
+import { FilterItem, MainFilterItem, SubFilterItem } from 'src/app/shared/models/filter-item.model';
 import { ImageItem } from 'src/app/shared/models/image-item.model';
+import { ChipComponent } from './chip/chip.component';
 
 @Component({
   selector: 'app-extended-gallery',
@@ -11,9 +13,11 @@ import { ImageItem } from 'src/app/shared/models/image-item.model';
 })
 export class ExtendedGalleryComponent implements OnInit {
 
+  @ViewChild('chipsListContainer') public chipsListContainer!: ChipComponent;
+
   public chips!: ChipItem[];
   public images!: ImageItem[];
-  public filters!: FilterItem[];
+  public filters!: FilterItem;
 
   constructor() { }
 
@@ -30,68 +34,55 @@ export class ExtendedGalleryComponent implements OnInit {
   }
 
   private initFilters(): void {
-
-    const filterItem1 = new FilterItem();
-    filterItem1.label = 'Humano';
-
-    const filterItem1a = new FilterItem();
-    filterItem1a.label = 'Humano Verde';
-    const filterItem1b = new FilterItem();
-    filterItem1b.label = 'Humano Rojo';
-    const filterItem1c = new FilterItem();
-    filterItem1c.label = 'Humano Azul';
-
-    filterItem1.subFilterItems = [filterItem1a, filterItem1b, filterItem1c];
-
-    const filterItem2 = new FilterItem();
-    filterItem2.label = 'Orco';
-
-    const filterItem2a = new FilterItem();
-    filterItem2a.label = 'Orco Verde';
-
-    const filterItem2b = new FilterItem();
-    filterItem2b.label = 'Orco Rojo';
-
-    const filterItem2c = new FilterItem();
-    filterItem2c.label = 'Orco Azul';
-
-    filterItem2.subFilterItems = [filterItem2a, filterItem2b, filterItem2c];
-
-    const filterItem3 = new FilterItem();
-    filterItem3.label = 'Elfo';
-
-    const filterItem3a = new FilterItem();
-    filterItem3a.label = 'Elfo Verde';
-
-    const filterItem3b = new FilterItem();
-    filterItem3b.label = 'Elfo Rojo';
-
-    const filterItem3c = new FilterItem();
-    filterItem3c.label = 'Elfo Azul';
-
-    filterItem3.subFilterItems = [filterItem3a, filterItem3b, filterItem3c];
-
-    this.filters = [filterItem1, filterItem2, filterItem3];
+    this.filters = require('./filters/filters.json');
   }
 
   private initChipItems(): void {
-    this.chips = [
-      { active: true, title: 'Orco' },
-      { active: true, title: 'Humano' },
-      { active: true, title: 'Elfo' },
-      { active: true, title: 'Brujo' },
-      { active: true, title: 'Robot' },
-      { active: true, title: 'No muerto' },
-      { active: true, title: 'Pirata espacial' },
-      { active: true, title: 'Marine' },
-      { active: true, title: 'Alien' },
-    ];
+    this.chips = [];
+    this.filters.mainFilterItem.forEach((mainFilterItem: MainFilterItem) => {
+      if (mainFilterItem.subFilterItems?.length > 0) {
+        this.generateChipsFromSubFilterItems(mainFilterItem.subFilterItems);
+      }
+    });
   }
 
-  public selectFilter(event: any): void {
+  private generateChipsFromSubFilterItems(subFilterItems: SubFilterItem[]): void {
+    subFilterItems.forEach((subFilterItem: SubFilterItem) => {
+      const chip = new ChipItem();
+      chip.active = subFilterItem.selected;
+      chip.label = subFilterItem.label;
+      chip.id = subFilterItem.id;
+      this.chips.push(chip);
+      if (subFilterItem.subFilterItems?.length > 0) {
+        this.generateChipsFromSubFilterItems(subFilterItem.subFilterItems);
+      }
+    });
   }
 
-  public unselectFilter(event: any): void {
+  public onClickFilterItem(subFilterItem: SubFilterItem): void {
+    subFilterItem.selected = !subFilterItem.selected;
+    const foundChip = this.chips.find((chip: ChipItem) => chip.id === subFilterItem.id);
+    if (foundChip) {
+      foundChip.active = subFilterItem.selected;
+    }
+  }
+
+  public onClickHideChip(chip: ChipItem): void {
+    chip.active = false;
+    this.filters.mainFilterItem.forEach((mainFilterItem: MainFilterItem) => {
+      this.searchBySubFilterItems(mainFilterItem.subFilterItems, chip);
+    });
+  }
+
+  private searchBySubFilterItems(subFilterItems: SubFilterItem[], chip: ChipItem): void {
+    subFilterItems.forEach((subFilterItem) => {
+      if (subFilterItem.id === chip.id) {
+        subFilterItem.selected = false;
+      }
+      if (subFilterItem.subFilterItems?.length > 0) {
+        this.searchBySubFilterItems(subFilterItem.subFilterItems, chip);
+      }
+    });
   }
 
   public removeChip(chip: ChipItem): void {
