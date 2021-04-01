@@ -3,12 +3,17 @@
     <div class="extended-gallery-container flex-column">
 
         <div class="filter-container flex-row">
-            <div class="filter-item pointer" *ngFor="let filter of filters.mainFilterItem" (click)="filterOverlayPanel.toggle($event)">
-                {{ filter.title }}
+            <div class="collection-item filter-item pointer" *ngFor="let collectionItem of collections" (click)="filterOverlayPanel.toggle($event)">
+                {{ collectionItem.name }}
                 <p-overlayPanel #filterOverlayPanel appendTo="body" [style]="{width: '450px'}">
                     <ng-template pTemplate>
-                        <div class="filter-item" *ngFor="let subFilterItem of filter.subFilterItems" (click)="onClickFilterItem(subFilterItem)">
-                            {{ subFilterItem.label }}
+                        <div class="faction-item filter-item" [ngClass]="{'expanded': factionItem.expanded}" *ngFor="let factionItem of collectionItem.factionItems">
+                            <span (click)="factionItem.expanded = !factionItem.expanded"> {{ factionItem.name }} </span>
+                            <div class="filter-item-container" *ngIf="factionItem.expanded">
+                                <div class="filter-item zoom" *ngFor="let filterItem of factionItem.filterItems" (click)="onClickFilterItem(filterItem)">
+                                    {{ filterItem.name }}
+                                </div>
+                            </div>
                         </div>
                     </ng-template>
                 </p-overlayPanel>

@@ -1,24 +1,8 @@
 export class FilterItem {
-    mainFilterItem!: MainFilterItem[];
-
-    constructor() { }
-}
-
-export class MainFilterItem {
     id!: number;
-    title!: string;
-    img!: string;
-    subFilterItems!: SubFilterItem[];
-
-    constructor() { }
-}
-
-
-export class SubFilterItem {
-    id!: number;
+    name!: string;
     selected = false;
-    label!: string;
-    subFilterItems!: SubFilterItem[];
+    disabled = false;
 
     constructor() { }
 }
