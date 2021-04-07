@@ -20,7 +20,7 @@ export class ChipComponent implements OnInit {
   }
 
   public activeChips(): ChipItem[] {
-    return this.chips.filter((chip: ChipItem) => chip.active);
+    return this.chips?.filter((chip: ChipItem) => chip.active);
   }
 
   public hideChip(chip: ChipItem): void {

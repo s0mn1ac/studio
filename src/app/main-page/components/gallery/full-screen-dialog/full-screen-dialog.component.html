@@ -2,7 +2,7 @@
 
     <p-dialog #fullScreenDialog [showHeader]="false" *ngIf="isDialogVisible" [(visible)]="isDialogVisible" [modal]="true" [draggable]="false" [dismissableMask]="true" [resizable]="false" (onHide)="hideDialog()">
     
-        <img [src]="'../' + imageSelected.url">
+        <img [src]="'../' + imageSelected.fullSize">
 
     </p-dialog>
     

@@ -25,7 +25,8 @@ import { IvyGalleryModule } from 'angular-gallery';
     HttpClientModule,
     MaterialModule,
     NgxPageScrollModule,
-    IvyGalleryModule
+    IvyGalleryModule,
+    HttpClientModule
   ],
   providers: [
     TranslocoInitializer,

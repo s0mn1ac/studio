@@ -3,24 +3,40 @@
     <div class="extended-gallery-container flex-column">
 
         <div class="filter-container flex-row">
-            <div class="collection-item filter-item pointer" *ngFor="let collectionItem of collections" (click)="filterOverlayPanel.toggle($event)">
-                {{ collectionItem.name }}
-                <p-overlayPanel #filterOverlayPanel appendTo="body" [style]="{width: '450px'}">
-                    <ng-template pTemplate>
-                        <div class="faction-item filter-item" [ngClass]="{'expanded': factionItem.expanded}" *ngFor="let factionItem of collectionItem.factionItems">
-                            <span (click)="factionItem.expanded = !factionItem.expanded"> {{ factionItem.name }} </span>
-                            <div class="filter-item-container" *ngIf="factionItem.expanded">
-                                <div class="filter-item zoom" *ngFor="let filterItem of factionItem.filterItems" (click)="onClickFilterItem(filterItem)">
-                                    {{ filterItem.name }}
+
+            <div class="collection-item-container flex-column" *ngFor="let collectionItem of collections">
+
+                <div class="collection-item filter-item pointer unselectable" (click)="filterOverlayPanel.toggle($event)">
+                    {{ collectionItem.name }}
+                </div>
+
+                <div class="overlay-panel-container">
+                    <p-overlayPanel #filterOverlayPanel>
+                        <ng-template pTemplate>
+                            <div class="faction-item filter-item" *ngFor="let factionItem of collectionItem.factionItems">
+                                <div class="faction-item-title unselectable" (click)="factionItem.expanded = !factionItem.expanded">
+                                    <span> {{ factionItem.name }} </span>
+                                </div>
+                                <div class="filter-item-container" *ngIf="factionItem.expanded">
+                                    <div class="filter-item zoom unselectable" [ngClass]="{'selected': filterItem.selected}" *ngFor="let filterItem of factionItem.filterItems" (click)="onClickFilterItem(filterItem)">
+                                        {{ filterItem.name }}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </ng-template>
-                </p-overlayPanel>
+                        </ng-template>
+                    </p-overlayPanel>
+                </div>
+
             </div>
         </div>
 
         <div class="gallery-container">
+
+            <div class="column-container">
+                <div class="image-item pointer zoom" *ngFor="let imageItem of images" >
+                    <img [src]="imageItem.thumbnail" (click)="showGallery(imageItem.fullSize)" [alt]="'name'">
+                </div>
+            </div>
 
         </div>
 

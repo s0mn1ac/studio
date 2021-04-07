@@ -29,14 +29,14 @@ export class GalleryComponent implements OnInit {
     for (let i = 0; i < 3; i++) {
       const imageItem = new ImageItem();
       imageItem.title =  `image${i}`;
-      imageItem.url = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
+      imageItem.fullSize = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
       this.imagesFirstRow.push(imageItem);
     }
 
     for (let i = 3; i < 6; i++) {
       const imageItem = new ImageItem();
       imageItem.title =  `image${i}`;
-      imageItem.url = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
+      imageItem.fullSize = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
       this.imagesSecondRow.push(imageItem);
     }
 

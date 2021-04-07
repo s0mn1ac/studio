@@ -33,7 +33,7 @@
         <div class="main-gallery-block flex-column">
 
             <div class="first-row flex-row">
-                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow" [ngStyle]="{'background-image': 'url(' + image.url + ')'}" (click)="selectImage(image)">
+                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="selectImage(image)">
                     <!-- <div class="text-container flex-column">
                         <span> {{ t('mainPage.gallery.galleryTitles.' + image.title).toUpperCase() }} </span>
                     </div> -->
@@ -41,7 +41,7 @@
             </div>
             
             <div class="second-row flex-row">
-                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow" [ngStyle]="{'background-image': 'url(' + image.url + ')'}" (click)="selectImage(image)">
+                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="selectImage(image)">
                     <!-- <div class="text-container flex-column">
                         <span> {{ t('mainPage.gallery.galleryTitles.' + image.title).toUpperCase() }} </span>
                     </div> -->

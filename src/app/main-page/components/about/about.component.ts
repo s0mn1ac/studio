@@ -21,7 +21,8 @@ export class AboutComponent implements OnInit {
     this.images = [
       {
         // url: 'url(../../../../../assets/images/miniatures/full-size/image-1.jpeg)',
-        url: 'url(https://sapeoplewppro.blob.core.windows.net/media/2020/06/better-professional-2-768x924.jpg)',
+        fullSize: 'url(https://sapeoplewppro.blob.core.windows.net/media/2020/06/better-professional-2-768x924.jpg)',
+        thumbnail: 'url(https://sapeoplewppro.blob.core.windows.net/media/2020/06/better-professional-2-768x924.jpg)',
         title: 'professional',
         description: 'professional',
         id: 0,
@@ -30,7 +31,8 @@ export class AboutComponent implements OnInit {
       },
       {
         // url: 'url(../../../../../assets/images/miniatures/full-size/image-2.jpeg)',
-        url: 'url(https://cdn.lifehack.org/wp-content/uploads/2014/07/how-to-be-enthusiastic.jpeg)',
+        fullSize: 'url(https://sapeoplewppro.blob.core.windows.net/media/2020/06/better-professional-2-768x924.jpg)',
+        thumbnail: 'url(https://sapeoplewppro.blob.core.windows.net/media/2020/06/better-professional-2-768x924.jpg)',
         title: 'enthusiastic',
         description: 'professional',
         id: 1,
@@ -39,7 +41,8 @@ export class AboutComponent implements OnInit {
       },
       {
         // url: 'url(../../../../../assets/images/miniatures/full-size/image-3.jpeg)',
-        url: 'url(https://www.biospace.com/getasset/a7199edb-286e-422f-9738-54a526238dca/)',
+        fullSize: 'url(https://sapeoplewppro.blob.core.windows.net/media/2020/06/better-professional-2-768x924.jpg)',
+        thumbnail: 'url(https://sapeoplewppro.blob.core.windows.net/media/2020/06/better-professional-2-768x924.jpg)',
         title: 'passionate',
         description: 'professional',
         id: 2,

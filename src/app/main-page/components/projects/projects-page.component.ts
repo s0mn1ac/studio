@@ -30,18 +30,18 @@ export class ProjectsPageComponent implements OnInit {
   public showGallery(index: number, route: string): void {
     this.prop.index = index;
     this.gallery.load(this.prop);
-}
+  }
 
   private loadImageItems(): void {
-    this.prop = { images: [], index: 0 };
-    for (let index = 0; index < 20; index++) {
-      const imageItem = new ImageItem();
-      const route = `../../../assets/images/miniatures/image-${index}.jpg`;
-      imageItem.id = index;
-      imageItem.url = route;
-      this.imageItems.push(imageItem);
-      this.prop.images.push({path: route});
-    }
+    // this.prop = { images: [], index: 0 };
+    // for (let index = 0; index < 20; index++) {
+    //   const imageItem = new ImageItem();
+    //   const route = `../../../assets/images/miniatures/image-${index}.jpg`;
+    //   imageItem.id = index;
+    //   imageItem.url = route;
+    //   this.imageItems.push(imageItem);
+    //   this.prop.images.push({path: route});
+    // }
   }
 
 }
