@@ -1,6 +1,6 @@
 export class ImageItem {
     id!: number;
-    active = true;
+    active!: boolean;
     thumbnail!: string;
     fullSize!: string;
     title!: string;

@@ -33,7 +33,7 @@
         <div class="gallery-container">
 
             <div class="column-container">
-                <div class="image-item pointer zoom" *ngFor="let imageItem of images" >
+                <div class="image-item pointer zoom custom-shadow-hover" *ngFor="let imageItem of images" >
                     <img [src]="imageItem.thumbnail" (click)="showGallery(imageItem.fullSize)" [alt]="'name'">
                 </div>
             </div>

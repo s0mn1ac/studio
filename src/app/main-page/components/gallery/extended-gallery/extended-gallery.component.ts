@@ -8,7 +8,8 @@ import { ImageItem } from 'src/app/shared/models/image-item.model';
 import { CollectionItem } from 'src/app/shared/models/serie-item.model';
 import { AppService } from 'src/app/shared/services/app.service';
 import { ChipComponent } from './chip/chip.component';
-import * as jsonData from '../../../../../assets/data/filters.json';
+import * as jsonFilters from '../../../../../assets/data/filters.json';
+import * as jsonImages from '../../../../../assets/data/images.json';
 import { Gallery } from 'angular-gallery';
 
 @Component({
@@ -24,7 +25,6 @@ export class ExtendedGalleryComponent implements OnInit {
   public images!: ImageItem[];
   public imagesAll!: ImageItem[];
   public collections!: CollectionItem[];
-  public selectedImagesIds!: number[];
 
   private properties!: any;
   private propertiesAll!: any;
@@ -38,68 +38,11 @@ export class ExtendedGalleryComponent implements OnInit {
   }
 
   private initImageItems(): void {
-    const imageItem = new ImageItem();
-    const fullSize = `../../../../../assets/images/miniatures/full-size/image-0.jpeg`;
-    const thumbnail = `../../../../../assets/images/miniatures/thumbnail/image-0.jpeg`;
-    imageItem.id = 0;
-    imageItem.fullSize = fullSize;
-    imageItem.thumbnail = thumbnail;
-    imageItem.tags = [2, 3, 4];
-
-    const imageItem2 = new ImageItem();
-    const fullSize2 = `../../../../../assets/images/miniatures/full-size/image-1.jpeg`;
-    const thumbnail2 = `../../../../../assets/images/miniatures/thumbnail/image-1.jpeg`;
-    imageItem2.id = 1;
-    imageItem2.fullSize = fullSize2;
-    imageItem2.thumbnail = thumbnail2;
-    imageItem2.tags = [4];
-
-    const imageItem3 = new ImageItem();
-    const fullSize3 = `../../../../../assets/images/miniatures/full-size/image-2.jpeg`;
-    const thumbnail3 = `../../../../../assets/images/miniatures/thumbnail/image-2.jpeg`;
-    imageItem3.id = 2;
-    imageItem3.fullSize = fullSize3;
-    imageItem3.thumbnail = thumbnail3;
-    imageItem3.tags = [6];
-
-    const imageItem4 = new ImageItem();
-    const fullSize4 = `../../../../../assets/images/miniatures/full-size/image-3.jpeg`;
-    const thumbnail4 = `../../../../../assets/images/miniatures/thumbnail/image-3.jpeg`;
-    imageItem4.id = 3;
-    imageItem4.fullSize = fullSize4;
-    imageItem4.thumbnail = thumbnail4;
-    imageItem4.tags = [8];
-
-    const imageItem5 = new ImageItem();
-    const fullSize5 = `../../../../../assets/images/miniatures/full-size/image-4.jpeg`;
-    const thumbnail5 = `../../../../../assets/images/miniatures/thumbnail/image-4.jpeg`;
-    imageItem5.id = 4;
-    imageItem5.fullSize = fullSize5;
-    imageItem5.thumbnail = thumbnail5;
-    imageItem5.tags = [2, 3];
-
-    this.selectedImagesIds = [];
-    this.imagesAll = [];
-    this.images = [];
-
-    this.imagesAll.push(imageItem, imageItem2, imageItem3, imageItem4, imageItem5);
-    this.images.push(imageItem, imageItem2, imageItem3, imageItem4, imageItem5);
-
-    this.properties = { images: [], index: 0 };
-    this.properties.images.push(
-      {path: imageItem.fullSize},
-      {path: imageItem2.fullSize},
-      {path: imageItem3.fullSize},
-      {path: imageItem4.fullSize},
-      {path: imageItem5.fullSize});
-
     this.propertiesAll = { images: [], index: 0 };
-    this.propertiesAll.images.push(
-      {path: imageItem.fullSize},
-      {path: imageItem2.fullSize},
-      {path: imageItem3.fullSize},
-      {path: imageItem4.fullSize},
-      {path: imageItem5.fullSize});
+    this.imagesAll = (jsonImages as any).default;
+    this.imagesAll.forEach((imageItem: ImageItem) => this.propertiesAll.images.push({ path: imageItem.fullSize }));
+    this.images = this.imagesAll;
+    this.properties = this.propertiesAll;
   }
 
   private reloadGallery(): void {
@@ -137,7 +80,7 @@ export class ExtendedGalleryComponent implements OnInit {
   }
 
   private initFilters(): void {
-    this.collections = (jsonData as any).default;
+    this.collections = (jsonFilters as any).default;
   }
 
   private initChipItems(): void {
