@@ -13,13 +13,15 @@
                 <div class="overlay-panel-container">
                     <p-overlayPanel #filterOverlayPanel>
                         <ng-template pTemplate>
-                            <div class="faction-item filter-item" *ngFor="let factionItem of collectionItem.factionItems">
-                                <div class="faction-item-title unselectable" (click)="factionItem.expanded = !factionItem.expanded">
-                                    <span> {{ factionItem.name }} </span>
-                                </div>
-                                <div class="filter-item-container" *ngIf="factionItem.expanded">
-                                    <div class="filter-item zoom unselectable" [ngClass]="{'selected': filterItem.selected}" *ngFor="let filterItem of factionItem.filterItems" (click)="onClickFilterItem(filterItem)">
-                                        {{ filterItem.name }}
+                            <div class="overflow-container">
+                                <div class="faction-item filter-item" *ngFor="let factionItem of collectionItem.factionItems">
+                                    <div class="faction-item-title unselectable" (click)="factionItem.expanded = !factionItem.expanded">
+                                        <span> {{ factionItem.name }} </span>
+                                    </div>
+                                    <div class="filter-item-container" *ngIf="factionItem.expanded">
+                                        <div class="filter-item zoom unselectable" [ngClass]="{'selected': filterItem.selected}" *ngFor="let filterItem of factionItem.filterItems" (click)="onClickFilterItem(filterItem)">
+                                            {{ filterItem.name }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -30,12 +32,15 @@
             </div>
         </div>
 
-        <div class="gallery-container">
+        <div class="background-container">
 
-            <div class="column-container">
-                <div class="image-item pointer zoom custom-shadow-hover" *ngFor="let imageItem of images" >
-                    <img [src]="imageItem.thumbnail" (click)="showGallery(imageItem.fullSize)" [alt]="'name'">
+            <div class="gallery-container">
+    
+                <div class="column-container">
+                    <img class="image-item pointer zoom custom-shadow-hover" *ngFor="let imageItem of images"
+                        [src]="imageItem.thumbnail" (click)="showGallery(imageItem.fullSize)" [alt]="'name'">
                 </div>
+    
             </div>
 
         </div>

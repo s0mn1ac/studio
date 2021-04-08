@@ -41,6 +41,77 @@
             2,
             3
         ]
+    },
+    {
+        "id": 5,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "tags": [
+            2,
+            3
+        ]
+    },
+    {
+        "id": 6,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "tags": [
+            2,
+            3
+        ]
+    },
+    {
+        "id": 7,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "tags": [
+            2,
+            3
+        ]
+    },
+    {
+        "id": 8,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "tags": [
+            2,
+            3
+        ]
+    },
+    {
+        "id": 9,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "tags": [
+            2,
+            3
+        ]
+    },
+    {
+        "id": 10,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-0.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-0.jpeg",
+        "tags": [
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "id": 11,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-1.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-1.jpeg",
+        "tags": [
+            4
+        ]
+    },
+    {
+        "id": 12,
+        "fullSize": "../../../../../assets/images/miniatures/full-size/image-2.jpeg",
+        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-2.jpeg",
+        "tags": [
+            6
+        ]
     }
 ]
  

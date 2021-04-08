@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ImageItem } from 'src/app/shared/models/image-item.model';
+import { AppService } from 'src/app/shared/services/app.service';
 import { FullScreenDialogComponent } from './full-screen-dialog/full-screen-dialog.component';
 
 @Component({
@@ -18,9 +19,13 @@ export class GalleryComponent implements OnInit {
   public imageSelected!: ImageItem;
   public isDialogVisible = false;
 
-  constructor() { }
+  public isMainGalleryVisible = true;
+  public nextGalleryTitle!: string;
+
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
+    this.nextGalleryTitle = this.appService.translocoService.translate('mainPage.gallery.more');
     this.getImages();
   }
 
@@ -59,6 +64,12 @@ export class GalleryComponent implements OnInit {
   public selectImage(image: ImageItem): void {
     this.imageSelected = image;
     this.fullScreenDialog.showDialog();
+  }
+
+  public swapGallery(): void {
+    this.isMainGalleryVisible = !this.isMainGalleryVisible;
+    this.nextGalleryTitle = this.isMainGalleryVisible ?
+      this.appService.translocoService.translate('mainPage.gallery.more') : this.appService.translocoService.translate('mainPage.gallery.less');
   }
 
 }

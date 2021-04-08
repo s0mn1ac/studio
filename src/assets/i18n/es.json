@@ -81,6 +81,8 @@
             "subtitle": "Galería",
             "titleFirstPart": "Echa un vistazo a ",
             "titleSecondPart": "nuestros últimos proyectos",
+            "more": "Ver más ...",
+            "less": "Ver menos ...",
             "galleryTitles": {
                 "image0": "Título 1",
                 "image1": "Título 2",

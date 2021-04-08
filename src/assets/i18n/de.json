@@ -81,6 +81,8 @@
             "subtitle": "Gallery",
             "titleFirstPart": "Check our ",
             "titleSecondPart": "last projects",
+            "more": "See more ...",
+            "less": "See less ...",
             "galleryTitles": {
                 "image0": "Title 1",
                 "image1": "Title 2",

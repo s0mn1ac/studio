@@ -7,52 +7,25 @@
             <span class="second-part"> {{ t('mainPage.gallery.titleSecondPart') }} </span>
         </h1>
 
-        <!-- <div class="gallery-container flex-row">
-
-            <div class="gallery-block flex-row">
-                <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '660px'}" [numVisible]="5">
-                    <ng-template pTemplate="item" let-item>
-                        <img [src]="item.previewImageSrc" class="custom-shadow" style="width: 100%;" />
-                    </ng-template>
-                    <ng-template pTemplate="thumbnail" let-item>
-                        <div class="p-grid p-nogutter p-justify-center">
-                            <img [src]="item.thumbnailImageSrc" style="width: 80px;" />
-                        </div>
-                    </ng-template>
-                </p-galleria>
-            </div>
-
-            <div class="text-block flex-row">
-
-                <p> <span>  </span> </p>
-
-            </div>
-
-        </div> -->
-
-        <div class="main-gallery-block flex-column">
+        <div class="main-gallery-block flex-column" *ngIf="isMainGalleryVisible">
 
             <div class="first-row flex-row">
                 <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="selectImage(image)">
-                    <!-- <div class="text-container flex-column">
-                        <span> {{ t('mainPage.gallery.galleryTitles.' + image.title).toUpperCase() }} </span>
-                    </div> -->
                 </div>
             </div>
             
             <div class="second-row flex-row">
                 <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="selectImage(image)">
-                    <!-- <div class="text-container flex-column">
-                        <span> {{ t('mainPage.gallery.galleryTitles.' + image.title).toUpperCase() }} </span>
-                    </div> -->
                 </div>
             </div>
 
         </div>
 
-        <div class="extended-gallery-block">
+        <div class="extended-gallery-block" *ngIf="!isMainGalleryVisible">
             <app-extended-gallery></app-extended-gallery>
         </div>
+
+        <button mat-raised-button color="accent" class="zoom" (click)="swapGallery()"> {{ nextGalleryTitle }} </button>
 
     </div>
 
