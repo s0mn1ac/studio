@@ -6,8 +6,16 @@
 
             <div class="collection-item-container flex-column" *ngFor="let collectionItem of collections">
 
-                <div class="collection-item filter-item pointer unselectable" (click)="filterOverlayPanel.toggle($event)">
-                    {{ collectionItem.name }}
+                <div class="collection-item filter-item main-item pointer unselectable flex-row" (click)="filterOverlayPanel.toggle($event)">
+                    <div class="image-container">
+                        <img src="../../../../../assets/images/test-figure.png">
+                    </div>
+                    <div class="title-container">
+                        <span> {{ collectionItem.name }} </span>
+                    </div>
+                    <div class="icon-container">
+                        <i class="pi pi-chevron-down"></i>
+                    </div>
                 </div>
 
                 <div class="overlay-panel-container">
@@ -15,8 +23,10 @@
                         <ng-template pTemplate>
                             <div class="overflow-container">
                                 <div class="faction-item filter-item" *ngFor="let factionItem of collectionItem.factionItems">
-                                    <div class="faction-item-title unselectable" (click)="factionItem.expanded = !factionItem.expanded">
-                                        <span> {{ factionItem.name }} </span>
+                                    <div class="faction-item-title unselectable flex-row" (click)="factionItem.expanded = !factionItem.expanded">
+                                        <div class="title-container">
+                                            <span> {{ factionItem.name }} </span>
+                                        </div>
                                     </div>
                                     <div class="filter-item-container" *ngIf="factionItem.expanded">
                                         <div class="filter-item zoom unselectable" [ngClass]="{'selected': filterItem.selected}" *ngFor="let filterItem of factionItem.filterItems" (click)="onClickFilterItem(filterItem)">
@@ -50,7 +60,5 @@
         </div>
 
     </div>
-
-    
 
 </div>

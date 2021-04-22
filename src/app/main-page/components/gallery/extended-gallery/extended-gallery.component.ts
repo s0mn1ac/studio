@@ -55,7 +55,7 @@ export class ExtendedGalleryComponent implements OnInit {
     this.imagesAll.forEach((imageToFilter: ImageItem) => {
       this.chips.forEach((chipItem: ChipItem) => {
         if (chipItem.active) {
-          if (imageToFilter.tags.includes(chipItem.id)) {
+          if (imageToFilter.tags?.includes(chipItem.id)) {
             const imageAlreadyListed = this.images.find((imageItem: ImageItem) => imageItem.id === imageToFilter.id );
             if (!imageAlreadyListed) {
               isAnyFilterSelected = true;

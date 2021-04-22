@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Gallery } from 'angular-gallery';
 import { ImageItem } from 'src/app/shared/models/image-item.model';
 import { AppService } from 'src/app/shared/services/app.service';
 import { FullScreenDialogComponent } from './full-screen-dialog/full-screen-dialog.component';
@@ -10,60 +11,71 @@ import { FullScreenDialogComponent } from './full-screen-dialog/full-screen-dial
 })
 export class GalleryComponent implements OnInit {
 
-  @ViewChild('fullScreenDialog') public fullScreenDialog!: FullScreenDialogComponent;
-
   public imagesFirstRow: ImageItem[] = [];
   public imagesSecondRow: ImageItem[] = [];
-  public responsiveOptions!: any[];
+  // public responsiveOptions!: any[];
 
-  public imageSelected!: ImageItem;
-  public isDialogVisible = false;
-
-  public isMainGalleryVisible = true;
+  public isMainGalleryVisible = false;
   public nextGalleryTitle!: string;
 
-  constructor(private appService: AppService) { }
+  public images!: ImageItem[];
+
+  private properties!: any;
+
+  constructor(private appService: AppService, private gallery: Gallery) { }
 
   ngOnInit(): void {
     this.nextGalleryTitle = this.appService.translocoService.translate('mainPage.gallery.more');
     this.getImages();
+    this.initImageItems();
   }
 
   private getImages(): void {
 
-    for (let i = 0; i < 3; i++) {
-      const imageItem = new ImageItem();
-      imageItem.title =  `image${i}`;
-      imageItem.fullSize = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
-      this.imagesFirstRow.push(imageItem);
-    }
+    
 
-    for (let i = 3; i < 6; i++) {
-      const imageItem = new ImageItem();
-      imageItem.title =  `image${i}`;
-      imageItem.fullSize = `../../../../assets/images/miniatures/full-size/image-${i}.jpeg`;
-      this.imagesSecondRow.push(imageItem);
-    }
 
-    this.responsiveOptions = [
-      {
-          breakpoint: '1024px',
-          numVisible: 5
-      },
-      {
-          breakpoint: '768px',
-          numVisible: 3
-      },
-      {
-          breakpoint: '560px',
-          numVisible: 1
-      }
-    ];
+    // this.responsiveOptions = [
+    //   {
+    //       breakpoint: '1024px',
+    //       numVisible: 5
+    //   },
+    //   {
+    //       breakpoint: '768px',
+    //       numVisible: 3
+    //   },
+    //   {
+    //       breakpoint: '560px',
+    //       numVisible: 1
+    //   }
+    // ];
   }
 
-  public selectImage(image: ImageItem): void {
-    this.imageSelected = image;
-    this.fullScreenDialog.showDialog();
+  private initImageItems(): void {
+
+    this.properties = { images: [], index: 0 };
+
+    this.imagesFirstRow = [
+      { id: 0, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-0.jpeg', fullSize: '../../../../assets/images/gallery/image-0.jpeg' },
+      { id: 1, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-1.jpeg', fullSize: '../../../../assets/images/gallery/image-1.jpeg' },
+      { id: 2, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-2.jpeg', fullSize: '../../../../assets/images/gallery/image-2.jpeg' }
+    ];
+
+    this.imagesSecondRow = [
+      { id: 3, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-3.jpeg', fullSize: '../../../../assets/images/gallery/image-3.jpeg' },
+      { id: 4, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-4.jpeg', fullSize: '../../../../assets/images/gallery/image-4.jpeg' },
+      { id: 5, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-5.jpeg', fullSize: '../../../../assets/images/gallery/image-5.jpeg' }
+    ];
+    
+    this.images = this.imagesFirstRow.concat(this.imagesSecondRow);
+
+    this.images.forEach((imageItem: ImageItem) => this.properties.images.push({ path: imageItem.fullSize }));
+  }
+
+  public showGallery(route: string): void {
+    const index =  this.properties.images.findIndex((image: any) => image.path === route);
+    this.properties.index = index;
+    this.gallery.load(this.properties);
   }
 
   public swapGallery(): void {

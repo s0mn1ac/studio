@@ -3,6 +3,11 @@
 @import 'shared/colors.scss';
 @import 'shared/custom-cards.scss';
 
+.carousel-cell img {
+    width: calc(100% - 50px) !important;
+    height: calc(100% - 50px) !important;
+}
+
 .p-sidebar-mask {
     z-index: 0 !important;
 }

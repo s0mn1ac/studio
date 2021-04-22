@@ -1,5 +1,5 @@
 <div class="gallery-layout flex-column" *transloco="let t">
-
+    
     <div data-aos="fade-right">
         <h2 class="subtitle"> {{ t('mainPage.gallery.subtitle').toUpperCase() }} </h2>
         <h1 class="title">
@@ -10,12 +10,12 @@
         <div class="main-gallery-block flex-column" *ngIf="isMainGalleryVisible">
 
             <div class="first-row flex-row">
-                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="selectImage(image)">
+                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}"  (click)="showGallery(image.fullSize)">
                 </div>
             </div>
             
             <div class="second-row flex-row">
-                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="selectImage(image)">
+                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow" [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="showGallery(image.fullSize)">
                 </div>
             </div>
 
@@ -28,7 +28,5 @@
         <button mat-raised-button color="accent" class="zoom" (click)="swapGallery()"> {{ nextGalleryTitle }} </button>
 
     </div>
-
-    <app-full-screen-dialog #fullScreenDialog [imageSelected]="imageSelected"></app-full-screen-dialog>
 
 </div>

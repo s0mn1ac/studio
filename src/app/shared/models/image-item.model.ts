@@ -5,7 +5,7 @@ export class ImageItem {
     fullSize!: string;
     title!: string;
     description!: string;
-    tags!: number[];
+    tags?: number[];
 
     constructor() { }
 }
