@@ -13,9 +13,8 @@ export class GalleryComponent implements OnInit {
 
   public imagesFirstRow: ImageItem[] = [];
   public imagesSecondRow: ImageItem[] = [];
-  // public responsiveOptions!: any[];
 
-  public isMainGalleryVisible = false;
+  public isMainGalleryVisible = true;
   public nextGalleryTitle!: string;
 
   public images!: ImageItem[];
@@ -26,29 +25,7 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.nextGalleryTitle = this.appService.translocoService.translate('mainPage.gallery.more');
-    this.getImages();
     this.initImageItems();
-  }
-
-  private getImages(): void {
-
-    
-
-
-    // this.responsiveOptions = [
-    //   {
-    //       breakpoint: '1024px',
-    //       numVisible: 5
-    //   },
-    //   {
-    //       breakpoint: '768px',
-    //       numVisible: 3
-    //   },
-    //   {
-    //       breakpoint: '560px',
-    //       numVisible: 1
-    //   }
-    // ];
   }
 
   private initImageItems(): void {
