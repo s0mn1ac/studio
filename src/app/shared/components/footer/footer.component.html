@@ -18,8 +18,16 @@
 
                 <p class="title"> {{ t('footer.lastProjects').toUpperCase() }} </p>
 
-                <div class="img-row flex-row">
-                    <div class="img-container pointer custom-shadow zoom" *ngFor="let image of images" [ngStyle]="{'background-image': image.url}"></div>
+                <div class="img-row first-row flex-row">
+                    <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow"
+                        [ngStyle]="{'background-image': 'url(' + image.thumbnail + ')'}" (click)="showGallery(image.fullSize)">
+                    </div>
+                </div>
+
+                <div class="img-row second-row flex-row">
+                    <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow"
+                        [ngStyle]="{'background-image': 'url(' + image.thumbnail + ')'}" (click)="showGallery(image.fullSize)">
+                    </div>
                 </div>
 
             </div>
