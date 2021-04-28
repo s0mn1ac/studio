@@ -4,6 +4,10 @@
 
         <div class="menu">
 
+            <button mat-icon-button class="close-button" (click)="toggleSidebar()">
+                <mat-icon> close </mat-icon>
+            </button>
+
             <mat-selection-list #menuItems [multiple]="false">
                 <mat-list-option *ngFor="let menuItem of allHeaderItems" [selected]="menuItem.active" (click)="onClickMenuItem(menuItem.id)">
                     {{ t('header.' + menuItem.id) }}
@@ -15,6 +19,18 @@
         <mat-divider></mat-divider>
 
         <div class="tools flex-row">
+
+            <div class="social-container flex-row">
+                <button mat-icon-button>
+                    <fa-icon [icon]="faInstagram" class="pointer"></fa-icon>
+                </button>
+                <button mat-icon-button>
+                    <fa-icon [icon]="faFacebook" class="pointer"></fa-icon>
+                </button>
+                <button mat-icon-button>
+                    <fa-icon [icon]="faYoutube" class="pointer"></fa-icon>
+                </button>
+            </div>
 
             <div class="language-container">
 

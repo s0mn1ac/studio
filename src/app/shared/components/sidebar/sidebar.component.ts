@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { SectionName } from '../../enums/section-name.enum';
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { HeaderItem } from '../../models/header-item.model';
 
 @Component({
@@ -11,11 +11,13 @@ export class SidebarComponent implements OnInit {
 
   @Input() allHeaderItems!: HeaderItem[];
   @Input() languageSelected!: string;
-  @Input() isDarkModeEnabled!: boolean;
 
   @Output() menuItemEmitter: EventEmitter<string> = new EventEmitter();
   @Output() changeLanguageEmitter: EventEmitter<string> = new EventEmitter();
-  @Output() changeThemeEmitter: EventEmitter<boolean> = new EventEmitter();
+
+  public faInstagram = faInstagram;
+  public faFacebook = faFacebook;
+  public faYoutube = faYoutube;
 
   public menuItemSelected!: HeaderItem;
 
@@ -32,10 +34,6 @@ export class SidebarComponent implements OnInit {
   public onClickMenuItem(name: string): void {
     this.isOpen = !this.isOpen;
     this.menuItemEmitter.emit(name);
-  }
-
-  public changeTheme(checked: boolean): void {
-    this.changeThemeEmitter.emit(checked);
   }
 
   public changeLanguage(language: string): void {

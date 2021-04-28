@@ -75,10 +75,8 @@
 
     <app-sidebar #mainSidebar [allHeaderItems]="allHeaderItems"
         [languageSelected]="languageSelected" 
-        [isDarkModeEnabled]="isDarkModeEnabled"
         (menuItemEmitter)="onClickHeaderOption($event)"
-        (changeLanguageEmitter)="changeLanguage($event)"
-        (changeThemeEmitter)="changeTheme($event)">
+        (changeLanguageEmitter)="changeLanguage($event)">
     </app-sidebar>
 
 </ng-container>

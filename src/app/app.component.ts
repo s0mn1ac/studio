@@ -2,7 +2,6 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ThemeType } from './shared/enums/theme-type.enum';
-import { ThemingService } from './shared/services/theming.service';
 import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
@@ -13,26 +12,15 @@ export class AppComponent implements OnInit {
 
   @HostBinding('class') public cssClass!: string;
 
-  constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer,
-    private themingService: ThemingService,
-    private overlayContainer: OverlayContainer
-  ) {
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private overlayContainer: OverlayContainer) {
     this.matIconRegistry.addSvgIcon('custom-flag-es', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/spain-flag.svg'));
     this.matIconRegistry.addSvgIcon('custom-flag-en', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/united-kingdom-flag.svg'));
     this.matIconRegistry.addSvgIcon('custom-flag-de', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/flags/germany-flag.svg'));
   }
 
   ngOnInit(): void {
-    this.initThemeConfiguration();
+    this.overlayContainer.getContainerElement().classList.add(ThemeType.DARK);
+    this.cssClass = ThemeType.DARK;
   }
 
-  private initThemeConfiguration(): void {
-    this.themingService.theme.subscribe((theme: ThemeType) => {
-      this.overlayContainer.getContainerElement().classList.remove(ThemeType.DARK, ThemeType.LIGHT);
-      this.overlayContainer.getContainerElement().classList.add(theme);
-      this.cssClass = theme;
-    });
-  }
 }

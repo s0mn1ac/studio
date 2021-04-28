@@ -10,8 +10,6 @@
 @mixin custom-components-theme($theme, $background-selector) {
     @include header-theme($theme, $background-selector);
     @include sidebar-theme($theme, $background-selector);
-    // @include main-theme($theme);
-    // @include projects-dialog-theme($theme);
 }
 
 $mat-custom-primary: (

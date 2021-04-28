@@ -7,7 +7,6 @@ import { GalleriaModule } from 'primeng/galleria';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { ChipModule } from 'primeng/chip';
 import { TreeModule } from 'primeng/tree';
-import { TreeNode } from 'primeng/api';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @NgModule({
