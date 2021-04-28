@@ -10,8 +10,7 @@ import { AppService } from '../../services/app.service';
 import { MaterialModule } from '../material/material.module';
 import { PrimeNgModule } from '../primeng/primeng.module';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
-import { ScrollToTopComponent } from '../../components/scroll-to-top/scroll-to-top.component';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CookiePolicyComponent } from '../../components/footer/cookie-policy/cookie-policy.component';
 import { TermsAndConditionsComponent } from '../../components/footer/terms-and-conditions/terms-and-conditions.component';
 
@@ -21,7 +20,6 @@ import { TermsAndConditionsComponent } from '../../components/footer/terms-and-c
         LayoutComponent,
         FooterComponent,
         SidebarComponent,
-        ScrollToTopComponent,
         CookiePolicyComponent,
         TermsAndConditionsComponent
     ],
@@ -40,7 +38,6 @@ import { TermsAndConditionsComponent } from '../../components/footer/terms-and-c
         LayoutComponent,
         FooterComponent,
         SidebarComponent,
-        ScrollToTopComponent,
         CookiePolicyComponent,
         TermsAndConditionsComponent,
         MaterialModule,
