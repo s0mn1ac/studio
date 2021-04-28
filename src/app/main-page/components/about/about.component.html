@@ -23,9 +23,7 @@
             
             <div class="card-container flex-row">
 
-                <app-presentation-card class="card zoom" [image]="images[0]"></app-presentation-card>
-                <app-presentation-card class="card zoom" [image]="images[1]"></app-presentation-card>
-                <app-presentation-card class="card zoom" [image]="images[2]"></app-presentation-card>
+                <app-presentation-card data-aos="zoom-in" class="card zoom" data-aos-delay="300" [image]="image" *ngFor="let image of images"></app-presentation-card>
 
             </div>
 
