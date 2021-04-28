@@ -8,7 +8,6 @@ import { HomeComponent } from './components/home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
-import { ProjectsPageComponent } from './components/projects/projects-page.component';
 import { ServicesComponent } from './components/services/services.component';
 import { PaintServicesComponent } from './components/services/components/paint-services/paint-services.component';
 import { PrintServicesComponent } from './components/services/components/print-services/print-services.component';
@@ -26,7 +25,6 @@ import { ChipComponent } from './components/gallery/extended-gallery/chip/chip.c
         GalleryComponent,
         ContactComponent,
         AboutComponent,
-        ProjectsPageComponent,
         ServicesComponent,
         PaintServicesComponent,
         PrintServicesComponent,

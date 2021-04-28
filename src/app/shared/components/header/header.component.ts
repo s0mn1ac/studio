@@ -1,8 +1,6 @@
 import { Component, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ProjectsPageComponent } from 'src/app/main-page/components/projects/projects-page.component';
 import { SectionName } from '../../enums/section-name.enum';
-import { ThemeType } from '../../enums/theme-type.enum';
 import { HeaderItem } from '../../models/header-item.model';
 import { AppService } from '../../services/app.service';
 import { SidebarComponent } from '../sidebar/sidebar.component';
@@ -44,11 +42,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public onClickHeaderOption(name: string): void {
-    if (name === SectionName.PROJECTS) {
-      this.openProjectsDialog();
-    } else {
       this.navigateTo(name);
-    }
   }
 
   public changeLanguage(lang: string): void {
@@ -78,14 +72,6 @@ export class HeaderComponent implements OnInit {
     this.appService.headerService.navigateTo(name);
   }
 
-  public openProjectsDialog(): void {
-    const dialogRef = this.dialog.open(ProjectsPageComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      // TODO: Acción al cerrar el modal
-    });
-  }
-
   public toggleSidebar(): void {
     this.mainSidebar.toggleSidebar();
   }
@@ -98,6 +84,6 @@ export class HeaderComponent implements OnInit {
             window.scrollTo(0, currentScroll - (currentScroll / 8));
         }
     })();
-}
+  }
 
 }
