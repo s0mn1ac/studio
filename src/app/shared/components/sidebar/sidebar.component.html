@@ -16,12 +16,6 @@
 
         <div class="tools flex-row">
 
-            <div class="dark-mode-slider flex-row">
-                <mat-icon> light_mode </mat-icon>
-                <mat-slide-toggle color="primary" [checked]="isDarkModeEnabled" (change)="changeTheme($event.checked)"> </mat-slide-toggle>
-                <mat-icon> dark_mode </mat-icon>
-            </div>
-
             <div class="language-container">
 
                 <button mat-icon-button [matMenuTriggerFor]="languageMenu">
