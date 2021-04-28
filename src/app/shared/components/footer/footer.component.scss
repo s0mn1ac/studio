@@ -16,7 +16,7 @@
         .main-row {
             padding: 0 2rem;
 
-            .footer-about, .footer-last-projects, .footer-links {
+            .footer-about, .footer-last-projects, .footer-links, .footer-social-links {
                 width: 100%;
                 padding: 0.5rem;
 
@@ -82,5 +82,13 @@
 
     .main-row {
         flex-wrap: wrap;
+
+        .hidden-divider {
+            display: none;
+        }
+
+        .footer-links, .footer-social-links {
+            width: 50% !important;
+        }
     }
 }

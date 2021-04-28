@@ -9,6 +9,8 @@
                 <p class="title"> {{ t('footer.about').toUpperCase() }} </p>
 
                 <span> {{ t('mainPage.about.content.firstParagraph') }} </span>
+                <br>
+                <span> {{ t('mainPage.about.content.firstParagraph') }} </span>
 
             </div>
 
@@ -32,11 +34,20 @@
 
             </div>
 
-            <mat-divider vertical="true"></mat-divider>
+            <mat-divider vertical="true" class="hidden-divider"></mat-divider>
 
             <div class="footer-links flex-column">
                 <p class="title"> {{ t('footer.maginkLinks').toUpperCase() }} </p>
                 <p class="link text-clickable" *ngFor="let footer of footerItems" (click)="onClickFooterOption(footer.id)"> {{ t('header.' + footer.id) }} </p>
+            </div>
+
+            <mat-divider vertical="true" class="hidden-divider"></mat-divider>
+
+            <div class="footer-social-links flex-column">
+                <p class="title"> {{ t('footer.socialLinks').toUpperCase() }} </p>
+                <p class="link text-clickable"> Instagram </p>
+                <p class="link text-clickable"> Facebook </p>
+                <p class="link text-clickable"> Youtube </p>
             </div>
 
         </div>
@@ -44,8 +55,8 @@
         <mat-divider></mat-divider>
 
         <div class="social-row flex-row">
-            <fa-icon [icon]="faFacebook" class="zoom pointer"></fa-icon>
             <fa-icon [icon]="faInstagram" class="zoom pointer"></fa-icon>
+            <fa-icon [icon]="faFacebook" class="zoom pointer"></fa-icon>
             <fa-icon [icon]="faYoutube" class="zoom pointer"></fa-icon>
         </div>
 
