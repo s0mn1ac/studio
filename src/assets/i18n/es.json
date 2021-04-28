@@ -7,7 +7,7 @@
         "contact": "Contacto",
         "printServices": "Impresión 3D",
         "paintServices": "Pintura",
-        "references": "Referencias",
+        "references": "Opiniones",
         "projects": "Proyectos"
     },
 
@@ -72,7 +72,7 @@
         },
 
         "references": {
-            "subtitle": "Referencias",
+            "subtitle": "Opiniones",
             "titleFirstPart": "Han confiado ",
             "titleSecondPart": "en nosotros"
         },

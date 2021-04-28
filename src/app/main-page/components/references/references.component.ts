@@ -21,12 +21,12 @@ export class ReferencesComponent implements OnInit {
     ];
 
     this.customers = [
-      { name: 'Bill Puertas', ocupation: 'Limpiador de estanques', opinion: '≪Son la polla en vinagre≫' },
-      { name: 'Gertrudis', ocupation: 'Paseador de gallinas', opinion: '≪A mi me gustar miccionar sobre bebés≫' },
-      { name: 'José Luis', ocupation: 'Pulidor de bombillas', opinion: '≪A mi padre le gusta darme palizas≫' },
-      { name: 'Juan Antonio', ocupation: 'Recolector de pulgas', opinion: '≪¡Me encanta comer mierda!≫' },
-      { name: 'Beatriz', ocupation: 'Doblador de pañuelos', opinion: '≪Por el culo mejor dos≫' },
-      { name: 'Íñigo', ocupation: 'Afilador de cucharas', opinion: '≪¡Hola, mamá!≫' },
+      { name: 'Nombre', ocupation: 'Ocupación', opinion: '≪Opinión≫' },
+      { name: 'Nombre', ocupation: 'Ocupación', opinion: '≪Opinión≫' },
+      { name: 'Nombre', ocupation: 'Ocupación', opinion: '≪Opinión≫' },
+      { name: 'Nombre', ocupation: 'Ocupación', opinion: '≪Opinión≫' },
+      { name: 'Nombre', ocupation: 'Ocupación', opinion: '≪Opinión≫' },
+      { name: 'Nombre', ocupation: 'Ocupación', opinion: '≪Opinión≫' },
     ];
   }
 
