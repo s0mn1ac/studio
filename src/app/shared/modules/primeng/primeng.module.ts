@@ -8,6 +8,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { ChipModule } from 'primeng/chip';
 import { TreeModule } from 'primeng/tree';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
   declarations: [],
@@ -19,7 +20,8 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
     ScrollTopModule,
     ChipModule,
     TreeModule,
-    OverlayPanelModule
+    OverlayPanelModule,
+    TagModule
   ]
 })
 export class PrimeNgModule { }
