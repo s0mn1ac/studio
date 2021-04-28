@@ -43,7 +43,7 @@
                     <button mat-icon-button [matMenuTriggerFor]="languageMenu">
                         <mat-icon svgIcon="custom-flag-es" *ngIf="languageSelected === 'es'"></mat-icon>
                         <mat-icon svgIcon="custom-flag-en" *ngIf="languageSelected === 'en'"></mat-icon>
-                        <mat-icon svgIcon="custom-flag-de" *ngIf="languageSelected === 'de'"></mat-icon>
+                        <!-- <mat-icon svgIcon="custom-flag-de" *ngIf="languageSelected === 'de'"></mat-icon> -->
                     </button>
     
                     <mat-menu #languageMenu="matMenu" xPosition="before">
@@ -58,10 +58,10 @@
                             <span> EN </span>
                         </button>
 
-                        <button mat-menu-item (click)="changeLanguage('de')">
+                        <!-- <button mat-menu-item (click)="changeLanguage('de')">
                             <mat-icon svgIcon="custom-flag-de"></mat-icon>
                             <span> DE </span>
-                        </button>
+                        </button> -->
                         
                     </mat-menu>
 
