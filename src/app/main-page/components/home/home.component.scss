@@ -95,7 +95,8 @@
         height: 50px;
         left: calc(50% - 25px);
         cursor: pointer;
-
+        user-select: none;
+        
         .arrow {
             position: absolute;
             bottom: 0;
