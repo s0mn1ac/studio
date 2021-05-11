@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-.home-container {
+:host ::ng-deep .home-container {
     height: calc(100vh);
     justify-content: flex-end;
     align-items: center;
@@ -95,8 +95,7 @@
         height: 50px;
         left: calc(50% - 25px);
         cursor: pointer;
-        user-select: none;
-        
+
         .arrow {
             position: absolute;
             bottom: 0;
@@ -107,6 +106,7 @@
                 height: 50px;
                 width: 50px;
                 font-size: 50px;
+                line-height: 50px;
             }
         }
         
