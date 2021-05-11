@@ -2,7 +2,7 @@
     height: 100%;
 
     .layout-container {
-        overflow-x: hidden;
+        overflow: hidden;
     }
 }
 
@@ -10,5 +10,6 @@
 
     .p-scrolltop {
         z-index: 2 !important;
+        box-shadow: none !important;
     }
 }

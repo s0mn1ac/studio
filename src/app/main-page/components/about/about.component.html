@@ -1,9 +1,9 @@
 <div class="about-layout flex-column" *transloco="let t">
     <div>
         
-        <div class="title-container" data-aos="fade-left">
-            <h2 class="subtitle"> {{ t('mainPage.about.subtitle').toUpperCase() }} </h2>
-            <h1 class="text-animation-container flex-row">    
+        <div class="title-container">
+            <h2 data-aos="fade-up" class="subtitle"> {{ t('mainPage.about.subtitle').toUpperCase() }} </h2>
+            <h1 data-aos="fade-up" data-aos-delay="400" class="text-animation-container flex-row">    
                 <span class="title"> {{ t('mainPage.about.title') }} </span> 
                 <div> 
                     <ul class="flip-animation"> 
@@ -17,13 +17,13 @@
         
         <div class="content-container">
 
-            <p data-aos="fade-left"> <span> {{ t('mainPage.about.content.firstParagraph') }} </span> </p>
-            <p data-aos="fade-left"> <span> {{ t('mainPage.about.content.secondParagraph') }} </span> </p>
+            <p data-aos="fade-up" data-aos-delay="800"> <span> {{ t('mainPage.about.content.firstParagraph') }} </span> </p>
+            <p data-aos="fade-up" data-aos-delay="1000"> <span> {{ t('mainPage.about.content.secondParagraph') }} </span> </p>
 
             
             <div class="card-container flex-row">
 
-                <app-presentation-card data-aos="zoom-in" class="card zoom" data-aos-delay="300" [image]="image" *ngFor="let image of images"></app-presentation-card>
+                <app-presentation-card data-aos="zoom-in" data-aos-duration="500" data-aos-offset="0" class="card zoom" [image]="image" *ngFor="let image of images"></app-presentation-card>
 
             </div>
 

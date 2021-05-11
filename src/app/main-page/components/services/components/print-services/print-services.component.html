@@ -1,10 +1,10 @@
 <div class="print-services-layout flex-column" *transloco="let t">
 
-    <div data-aos="fade-right">
+    <div>
         
         <div class="title-container">
-            <h2 class="subtitle print-services-subtitle"> {{ t('mainPage.services.printServices.subtitle').toUpperCase() }} </h2>
-            <h1 class="title">
+            <h2 data-aos="fade-up" class="subtitle print-services-subtitle"> {{ t('mainPage.services.printServices.subtitle').toUpperCase() }} </h2>
+            <h1 data-aos="fade-up" data-aos-delay="400" class="title">
                 <span class="first-part"> {{ t('mainPage.services.printServices.titleFirstPart') }} </span>
                 <span class="second-part"> {{ t('mainPage.services.printServices.titleSecondPart') }} </span>
             </h1>
@@ -14,15 +14,15 @@
 
             <div class="description-container flex-column">
 
-                <p> <span> {{ t('mainPage.services.printServices.content.firstParagraph') }} </span> </p>
+                <p data-aos="fade-up" data-aos-delay="800"> <span> {{ t('mainPage.services.printServices.content.firstParagraph') }} </span> </p>
 
-                <p> <span> {{ t('mainPage.services.printServices.content.secondParagraph') }} </span> </p>
+                <p data-aos="fade-up" data-aos-delay="1000"> <span> {{ t('mainPage.services.printServices.content.secondParagraph') }} </span> </p>
                 
                 <div class="custom-card-container flex-row">
 
                     <div class="custom-card">
                         <div class="custom-card-inner">
-                            <div class="custom-card-front flex-column">
+                            <div data-aos="flip-right" class="custom-card-front flex-column">
                                 <fa-icon [icon]="faLayerGroup"> </fa-icon>
                                 <h1> Impresión 3D </h1>
                             </div>
@@ -34,7 +34,7 @@
 
                     <div class="custom-card">
                         <div class="custom-card-inner">
-                            <div class="custom-card-front flex-column">
+                            <div data-aos="flip-right" class="custom-card-front flex-column">
                                 <fa-icon [icon]="faCube"> </fa-icon>
                                 <h1> Diseños </h1>
                             </div>
@@ -46,7 +46,7 @@
 
                     <div class="custom-card">
                         <div class="custom-card-inner">
-                            <div class="custom-card-front flex-column">
+                            <div data-aos="flip-right" class="custom-card-front flex-column">
                                 <fa-icon [icon]="faUserEdit"> </fa-icon>
                                 <h1> Hazlo tuyo! </h1>
                             </div>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="img-container flex-row">
-                <img src="https://cdn03.plentymarkets.com/ioseuwg7moqp/item/images/24320/full/Raise3D-E2-Educational-E2-24320.png">
+                <img data-aos="fade-left" data-aos-duration="1500" src="https://cdn03.plentymarkets.com/ioseuwg7moqp/item/images/24320/full/Raise3D-E2-Educational-E2-24320.png">
             </div>
 
         </div>

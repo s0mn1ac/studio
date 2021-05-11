@@ -22,7 +22,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
   constructor(private appService: AppService, private router: Router) { }
 
   ngOnInit(): void {
-    AOS.init({ once: true });
+    AOS.init({ once: false, duration: 1000 });
     this.initSubscriptions();
   }
 

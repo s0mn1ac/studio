@@ -1,22 +1,22 @@
 <div class="contact-layout flex-column" *transloco="let t">
-    <div data-aos="fade-left">
-        <h2 class="subtitle"> {{ t('mainPage.contact.subtitle').toUpperCase() }} </h2>
-        <h1 class="title">
+    <div>
+        <h2 data-aos="fade-up" class="subtitle"> {{ t('mainPage.contact.subtitle').toUpperCase() }} </h2>
+        <h1 data-aos="fade-up" data-aos-delay="400" class="title">
             <span class="first-part"> {{ t('mainPage.contact.titleFirstPart') }} </span>
             <span class="second-part"> {{ t('mainPage.contact.titleSecondPart') }} </span>
         </h1>
 
-        <p> {{ t('mainPage.contact.content.firstParagraph') }} </p>
+        <p data-aos="fade-up" data-aos-delay="800"> {{ t('mainPage.contact.content.firstParagraph') }} </p>
 
         <div class="icon-container flex-row">
 
-            <a href="mailto:maginkstudioart@gmail.com" class="zoom pointer" target="_blank"> <fa-icon [icon]="faEnvelope"></fa-icon> </a>
-            <a href="https://wa.me/34634189541" class="zoom pointer" target="_blank"> <fa-icon [icon]="faWhatsapp"></fa-icon> </a>
-            <a href="https://telegram.me/tarmanau" class="zoom pointer" target="_blank"> <fa-icon [icon]="faTelegram"></fa-icon> </a>
+            <a data-aos="fade-up" data-aos-delay="1000" href="mailto:maginkstudioart@gmail.com" class="zoom pointer" target="_blank"> <fa-icon data-aos="zoom-in" data-aos-delay="1000" [icon]="faEnvelope"></fa-icon> </a>
+            <a data-aos="fade-up" data-aos-delay="1000" href="https://wa.me/34634189541" class="zoom pointer" target="_blank"> <fa-icon data-aos="zoom-in" data-aos-delay="1000" [icon]="faWhatsapp"></fa-icon> </a>
+            <a data-aos="fade-up" data-aos-delay="1000" href="https://telegram.me/tarmanau" class="zoom pointer" target="_blank"> <fa-icon data-aos="zoom-in" data-aos-delay="1000" [icon]="faTelegram"></fa-icon> </a>
             
         </div>
         
-        <p class="second-paragraph"> {{ t('mainPage.contact.content.secondParagraph') }} </p>
+        <p data-aos="fade-up" data-aos-delay="1500" class="second-paragraph"> {{ t('mainPage.contact.content.secondParagraph') }} </p>
 
     </div>
 </div>

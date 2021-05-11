@@ -20,6 +20,7 @@ h2 {
 .text-clickable {
     cursor: pointer;
     transition: all .2s ease-in-out;
+    user-select: none;
 
     &:hover {
         color: $text-grey;
