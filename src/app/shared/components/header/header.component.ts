@@ -60,7 +60,7 @@ export class HeaderComponent implements OnInit {
 
     this.rightSideHeaderItems = [
       { id: SectionName.GALLERY, active: false },
-      { id: SectionName.REFERENCES, active: false },
+      // { id: SectionName.REFERENCES, active: false },
       { id: SectionName.CONTACT, active: false }
     ];
 
