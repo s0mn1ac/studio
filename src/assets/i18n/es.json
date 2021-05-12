@@ -154,6 +154,8 @@
         },
 
         "cookiePolicy": {
+            "message": "Este sitio web utiliza cookies para mejorar tu experiencia de usuario.",
+            "allow": "¡Vamos allá!",
             "title": "Política de cookies",
             "description": "Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada usuario para que el servidor recuerde cierta información que posteriormente pueda utilizar.",
             "clickHere": "haga click aquí",

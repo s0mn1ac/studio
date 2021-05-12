@@ -154,6 +154,8 @@
         },
 
         "cookiePolicy": {
+            "message": "This website uses cookies to ensure you get the best user experience.",
+            "allow": "Got it!",
             "title": "Cookies policy",
             "description": "Cookies are small amounts of information that are stored in the browser used by each user so that the server remembers certain information that it can use later.",
             "clickHere": "click here",

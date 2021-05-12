@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  cookieDomain: 'localhost'
+  cookieDomain: '192.168.1.67'
 };
 
 /*
