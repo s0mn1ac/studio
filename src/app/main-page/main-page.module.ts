@@ -12,8 +12,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { PaintServicesComponent } from './components/services/components/paint-services/paint-services.component';
 import { PrintServicesComponent } from './components/services/components/print-services/print-services.component';
 import { ReferencesComponent } from './components/references/references.component';
-import { QualityBadgeComponent } from './components/services/components/paint-services/quality-badge/quality-badge.component';
-import { PresentationCardComponent } from './components/about/presentation-card/presentation-card.component';
+import { CardComponent } from '../shared/components/card/card.component';
 import { FullScreenDialogComponent } from './components/gallery/full-screen-dialog/full-screen-dialog.component';
 import { ExtendedGalleryComponent } from './components/gallery/extended-gallery/extended-gallery.component';
 import { ChipComponent } from './components/gallery/extended-gallery/chip/chip.component';
@@ -28,9 +27,8 @@ import { ChipComponent } from './components/gallery/extended-gallery/chip/chip.c
         ServicesComponent,
         PaintServicesComponent,
         PrintServicesComponent,
-        QualityBadgeComponent,
         ReferencesComponent,
-        PresentationCardComponent,
+        CardComponent,
         FullScreenDialogComponent,
         ExtendedGalleryComponent,
         ChipComponent

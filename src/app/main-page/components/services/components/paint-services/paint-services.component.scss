@@ -1,6 +1,6 @@
 @import '../../../../../../assets/scss/main-styles.scss';
 
-.paint-services-layout {
+:host ::ng-deep .paint-services-layout {
     padding: 80px 2rem 50px 2rem;
     background-color: $primary-color;
     text-align: center;
@@ -30,22 +30,37 @@
 
     .content-container {
         margin-top: 20px;
-        // flex-wrap: wrap;
 
         .description-container {
             flex-grow: 1;
             width: 100%;
-        }
 
-        .custom-card-front {
-            background-color: $accent-color;
-            border-radius: 4px;
-        }
+            .custom-card-container {
 
-        .custom-card-back {
-            background-color: $material-dark;
-            color: $white;
-            border-radius: 4px;
+                .presentation-card-container {
+
+                    &:hover {
+
+                        .color-overlay{
+                            background-color: $accent-color !important;
+                        }
+                    }
+
+                    .title-content {
+        
+                        hr {
+                            background-color: $primary-color !important;
+                        }
+                    }
+
+                    .card-info {
+            
+                        fa-icon {
+                            color: $primary-color !important;
+                        }
+                    }
+                }
+            }
         }
 
         .img-container {

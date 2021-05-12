@@ -32,7 +32,6 @@
                 margin-top: -10px;
 
                 li {
-                    // font-family: Serif;
                     color: $accent-color;
                     font-weight: 700;
                     padding: 0 10px;
@@ -52,21 +51,10 @@
     .content-container {
         margin-top: 20px;
         
-        .card-container {
-            overflow-x: hidden;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-
-            .card {
-                margin: 3rem;
-
-                &:hover {
-                    -ms-transform: scale(1.03);
-                    -webkit-transform: scale(1.03);
-                    transform: scale(1.03);
-                }
-            }
+        img {
+            margin-top: 5rem;
+            width: 100%;
+            max-width: 940px;
         }
     }
 }

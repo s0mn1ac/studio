@@ -7,7 +7,7 @@
             <span class="second-part"> {{ t('mainPage.gallery.titleSecondPart') }} </span>
         </h1>
 
-        <div class="main-gallery-block flex-column" *ngIf="isMainGalleryVisible">
+        <div data-aos="fade-up" data-aos-delay="800" class="main-gallery-block flex-column" *ngIf="isMainGalleryVisible">
 
             <div class="first-row flex-row">
                 <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow"

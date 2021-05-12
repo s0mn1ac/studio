@@ -1,0 +1,21 @@
+<div class="presentation-card-layout" *transloco="let t">
+
+    <div data-aos="fade-up" class="presentation-card-container custom-shadow zoom" [ngStyle]="{'background-image': image.fullSize}">
+
+        <div class="title-content">
+            <h3> {{ image.title.toUpperCase() }} </h3>
+            <hr class="custom-shadow" />
+        </div>
+
+        <div class="card-info flex-column">
+            <fa-icon [icon]="icon"> </fa-icon>
+            {{ image.description }}
+        </div>
+
+        <div class="gradient-overlay"> </div>
+
+        <div class="color-overlay"> </div>
+
+    </div>
+
+</div>

@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
+
 export class ImageItem {
     id!: number;
     active!: boolean;
@@ -6,6 +8,7 @@ export class ImageItem {
     title!: string;
     description!: string;
     tags?: number[];
+    icon?: IconDefinition;
 
     constructor() { }
 }

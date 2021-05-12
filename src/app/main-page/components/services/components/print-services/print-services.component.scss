@@ -6,17 +6,6 @@
     font-family: $text;
     position: relative;
 
-    // &::before {
-    //     content: ' ';
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     opacity: 0.1;
-    //     background-image: url('../../../../../../assets/images/patterns/print-pattern.png');
-    // }
-
     .title-container {
 
         .title {
@@ -29,7 +18,6 @@
 
     .content-container {
         margin-top: 20px;
-        // flex-wrap: wrap;
 
         .description-container {
             flex-grow: 1;

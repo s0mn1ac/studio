@@ -10,55 +10,21 @@
             </h1>
         </div>
         
-        <div class="content-container flex-row">
+        <div class="content-container flex-row" data-aos="fade-up" data-aos-delay="800">
 
             <div class="img-container flex-row">
-                <img data-aos="fade-right" data-aos-duration="1500" src="https://cdn03.plentymarkets.com/ioseuwg7moqp/item/images/24320/full/Raise3D-E2-Educational-E2-24320.png">
+                <img src="https://cdn03.plentymarkets.com/ioseuwg7moqp/item/images/24320/full/Raise3D-E2-Educational-E2-24320.png">
             </div>
 
             <div class="description-container flex-column">
 
-                <p data-aos="fade-up" data-aos-delay="800"> <span> {{ t('mainPage.services.printServices.content.firstParagraph') }} </span> </p>
+                <p> <span> {{ t('mainPage.services.printServices.content.firstParagraph') }} </span> </p>
 
-                <p data-aos="fade-up" data-aos-delay="1000"> <span> {{ t('mainPage.services.printServices.content.secondParagraph') }} </span> </p>
+                <p> <span> {{ t('mainPage.services.printServices.content.secondParagraph') }} </span> </p>
 
                 <div class="custom-card-container flex-row">
 
-                    <div class="custom-card">
-                        <div class="custom-card-inner">
-                            <div data-aos="flip-left" class="custom-card-front flex-column">
-                                <fa-icon [icon]="faTools"> </fa-icon>
-                                <h1> Montaje </h1>
-                            </div>
-                            <div class="custom-card-back flex-column">
-                                <span> ¿Tienes problemas montando tus minis? Déjanoslo a nosotros. </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="custom-card">
-                        <div class="custom-card-inner">
-                            <div data-aos="flip-left" class="custom-card-front flex-column">
-                                <fa-icon [icon]="faMagnet"> </fa-icon>
-                                <h1> Imantación </h1>
-                            </div>
-                            <div class="custom-card-back flex-column">
-                                <span> Imantamos peanas y diferentes partes de las figuras. </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="custom-card">
-                        <div class="custom-card-inner">
-                            <div data-aos="flip-left" class="custom-card-front flex-column">
-                                <fa-icon [icon]="faMountain"> </fa-icon>
-                                <h1> Decoración </h1>
-                            </div>
-                            <div class="custom-card-back flex-column">
-                                <span> Le damos un toque especial a tu peana. </span>
-                            </div>
-                        </div>
-                    </div>
+                    <app-card [image]="imageItem" *ngFor="let imageItem of images" ></app-card>
 
                 </div>
 

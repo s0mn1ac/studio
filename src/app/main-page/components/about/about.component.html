@@ -15,17 +15,12 @@
             </h1>
         </div>
         
-        <div class="content-container">
+        <div class="content-container" data-aos="fade-up" data-aos-delay="800">
 
-            <p data-aos="fade-up" data-aos-delay="800"> <span> {{ t('mainPage.about.content.firstParagraph') }} </span> </p>
-            <p data-aos="fade-up" data-aos-delay="1000"> <span> {{ t('mainPage.about.content.secondParagraph') }} </span> </p>
+            <p> <span> {{ t('mainPage.about.content.firstParagraph') }} </span> </p>
+            <p> <span> {{ t('mainPage.about.content.secondParagraph') }} </span> </p>
 
-            
-            <div class="card-container flex-row">
-
-                <app-presentation-card data-aos="zoom-in" data-aos-duration="500" data-aos-offset="0" class="card zoom" [image]="image" *ngFor="let image of images"></app-presentation-card>
-
-            </div>
+            <img src="https://2.bp.blogspot.com/-x4t4tquKokA/XETST4OJCaI/AAAAAAABjFw/ODMJk14u7tE8yNCyjbUeBsQSiSsnkVzQwCLcBGAs/s1600/home-issues-covers.png">
 
         </div>
 
