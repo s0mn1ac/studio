@@ -35,7 +35,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private initTranslocoSubscription(): void {
 
     this.transloco$ = this.appService.translocoService.selectTranslation().subscribe((event: any) => {
-      console.log(this.cookieService)
+      
       const content = this.cookieService.getConfig().content;
   
       if (content) {
