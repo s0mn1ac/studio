@@ -16,6 +16,7 @@ import { CardComponent } from '../shared/components/card/card.component';
 import { FullScreenDialogComponent } from './components/gallery/full-screen-dialog/full-screen-dialog.component';
 import { ExtendedGalleryComponent } from './components/gallery/extended-gallery/extended-gallery.component';
 import { ChipComponent } from './components/gallery/extended-gallery/chip/chip.component';
+import { CustomGalleryComponent } from './components/gallery/custom-gallery/custom-gallery.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { ChipComponent } from './components/gallery/extended-gallery/chip/chip.c
         CardComponent,
         FullScreenDialogComponent,
         ExtendedGalleryComponent,
-        ChipComponent
+        ChipComponent,
+        CustomGalleryComponent
     ],
     imports: [
         CommonModule,

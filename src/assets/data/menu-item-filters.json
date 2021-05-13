@@ -1,0 +1,380 @@
+[
+    {
+        "disabled": false,
+        "id": 1,
+        "command": null,
+        "label": "warhammerAgeOfSigmar",
+        "items": [
+            {
+                "disabled": false,
+                "id": 101,
+                "command": null,
+                "label": "grandAllianceOrder",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 1101,
+                        "command": null,
+                        "label": "daughtersOfKhaine"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1102,
+                        "command": null,
+                        "label": "seraphon"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1103,
+                        "command": null,
+                        "label": "stormcastEternals"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1104,
+                        "command": null,
+                        "label": "idonethDeepkin"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1105,
+                        "command": null,
+                        "label": "sylvaneth"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1106,
+                        "command": null,
+                        "label": "fyreslayers"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1107,
+                        "command": null,
+                        "label": "kharadronOverlords"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1108,
+                        "command": null,
+                        "label": "luminethRealmLords"
+                    }
+                    
+                ]
+            },
+            {
+                "disabled": false,
+                "id": 102,
+                "command": null,
+                "label": "grandAllianceChaos",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 1201,
+                        "command": null,
+                        "label": "bladesOfKhorne"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1202,
+                        "command": null,
+                        "label": "disciplesOfTzeentch"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1203,
+                        "command": null,
+                        "label": "hedonitesOfSlaanesh"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1204,
+                        "command": null,
+                        "label": "maggotkinOfNurgle"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1205,
+                        "command": null,
+                        "label": "skaven"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1206,
+                        "command": null,
+                        "label": "slavesOfDarkness"
+                    }
+                ]
+            },
+            {
+                "disabled": false,
+                "id": 103,
+                "command": null,
+                "label": "grandAllianceDeath",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 1301,
+                        "command": null,
+                        "label": "fleshEaterCourts"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1302,
+                        "command": null,
+                        "label": "legionsOfNagash"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1303,
+                        "command": null,
+                        "label": "nighthaunt"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1304,
+                        "command": null,
+                        "label": "ossiarchBonereapers"
+                    }
+                ]
+            },
+            {
+                "disabled": false,
+                "id": 104,
+                "command": null,
+                "label": "grandAllianceDestruction",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 1401,
+                        "command": null,
+                        "label": "giants"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1402,
+                        "command": null,
+                        "label": "ogorMawtribes"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1403,
+                        "command": null,
+                        "label": "orrukWarclans"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 1404,
+                        "command": null,
+                        "label": "goblins"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "disabled": false,
+        "id": 2,
+        "command": null,
+        "label": "warhammer40000",
+        "items": [
+            {
+                "disabled": false,
+                "id": 201,
+                "command": null,
+                "label": "spaceMarines",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 2101,
+                        "command": null,
+                        "label": "ultramarines"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2102,
+                        "command": null,
+                        "label": "blackTemplars"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2103,
+                        "command": null,
+                        "label": "bloodAngels"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2104,
+                        "command": null,
+                        "label": "darkAngels"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2105,
+                        "command": null,
+                        "label": "spaceWolves"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2106,
+                        "command": null,
+                        "label": "salamanders"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2107,
+                        "command": null,
+                        "label": "whiteScars"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2108,
+                        "command": null,
+                        "label": "ravenGuard"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2109,
+                        "command": null,
+                        "label": "greyKnights"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2110,
+                        "command": null,
+                        "label": "ironHands"
+                    }
+                ]
+            },
+            {
+                "disabled": false,
+                "id": 202,
+                "command": null,
+                "label": "imperiumArmies",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 2201,
+                        "command": null,
+                        "label": "deptusCustodes"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2202,
+                        "command": null,
+                        "label": "adeptusMechanicus"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2203,
+                        "command": null,
+                        "label": "astraMilitarum"
+                    }
+                ]
+            },
+            {
+                "disabled": false,
+                "id": 203,
+                "command": null,
+                "label": "chaosArmies",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 2301,
+                        "command": null,
+                        "label": "chaosDaemons"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2302,
+                        "command": null,
+                        "label": "chaosKnights"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2303,
+                        "command": null,
+                        "label": "chaosSpaceMarines"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2304,
+                        "command": null,
+                        "label": "deathGuard"
+                    }
+                ]
+            },
+            {
+                "disabled": false,
+                "id": 204,
+                "command": null,
+                "label": "xenosArmies",
+                "items": [
+                    {
+                        "disabled": false,
+                        "id": 2401,
+                        "command": null,
+                        "label": "drukhari"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2402,
+                        "command": null,
+                        "label": "genestealerCults"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2403,
+                        "command": null,
+                        "label": "necrons"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2404,
+                        "command": null,
+                        "label": "orks"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2405,
+                        "command": null,
+                        "label": "tauEmpire"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2406,
+                        "command": null,
+                        "label": "tyranids"
+                    },
+                    {
+                        "disabled": false,
+                        "id": 2407,
+                        "command": null,
+                        "label": "ynnari"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "disabled": false,
+        "id": 3,
+        "command": null,
+        "label": "theLordOfTheRings",
+        "items": null
+    },
+    {
+        "disabled": false,
+        "id": 4,
+        "command": null,
+        "label": "alienVsPredator",
+        "items": null
+    },
+    {
+        "disabled": false,
+        "id": 0,
+        "command": null,
+        "label": "lastProjects",
+        "items": null
+    }
+ ]

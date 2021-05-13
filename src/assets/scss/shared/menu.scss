@@ -1,0 +1,34 @@
+@import './colors.scss';
+
+.p-tieredmenu {
+
+    &.p-tieredmenu-overlay {
+        margin-top: 0.5rem !important;
+        background-color: $material-dark !important;
+    }
+
+    .p-menuitem {
+        background-color: $material-dark !important;
+
+        &.p-menuitem-active > .p-menuitem-link {
+            background-color: $material-darker !important;
+            color: $text-white !important;
+            margin: 0 4px;
+            border-radius: 3px;
+        }
+
+        .p-menuitem-link {
+            background-color: $material-dark !important;
+            box-shadow: none !important;
+
+            .p-menuitem-text, .p-submenu-icon {
+                color: $text-white !important;
+            }
+        }
+    }
+
+    .p-submenu-list {
+        background-color: $material-dark !important;
+    }
+
+}

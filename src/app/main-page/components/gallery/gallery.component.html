@@ -9,7 +9,9 @@
 
         <div data-aos="fade-up" data-aos-delay="800" class="main-gallery-block flex-column" *ngIf="isMainGalleryVisible">
 
-            <div class="first-row flex-row">
+            <app-custom-gallery></app-custom-gallery>
+
+            <!-- <div class="first-row flex-row">
                 <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow"
                     [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}"  (click)="showGallery(image.fullSize)">
                 </div>
@@ -19,15 +21,15 @@
                 <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow"
                     [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="showGallery(image.fullSize)">
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
-        <div class="extended-gallery-block" *ngIf="!isMainGalleryVisible">
+        <!-- <div class="extended-gallery-block" *ngIf="!isMainGalleryVisible">
             <app-extended-gallery></app-extended-gallery>
         </div>
 
-        <button mat-raised-button color="accent" class="zoom" (click)="swapGallery()"> {{ nextGalleryTitle }} </button>
+        <button mat-raised-button color="accent" class="zoom" (click)="swapGallery()"> {{ nextGalleryTitle }} </button> -->
 
     </div>
 

@@ -1,0 +1,50 @@
+@import '../../../../../assets/scss/main-styles.scss';
+
+:host ::ng-deep .custom-gallery-layout {
+    justify-content: center;
+
+    .custom-gallery-container {
+        position: relative;
+        width: 100%;
+        max-width: 840px;
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding: 1rem;
+        }
+
+        .gallery {
+            width: 100%;
+            max-width: 840px;
+
+            p-galleria {
+                width: 100%;
+
+                .p-galleria-thumbnail-item {
+    
+                    img {
+                        width: 80px;
+                        height: 60px;
+                    }
+                }
+
+                .p-galleria-thumbnail-container {
+                    justify-content: space-between;
+                    
+                    .p-galleria-thumbnail-prev, .p-galleria-thumbnail-next {
+                        box-shadow: none !important;
+                        padding: 1.5rem;
+                        background-color: $accent-color;
+                    }
+
+                    .p-galleria-thumbnail-item-content {
+                        box-shadow: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

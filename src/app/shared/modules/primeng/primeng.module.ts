@@ -9,6 +9,9 @@ import { ChipModule } from 'primeng/chip';
 import { TreeModule } from 'primeng/tree';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { TagModule } from 'primeng/tag';
+import { TieredMenuModule } from 'primeng/tieredmenu';
+import { ButtonModule } from 'primeng/button';
+import { SlideMenuModule } from 'primeng/slidemenu';
 
 @NgModule({
   declarations: [],
@@ -21,7 +24,10 @@ import { TagModule } from 'primeng/tag';
     ChipModule,
     TreeModule,
     OverlayPanelModule,
-    TagModule
+    TagModule,
+    TieredMenuModule,
+    ButtonModule,
+    SlideMenuModule
   ]
 })
 export class PrimeNgModule { }
