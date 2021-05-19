@@ -24,6 +24,7 @@ const cookieConfig: NgcCookieConsentConfig = {
       background: '#065A82',
       text: '#FFFFFF',
       link: '#FFFFFF'
+      // border: "#F4AC45"
     },
     button: {
       background: '#F4AC45',

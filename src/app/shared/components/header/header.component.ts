@@ -53,15 +53,15 @@ export class HeaderComponent implements OnInit {
   private initHeaderConfiguration(): void {
 
     this.leftSideHeaderItems = [
-      { id: SectionName.ABOUT, active: false },
-      { id: SectionName.PRINT_SERVICES, active: false },
-      { id: SectionName.PAINT_SERVICES, active: false }
+      { id: SectionName.ABOUT, active: false, icon: 'contact_support' },
+      { id: SectionName.PRINT_SERVICES, active: false, icon: '3d_rotation' },
+      { id: SectionName.PAINT_SERVICES, active: false, icon: 'palette' }
     ];
 
     this.rightSideHeaderItems = [
-      { id: SectionName.GALLERY, active: false },
-      // { id: SectionName.REFERENCES, active: false },
-      { id: SectionName.CONTACT, active: false }
+      { id: SectionName.GALLERY, active: false, icon: 'image' },
+      // { id: SectionName.REFERENCES, active: false, icon: 'folder' },
+      { id: SectionName.CONTACT, active: false, icon: 'alternate_email' }
     ];
 
     this.allHeaderItems = this.leftSideHeaderItems.concat(this.rightSideHeaderItems);

@@ -13,9 +13,6 @@ import { PaintServicesComponent } from './components/services/components/paint-s
 import { PrintServicesComponent } from './components/services/components/print-services/print-services.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { CardComponent } from '../shared/components/card/card.component';
-import { FullScreenDialogComponent } from './components/gallery/full-screen-dialog/full-screen-dialog.component';
-import { ExtendedGalleryComponent } from './components/gallery/extended-gallery/extended-gallery.component';
-import { ChipComponent } from './components/gallery/extended-gallery/chip/chip.component';
 import { CustomGalleryComponent } from './components/gallery/custom-gallery/custom-gallery.component';
 
 @NgModule({
@@ -30,9 +27,6 @@ import { CustomGalleryComponent } from './components/gallery/custom-gallery/cust
         PrintServicesComponent,
         ReferencesComponent,
         CardComponent,
-        FullScreenDialogComponent,
-        ExtendedGalleryComponent,
-        ChipComponent,
         CustomGalleryComponent
     ],
     imports: [

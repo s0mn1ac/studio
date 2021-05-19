@@ -7,29 +7,11 @@
             <span class="second-part"> {{ t('mainPage.gallery.titleSecondPart') }} </span>
         </h1>
 
-        <div data-aos="fade-up" data-aos-delay="800" class="main-gallery-block flex-column" *ngIf="isMainGalleryVisible">
+        <div data-aos="fade-up" data-aos-delay="800" class="main-gallery-block flex-column">
 
             <app-custom-gallery></app-custom-gallery>
 
-            <!-- <div class="first-row flex-row">
-                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesFirstRow"
-                    [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}"  (click)="showGallery(image.fullSize)">
-                </div>
-            </div>
-            
-            <div class="second-row flex-row">
-                <div class="img-container pointer custom-shadow zoom" *ngFor="let image of imagesSecondRow"
-                    [ngStyle]="{'background-image': 'url(' + image.fullSize + ')'}" (click)="showGallery(image.fullSize)">
-                </div>
-            </div> -->
-
         </div>
-
-        <!-- <div class="extended-gallery-block" *ngIf="!isMainGalleryVisible">
-            <app-extended-gallery></app-extended-gallery>
-        </div>
-
-        <button mat-raised-button color="accent" class="zoom" (click)="swapGallery()"> {{ nextGalleryTitle }} </button> -->
 
     </div>
 
