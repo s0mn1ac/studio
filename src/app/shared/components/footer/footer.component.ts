@@ -66,12 +66,12 @@ export class FooterComponent implements OnInit {
   private initFooterItems(): void {
 
     this.footerItems = [
-      { id: SectionName.ABOUT, active: false },
-      { id: SectionName.PRINT_SERVICES, active: false },
-      { id: SectionName.PAINT_SERVICES, active: false },
-      { id: SectionName.REFERENCES, active: false },
-      { id: SectionName.GALLERY, active: false },
-      { id: SectionName.CONTACT, active: false }
+      { id: SectionName.ABOUT, active: false, icon: '' },
+      { id: SectionName.PRINT_SERVICES, active: false, icon: '' },
+      { id: SectionName.PAINT_SERVICES, active: false, icon: '' },
+      { id: SectionName.REFERENCES, active: false, icon: '' },
+      { id: SectionName.GALLERY, active: false, icon: '' },
+      { id: SectionName.CONTACT, active: false, icon: '' }
     ];
 
   }
