@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { GalleryImageItem } from 'src/app/shared/models/gallery-image-item.modal';
 import * as jsonFilters from '../../../../../assets/data/menu-item-filters.json';
 import * as jsonImages from '../../../../../assets/data/images.json';
 import { AppService } from 'src/app/shared/services/app.service';
+import { ImageItem } from 'src/app/shared/models/image-item.model';
+import { Galleria } from 'primeng/galleria';
 
 @Component({
   selector: 'app-custom-gallery',
@@ -12,11 +14,35 @@ import { AppService } from 'src/app/shared/services/app.service';
 })
 export class CustomGalleryComponent implements OnInit {
 
+  @ViewChild('mainGallery') mainGallery!: Galleria;
+
   public images: GalleryImageItem[] = [];
 
   public responsiveOptions: any[] = [];
 
   public menuItems: MenuItem[] = [];
+
+  public allImageItems!: ImageItem[];
+
+  public selectedFilter = 0;
+
+  public isGalleryVisible = false;
+
+  get activeIndex(): number {
+    return this._activeIndex;
+}
+
+  set activeIndex(newValue) {
+      if (this.images && 0 <= newValue && newValue <= (this.images.length - 1)) {
+        this._activeIndex = newValue;
+      } else if (this._activeIndex === 0) {
+        this._activeIndex = this.images.length - 1;
+      } else {
+        this._activeIndex = 0;
+      }
+  }
+
+  _activeIndex: number = 0;
 
   constructor(private appService: AppService) {
 
@@ -29,63 +55,32 @@ export class CustomGalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.initGalleryImageItems();
+    this.initImageItems();
+    this.initGallery();
     this.initMenuItems();
   }
 
-  private initGalleryImageItems(): void {
+  private initImageItems(): void {
+    this.allImageItems = (jsonImages as any).default;
+    console.log(this.allImageItems)
+  }
 
-    this.images = [
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria1.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria1.jpg',
-        alt: 'Text',
-        title: 'Text'
-      },
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria2.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria2.jpg',
-        alt: 'Text',
-        title: 'Text'
-      },
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria3.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria3.jpg',
-        alt: 'Text',
-        title: 'Text'
-      },
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria4.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria4.jpg',
-        alt: 'Text',
-        title: 'Text'
-      },
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria5.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria5.jpg',
-        alt: 'Text',
-        title: 'Text'
-      },
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria6.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria6.jpg',
-        alt: 'Text',
-        title: 'Text'
-      },
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria7.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria7.jpg',
-        alt: 'Text',
-        title: 'Text'
-      },
-      {
-        previewImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria8.jpg',
-        thumbnailImageSrc: 'https://www.primefaces.org/primeng/showcase/assets/showcase/images/galleria/galleria8.jpg',
-        alt: 'Text',
-        title: 'Text'
+  private initGallery(): void {
+
+    this.images = [];
+
+    this.allImageItems.forEach((imageItem: ImageItem) => {
+      if (imageItem.tags?.includes(this.selectedFilter)) {
+        this.images.push({
+          previewImageSrc: imageItem.fullSize,
+          thumbnailImageSrc: imageItem.thumbnail,
+          alt: imageItem.description,
+          title: imageItem.title
+        });
       }
-    ]
+    });
 
+    setTimeout(() => this.isGalleryVisible = true, 100);
   }
 
   private initMenuItems(): void {
@@ -115,7 +110,17 @@ export class CustomGalleryComponent implements OnInit {
   }
 
   private test(id: number): void {
-    console.log('test', id)
+    this.selectedFilter = id;
+    this.initGallery();
+    this.activeIndex = 1;
+  }
+
+  next() {
+    this.activeIndex++;
+  }
+
+  prev() {
+    this.activeIndex--;
   }
 
 }

@@ -1,9 +1,15 @@
 @import './colors.scss';
 
-.p-tieredmenu {
+.p-tieredmenu, .p-slidemenu {
 
-    &.p-tieredmenu-overlay {
+    .p-slidemenu-rootlist {
+        width: 100% !important;
+    }
+
+    &.p-tieredmenu-overlay, &.p-slidemenu-overlay {
         margin-top: 0.5rem !important;
+        padding: 5px !important;
+        width: 250px !important;
         background-color: $material-dark !important;
     }
 
@@ -11,15 +17,18 @@
         background-color: $material-dark !important;
 
         &.p-menuitem-active > .p-menuitem-link {
-            background-color: $material-darker !important;
+            background-color: $material-dark-high !important;
             color: $text-white !important;
-            margin: 0 4px;
-            border-radius: 3px;
         }
 
         .p-menuitem-link {
             background-color: $material-dark !important;
             box-shadow: none !important;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: $material-dark-medium !important;
+            }
 
             .p-menuitem-text, .p-submenu-icon {
                 color: $text-white !important;
@@ -27,8 +36,18 @@
         }
     }
 
-    .p-submenu-list {
-        background-color: $material-dark !important;
+    .p-slidemenu-backward {
+        color: $text-white !important;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: $material-dark-medium !important;
+        }
     }
 
+    .p-submenu-list {
+        width: 100% !important;
+        background-color: $material-dark !important;
+    }
 }
+

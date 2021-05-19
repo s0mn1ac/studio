@@ -6,7 +6,7 @@
     .custom-gallery-container {
         position: relative;
         width: 100%;
-        max-width: 840px;
+        // max-width: 840px;
 
         .header {
             position: absolute;
@@ -18,31 +18,116 @@
 
         .gallery {
             width: 100%;
-            max-width: 840px;
+            // max-width: 840px;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+
+            #prevButton {
+                box-shadow: none !important;
+                border-radius: 25px;
+                width: 45px;
+                height: 100px;
+                margin: 0.5rem;
+                border: 2px solid $accent-color;
+                background-color: $transparent;
+                transition: all 0.2s ease-in-out;
+
+                span {
+                    transition: all 0.2s ease-in-out;
+                    color: $white;
+                }
+
+                &:hover {
+                    border: 2px solid $transparent;
+                    background-color: $accent-color;
+
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+            
+            #nextButton {
+                box-shadow: none !important;
+                border-radius: 25px;
+                height: 100px;
+                margin: 0.5rem;
+                border: 2px solid $accent-color;
+                background-color: $transparent;
+                transition: all 0.2s ease-in-out;
+
+                span {
+                    transition: all 0.2s ease-in-out;
+                    color: $white;
+                }
+
+                &:hover {
+                    border: 2px solid $transparent;
+                    background-color: $accent-color;
+
+                    span {
+                        color: $white;
+                    }
+                }
+            }
 
             p-galleria {
-                width: 100%;
+                // width: 100%;
 
-                .p-galleria-thumbnail-item {
-    
+                .p-galleria-item {
+                    padding: 0.5rem;
+
                     img {
-                        width: 80px;
-                        height: 60px;
+                        height: 750px;
                     }
                 }
 
-                .p-galleria-thumbnail-container {
-                    justify-content: space-between;
-                    
-                    .p-galleria-thumbnail-prev, .p-galleria-thumbnail-next {
-                        box-shadow: none !important;
-                        padding: 1.5rem;
-                        background-color: $accent-color;
+                .p-galleria-indicators .p-galleria-indicator {
+
+                    &.p-highlight button {
+                        background-color: $primary-color;
                     }
 
-                    .p-galleria-thumbnail-item-content {
+                    button {
                         box-shadow: none !important;
                     }
+                }
+
+                // .p-galleria-thumbnail-item {
+    
+                //     img {
+                //         width: 80px;
+                //         height: 60px;
+                //     }
+                // }
+
+                // .p-galleria-thumbnail-container {
+                //     justify-content: space-between;
+                    
+                //     .p-galleria-thumbnail-prev, .p-galleria-thumbnail-next {
+                //         box-shadow: none !important;
+                //         padding: 1.5rem;
+                //         background-color: $accent-color;
+                //     }
+
+                //     .p-galleria-thumbnail-item-content {
+                //         box-shadow: none !important;
+                //     }
+                // }
+            }
+
+            @media only screen and (max-width: 800px) {
+
+                p-galleria .p-galleria-item img {
+                    height: 500px;
+                }
+            }
+
+            @media only screen and (max-height: 500px) {
+
+                p-galleria .p-galleria-item img {
+                    height: 250px;
                 }
             }
         }

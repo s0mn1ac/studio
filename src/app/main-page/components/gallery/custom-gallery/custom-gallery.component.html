@@ -14,7 +14,9 @@
 
         <div class="gallery flex-row">
 
-            <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '840px'}" [numVisible]="5">
+            <button pButton pRipple type="button" id="prevButton" icon="pi pi-chevron-left" (click)="prev()" styleClass="p-button-rounded"></button>
+
+            <p-galleria #mainGallery [value]="images" [showThumbnails]="false" [showIndicators]="true" [responsiveOptions]="responsiveOptions" [(activeIndex)]="activeIndex" [containerStyle]="{'max-width': '840px'}" [numVisible]="5">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%;" [alt]="item.alt" />
                 </ng-template>
@@ -24,6 +26,8 @@
                     </div>
                 </ng-template>
             </p-galleria>
+
+            <button pButton pRipple type="button" id="nextButton" icon="pi pi-chevron-right" (click)="next()" styleClass="p-button-rounded"></button>
 
         </div>
 
