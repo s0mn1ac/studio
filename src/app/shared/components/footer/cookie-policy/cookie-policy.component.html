@@ -1,6 +1,6 @@
 <div class="cookie-policy-layout" *transloco="let t">
 
-    <p-dialog #cookiePolicyDialog *ngIf="isDialogVisible" [(visible)]="isDialogVisible" [draggable]="false" [dismissableMask]="true" [resizable]="false" (onHide)="hideDialog()">
+    <p-dialog #cookiePolicyDialog *ngIf="isDialogVisible" [(visible)]="isDialogVisible" [draggable]="false" [modal]="true" [dismissableMask]="true" [resizable]="false" (onHide)="hideDialog()">
 
         <div class="sections flex-column">
             <h1 style="margin-top: 0;"> {{ t('footer.cookiePolicy.title') }} </h1>
