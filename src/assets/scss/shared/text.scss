@@ -7,14 +7,16 @@ h1 {
     font-weight: bold;
     font-family: $title;
     font-size: 40px;
-    margin-top: 0px;
     margin-bottom: 0px;
+    margin-top: 2rem;
+    text-shadow: 0 5px 20px black;
 }
 
 h2 {
     font-family: $text;
     font-size: 30px;
     margin-bottom: 20px;
+    text-shadow: 0 5px 20px black;
 }
 
 .text-clickable {
