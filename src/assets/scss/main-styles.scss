@@ -10,7 +10,7 @@
 }
 
 .p-sidebar-mask {
-    z-index: 0 !important;
+    z-index: 1 !important;
 }
 
 .flex-row {
@@ -58,4 +58,17 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.brush-image-container {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    
+    img {
+        width: 350px;
+        // filter: opacity(85%);
+    }
 }

@@ -19,6 +19,8 @@
     // }
 
     .title-container {
+        position: relative;
+        z-index: 1;
 
         .text-animation-container {
             justify-content: center;

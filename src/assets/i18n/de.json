@@ -133,8 +133,9 @@
             "telegram": "Telegram",
 
             "content": {
-                "firstParagraph": "If you need to contact us, you can do so through the following communication channels:",
-                "secondParagraph": "We are looking forward to help you!"
+                "firstParagraph": "We have at your disposal different communication channels, so you can contact us using the one which you feel most comfortable.",
+                "secondParagraph": "Whichever option you choose, we will try to answer as soon as possible.",
+                "thirdParagraph": "We are looking forward to help you!"
             }
         }
     },

@@ -6,7 +6,13 @@
     font-family: $text;
     position: relative;
 
+    .brush-image-container {
+        top: -110px !important;
+    }
+
     .title-container {
+        position: relative;
+        z-index: 1;
 
         .title {
 

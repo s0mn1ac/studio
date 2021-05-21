@@ -133,8 +133,9 @@
             "telegram": "Telegram",
 
             "content": {
-                "firstParagraph": "Si necesitas ponerte en contacto con nosotros puedes hacerlo a través de los siguientes canales de comunicación:",
-                "secondParagraph": "¡Estamos deseando ayudarte!"
+                "firstParagraph": "Tenemos a tu disposición diferentes canales de comunicación para que puedas ponerte en contacto con nosotros utilizando el medio con el que te sientas más cómodo.",
+                "secondParagraph": "Elijas la opción que elijas, trataremos de responder con la mayor brevedad posible.",
+                "thirdParagraph": "¡Estamos deseando ayudarte!"
             }
         }
     },

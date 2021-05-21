@@ -5,6 +5,12 @@
     text-align: center;
     font-family: $text;
     background-color: $primary-color;
+    position: relative;
+    z-index: 1;
+
+    .brush-image-container {
+        top: -20px !important;
+    }
 
     .title {
 

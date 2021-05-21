@@ -5,6 +5,12 @@
     text-align: center;
     font-family: $text;
     position: relative;
+    position: relative;
+    z-index: 1;
+
+    .brush-image-container {
+        top: -25px !important;
+    }
 
     // &::before {
     //     content: ' ';
