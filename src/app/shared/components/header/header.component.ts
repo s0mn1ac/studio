@@ -53,14 +53,14 @@ export class HeaderComponent implements OnInit {
   private initHeaderConfiguration(): void {
 
     this.leftSideHeaderItems = [
+      { id: SectionName.HOME, active: false, icon: 'home' },
       { id: SectionName.ABOUT, active: false, icon: 'contact_support' },
-      { id: SectionName.PRINT_SERVICES, active: false, icon: '3d_rotation' },
-      { id: SectionName.PAINT_SERVICES, active: false, icon: 'palette' }
+      { id: SectionName.PRINT_SERVICES, active: false, icon: '3d_rotation' }
     ];
-
+    
     this.rightSideHeaderItems = [
+      { id: SectionName.PAINT_SERVICES, active: false, icon: 'palette' },
       { id: SectionName.GALLERY, active: false, icon: 'image' },
-      // { id: SectionName.REFERENCES, active: false, icon: 'folder' },
       { id: SectionName.CONTACT, active: false, icon: 'alternate_email' }
     ];
 
