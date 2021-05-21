@@ -8,7 +8,7 @@
 
                 <div class="left-row flex-row">
                     <div class="menu-container">
-                        <div class="header-item flex-row" *ngFor="let header of leftSideHeaderItems" (click)="onClickHeaderOption(header.id)">
+                        <div class="header-item left-side flex-row" *ngFor="let header of leftSideHeaderItems" (click)="onClickHeaderOption(header.id)">
                             <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
 
                 <div class="right-row flex-row">
                     <div class="menu-container">
-                        <div class="header-item flex-row" [ngClass]="{ 'click' : header.active }" *ngFor="let header of rightSideHeaderItems" (click)="onClickHeaderOption(header.id)">
+                        <div class="header-item right-side flex-row" [ngClass]="{ 'click' : header.active }" *ngFor="let header of rightSideHeaderItems" (click)="onClickHeaderOption(header.id)">
                             <span class="header-item-text"> {{ t('header.' + header.id) }} </span>
                         </div>
                     </div>

@@ -33,7 +33,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     }
   },
   content: {
-    message: 'Este sitio web utiliza cookies para mejorar tu experiencia de usuario.',
+    message: 'Utilizamos cookies para mejorar tu experiencia de uso. Si continúas navegando entendemos que aceptas su uso.',
     dismiss: '¡Vamos allá!'
   },
   showLink: false,

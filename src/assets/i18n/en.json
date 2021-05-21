@@ -28,6 +28,7 @@
             "content": {
                 "firstParagraph": "Nuestro principal objetivo es ayudarte a sacar del gris tus minis y darles vida. ¿Que no tienes minis? No te preocupes, pues también somos unos auténticos frikis de la impresión 3D y podemos ayudarte con eso.",
                 "secondParagraph": "Contamos con las mejores herramientas para dar vida a tus proyectos:",
+                "thirdParagraph": "Don't miss our latest posts!",
 
                 "list": {
 
@@ -154,7 +155,7 @@
         },
 
         "cookiePolicy": {
-            "message": "This website uses cookies to ensure you get the best user experience.",
+            "message": "This website uses cookies to ensure you get the best user experience. If you continue browsing we understand that you accept its use.",
             "allow": "Got it!",
             "title": "Cookies policy",
             "description": "Cookies are small amounts of information that are stored in the browser used by each user so that the server remembers certain information that it can use later.",

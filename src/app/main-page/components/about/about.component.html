@@ -22,6 +22,33 @@
 
             <img src="https://2.bp.blogspot.com/-x4t4tquKokA/XETST4OJCaI/AAAAAAABjFw/ODMJk14u7tE8yNCyjbUeBsQSiSsnkVzQwCLcBGAs/s1600/home-issues-covers.png">
 
+            <div class="social-media-container flex-row">
+
+                <span class="title"> {{ t('mainPage.about.content.thirdParagraph') }} </span>
+                
+                <div class="buttons-container flex-row">
+
+                    <button mat-icon-button aria-label="Instagram" class="zoom" (click)="openNewTab('Instagram')">
+                        <fa-icon [icon]="faInstagram"></fa-icon>
+                    </button>
+        
+                    <button mat-icon-button aria-label="Facebook" class="zoom" (click)="openNewTab('Facebook')">
+                        <fa-icon [icon]="faFacebook"></fa-icon>
+                    </button>
+        
+                    <button mat-icon-button aria-label="Twitter" class="zoom" (click)="openNewTab('Twitter')">
+                        <fa-icon [icon]="faTwitter"></fa-icon>
+                    </button>
+        
+                    <button mat-icon-button aria-label="Youtube" [disabled]="true" (click)="openNewTab('Youtube')">
+                        <fa-icon [icon]="faYoutube"></fa-icon>
+                    </button>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
