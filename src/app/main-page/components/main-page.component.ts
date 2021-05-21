@@ -44,7 +44,6 @@ export class MainPageComponent implements OnInit, OnDestroy {
 
   test(): void {
     this.shouldRun = !this.shouldRun;
-    console.log('OPEN');
   }
 
   ngOnDestroy(): void {

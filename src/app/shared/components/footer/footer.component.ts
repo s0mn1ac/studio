@@ -52,6 +52,10 @@ export class FooterComponent implements OnInit {
     this.appService.headerService.navigateTo(name);
   }
 
+  public openDevPage(): void {
+    window.open('https://about.me/juanmigonzalez', '_blank');
+  }
+
   public openNewTab(name: string): void {
     switch (name) {
       case 'Instagram':
@@ -76,7 +80,7 @@ export class FooterComponent implements OnInit {
   }
 
   public showTermsAndConditionsDialog(): void {
-    this.termsAndConditionsDialog.showDialog();
+    // this.termsAndConditionsDialog.showDialog();
   }
 
   private setCopyYear(): void {
@@ -101,15 +105,15 @@ export class FooterComponent implements OnInit {
     this.properties = { images: [], index: 0 };
 
     this.imagesFirstRow = [
-      { id: 0, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-0.jpeg', fullSize: '../../../../assets/images/gallery/image-0.jpeg' },
-      { id: 1, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-1.jpeg', fullSize: '../../../../assets/images/gallery/image-1.jpeg' },
-      { id: 2, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-2.jpeg', fullSize: '../../../../assets/images/gallery/image-2.jpeg' }
+      { id: 0, active: true, title: 'Title', description: 'Description', thumbnail: 'https://magink.es/custom_media/images/footer-images/image-0.jpeg', fullSize: 'https://magink.es/custom_media/images/footer-images/image-0.jpeg' },
+      { id: 1, active: true, title: 'Title', description: 'Description', thumbnail: 'https://magink.es/custom_media/images/footer-images/image-1.jpeg', fullSize: 'https://magink.es/custom_media/images/footer-images/image-1.jpeg' },
+      { id: 2, active: true, title: 'Title', description: 'Description', thumbnail: 'https://magink.es/custom_media/images/footer-images/image-2.jpeg', fullSize: 'https://magink.es/custom_media/images/footer-images/image-2.jpeg' }
     ];
 
     this.imagesSecondRow = [
-      { id: 3, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-3.jpeg', fullSize: '../../../../assets/images/gallery/image-3.jpeg' },
-      { id: 4, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-4.jpeg', fullSize: '../../../../assets/images/gallery/image-4.jpeg' },
-      { id: 5, active: true, title: 'Title', description: 'Description', thumbnail: '../../../../assets/images/gallery/image-5.jpeg', fullSize: '../../../../assets/images/gallery/image-5.jpeg' }
+      { id: 3, active: true, title: 'Title', description: 'Description', thumbnail: 'https://magink.es/custom_media/images/footer-images/image-3.jpeg', fullSize: 'https://magink.es/custom_media/images/footer-images/image-3.jpeg' },
+      { id: 4, active: true, title: 'Title', description: 'Description', thumbnail: 'https://magink.es/custom_media/images/footer-images/image-4.jpeg', fullSize: 'https://magink.es/custom_media/images/footer-images/image-4.jpeg' },
+      { id: 5, active: true, title: 'Title', description: 'Description', thumbnail: 'https://magink.es/custom_media/images/footer-images/image-5.jpeg', fullSize: 'https://magink.es/custom_media/images/footer-images/image-5.jpeg' }
     ];
     
     this.images = this.imagesFirstRow.concat(this.imagesSecondRow);

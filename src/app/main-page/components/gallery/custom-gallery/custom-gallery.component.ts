@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { GalleryImageItem } from 'src/app/shared/models/gallery-image-item.modal';
-import * as jsonFilters from '../../../../../assets/data/menu-item-filters.json';
-import * as jsonImages from '../../../../../assets/data/images.json';
 import { AppService } from 'src/app/shared/services/app.service';
 import { ImageItem } from 'src/app/shared/models/image-item.model';
 import { Galleria } from 'primeng/galleria';
@@ -55,14 +53,13 @@ export class CustomGalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.initImageItems();
-    this.initGallery();
-    this.initMenuItems();
+    this.initAllItems();
   }
 
-  private initImageItems(): void {
-    this.allImageItems = (jsonImages as any).default;
-    console.log(this.allImageItems)
+  private async initAllItems(): Promise<void> {
+    this.allImageItems = await this.appService.baseService.getAllImages();
+    this.menuItems = this.buildMenuItems(await this.appService.baseService.getAllFilters());
+    this.initGallery();
   }
 
   private initGallery(): void {
@@ -81,10 +78,6 @@ export class CustomGalleryComponent implements OnInit {
     });
 
     setTimeout(() => this.isGalleryVisible = true, 100);
-  }
-
-  private initMenuItems(): void {
-    this.menuItems = this.buildMenuItems((jsonFilters as any).default);
   }
 
   private buildMenuItems(rawMenuItems: any): MenuItem[] {
