@@ -22,14 +22,17 @@
         <div class="tools flex-row">
 
             <div class="social-container flex-row">
-                <button mat-icon-button>
-                    <fa-icon [icon]="faInstagram" class="pointer"></fa-icon>
+                <button mat-icon-button (click)="openNewTab('Instagram')">
+                    <fa-icon [icon]="faInstagram"></fa-icon>
                 </button>
-                <button mat-icon-button>
-                    <fa-icon [icon]="faFacebook" class="pointer"></fa-icon>
+                <button mat-icon-button (click)="openNewTab('Twitter')">
+                    <fa-icon [icon]="faTwitter"></fa-icon>
                 </button>
-                <button mat-icon-button>
-                    <fa-icon [icon]="faYoutube" class="pointer"></fa-icon>
+                <button mat-icon-button (click)="openNewTab('Facebook')">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                </button>
+                <button mat-icon-button [disabled]="true" (click)="openNewTab('Youtube')">
+                    <fa-icon [icon]="faYoutube"></fa-icon>
                 </button>
             </div>
 

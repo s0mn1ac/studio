@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Gallery } from 'angular-gallery';
 import { SectionName } from '../../enums/section-name.enum';
 import { HeaderItem } from '../../models/header-item.model';
@@ -20,6 +20,7 @@ export class FooterComponent implements OnInit {
 
   public faInstagram = faInstagram;
   public faFacebook = faFacebook;
+  public faTwitter = faTwitter;
   public faYoutube = faYoutube;
 
   public launchYear = new Date('2021-01-01').getFullYear();
@@ -49,6 +50,25 @@ export class FooterComponent implements OnInit {
 
   public async navigateTo(name: string): Promise<void> {
     this.appService.headerService.navigateTo(name);
+  }
+
+  public openNewTab(name: string): void {
+    switch (name) {
+      case 'Instagram':
+        window.open('https://www.instagram.com/maginkst', '_blank');
+        break;
+      case 'Facebook':
+        window.open('https://m.facebook.com/maginkst', '_blank');
+        break;
+      case 'Twitter':
+        window.open('https://twitter.com/maginkst', '_blank');
+        break;
+      case 'Youtube':
+        window.open('https://www.youtube.com', '_blank');
+        break;
+      default:
+        break;
+    }
   }
 
   public showCookiePolicyDialog(): void {

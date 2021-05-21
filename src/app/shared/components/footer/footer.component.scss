@@ -59,9 +59,13 @@
             padding: 0 2rem;
             justify-content: center;
 
+            button {
+                margin: 0.5rem;
+            }
+
             fa-icon {
                 font-size: 30px;
-                margin: 0.5rem;
+                vertical-align: inherit;
             }
         }
 

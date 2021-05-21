@@ -45,8 +45,9 @@
 
             <div class="footer-social-links flex-column">
                 <p class="title"> {{ t('footer.socialLinks').toUpperCase() }} </p>
-                <p class="link text-clickable text-disabled"> Instagram <p-tag [value]="t('footer.soon')" [rounded]="true" icon="pi pi-info-circle"> </p-tag> </p>
-                <p class="link text-clickable text-disabled"> Facebook <p-tag [value]="t('footer.soon')" [rounded]="true" icon="pi pi-info-circle"> </p-tag></p>
+                <p class="link text-clickable" (click)="openNewTab('Instagram')"> Instagram </p>
+                <p class="link text-clickable" (click)="openNewTab('Facebook')"> Facebook </p>
+                <p class="link text-clickable" (click)="openNewTab('Twitter')"> Twitter </p>
                 <p class="link text-clickable text-disabled"> Youtube <p-tag [value]="t('footer.soon')" [rounded]="true" icon="pi pi-info-circle"> </p-tag></p>
             </div>
 
@@ -55,9 +56,23 @@
         <mat-divider></mat-divider>
 
         <div class="social-row flex-row">
-            <fa-icon [icon]="faInstagram" class="zoom pointer"></fa-icon>
-            <fa-icon [icon]="faFacebook" class="zoom pointer"></fa-icon>
-            <fa-icon [icon]="faYoutube" class="zoom pointer"></fa-icon>
+
+            <button mat-icon-button aria-label="Instagram" class="zoom" (click)="openNewTab('Instagram')">
+                <fa-icon [icon]="faInstagram"></fa-icon>
+            </button>
+
+            <button mat-icon-button aria-label="Facebook" class="zoom" (click)="openNewTab('Facebook')">
+                <fa-icon [icon]="faFacebook"></fa-icon>
+            </button>
+
+            <button mat-icon-button aria-label="Twitter" class="zoom" (click)="openNewTab('Twitter')">
+                <fa-icon [icon]="faTwitter"></fa-icon>
+            </button>
+
+            <button mat-icon-button aria-label="Youtube" [disabled]="true" (click)="openNewTab('Youtube')">
+                <fa-icon [icon]="faYoutube"></fa-icon>
+            </button>
+
         </div>
 
         <div class="copy-row flex-row">

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { HeaderItem } from '../../models/header-item.model';
 
 @Component({
@@ -17,6 +17,7 @@ export class SidebarComponent implements OnInit {
 
   public faInstagram = faInstagram;
   public faFacebook = faFacebook;
+  public faTwitter = faTwitter;
   public faYoutube = faYoutube;
 
   public menuItemSelected!: HeaderItem;
@@ -38,6 +39,25 @@ export class SidebarComponent implements OnInit {
 
   public changeLanguage(language: string): void {
     this.changeLanguageEmitter.emit(language);
+  }
+
+  public openNewTab(name: string): void {
+    switch (name) {
+      case 'Instagram':
+        window.open('https://www.instagram.com/maginkst', '_blank');
+        break;
+      case 'Facebook':
+        window.open('https://m.facebook.com/maginkst', '_blank');
+        break;
+      case 'Twitter':
+        window.open('https://twitter.com/maginkst', '_blank');
+        break;
+      case 'Youtube':
+        window.open('https://www.youtube.com', '_blank');
+        break;
+      default:
+        break;
+    }
   }
 
 }
