@@ -1,80 +1,80 @@
 [
     {
         "id": 0,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-0.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-0.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-0.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-0.jpeg",
         "tags": [0, 1, 101, 1101]
     },
     {
         "id": 1,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-1.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-1.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-1.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-1.jpeg",
         "tags": [0, 1, 101, 1102]
     },
     {
         "id": 2,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-2.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-2.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-2.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-2.jpeg",
         "tags": [0, 1, 101, 1103]
     },
     {
         "id": 3,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-3.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-3.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-3.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-3.jpeg",
         "tags": [0, 1, 102, 1201]
     },
     {
         "id": 4,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
         "tags": [0, 1, 103, 1301]
     },
     {
         "id": 5,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
         "tags": [0, 1, 103, 1302]
     },
     {
         "id": 6,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
         "tags": [2, 201, 2101]
     },
     {
         "id": 7,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
         "tags": [2, 201, 2102]
     },
     {
         "id": 8,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
         "tags": [2, 201, 2103]
     },
     {
         "id": 9,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-4.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-4.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-4.jpeg",
         "tags": [2, 202, 2201]
     },
     {
         "id": 10,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-0.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-0.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-0.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-0.jpeg",
         "tags": [3]
     },
     {
         "id": 11,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-1.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-1.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-1.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-1.jpeg",
         "tags": [4]
     },
     {
         "id": 12,
-        "fullSize": "../../../../../assets/images/miniatures/full-size/image-2.jpeg",
-        "thumbnail": "../../../../../assets/images/miniatures/thumbnail/image-2.jpeg",
+        "fullSize": "https://magink.es/custom_media/images/gallery/image-2.jpeg",
+        "thumbnail": "https://magink.es/custom_media/images/gallery/image-2.jpeg",
         "tags": [4]
     }
 ]
