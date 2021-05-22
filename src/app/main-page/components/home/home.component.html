@@ -4,7 +4,7 @@
 
         <div class="video-container">
 
-            <video preload loop autoplay muted src="https://magink.es/custom_media/videos/presentation-video-1.mp4" poster="https://magink.es/custom_media/videos/poster.png">
+            <video id="presentationVideo" #presentationVideo preload loop autoplay muted src="https://magink.es/custom_media/videos/presentation-video-1.mp4" poster="https://magink.es/custom_media/videos/poster.png">
                 <source src="https://magink.es/custom_media/videos/presentation-video-1.mp4" type="video/mp4">
             </video>
 
@@ -23,6 +23,14 @@
                 <span data-aos="fade-up" data-aos-delay="900"> {{ t('mainPage.home.mount') }} </span>
                 <span data-aos="zoom-in" data-aos-delay="2700" class="point"> </span>
                 <span data-aos="fade-up" data-aos-delay="1500"> {{ t('mainPage.home.print') }} </span>
+            </div>
+            <div class="play-pause-button flex-row" data-aos="zoom-in" data-aos-delay="3000">
+                <button mat-icon-button (click)="playPause()" *ngIf="isVideoPaused">
+                    <mat-icon> play_circle_outline </mat-icon>
+                </button>
+                <button mat-icon-button (click)="playPause()" *ngIf="!isVideoPaused">
+                    <mat-icon> pause_circle_outline </mat-icon>
+                </button>
             </div>
         </div>
 

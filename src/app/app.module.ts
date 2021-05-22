@@ -3,7 +3,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +23,6 @@ const cookieConfig: NgcCookieConsentConfig = {
       background: '#065A82',
       text: '#FFFFFF',
       link: '#FFFFFF'
-      // border: "#F4AC45"
     },
     button: {
       background: '#F4AC45',
@@ -54,7 +52,6 @@ const cookieConfig: NgcCookieConsentConfig = {
     CoreModule.forRoot(),
     HttpClientModule,
     MaterialModule,
-    NgxPageScrollModule,
     IvyGalleryModule,
     HttpClientModule
   ],
