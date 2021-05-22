@@ -17,7 +17,10 @@
         "subtitle": "main page",
 
         "home": {
-            "title": "Magink Studio"
+            "title": "Magink Studio",
+            "paint": "Painting",
+            "mount": "Assembly",
+            "print": "3D Printing"
         },
 
         "about": {

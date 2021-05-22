@@ -58,7 +58,42 @@
                 text-shadow: 0 0 10px black;
             }
         }
+
+        .subtitle-container {
+            position: absolute;
+            width: 100%;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-family: $text;
+                letter-spacing: 3px;
+                font-size: 20px;
+
+                &.point {
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                    background-color: $white;
+                    margin: 0 2rem;
+                }
+            }
+
+            @media only screen and (max-width: 800px) {
+                margin-top: 1rem;
+
+                span {
+                    font-size: 16px;
+    
+                    &.point {
+                        margin: 0 0.5rem;
+                    }
+                }
+            }
+        }
     }
+
 
     .background-title-container {
         content: '';
@@ -76,6 +111,7 @@
     @media only screen and (max-width: 800px) {
 
         .title-container {
+            max-width: 400px;
 
             .container {
                 padding: 10px;
@@ -84,6 +120,10 @@
                     font-size: 40px;
                 }
             }
+        }
+
+        .background-title-container {
+            max-width: 360px;
         }
     }
 
