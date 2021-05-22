@@ -20,7 +20,7 @@ interface ServiceParams {
 export class BaseService {
 
   private filtersUrl = 'https://magink.es/custom_media/data/menu-item-filters.json';
-  private imagesUrl = 'https://magink.es/custom_media/data/images.json';
+  private imagesUrl = 'https://magink.es/custom_media/data/image-item-filters.json';
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(private http: HttpClient) { }
