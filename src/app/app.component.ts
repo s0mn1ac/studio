@@ -34,7 +34,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private initTranslocoSubscription(): void {
 
+    const lang = sessionStorage.getItem('active-lang');
+
+    if (lang != null) {
+      this.appService.translocoService.setActiveLang(lang);
+    }
+
     this.transloco$ = this.appService.translocoService.selectTranslation().subscribe((event: any) => {
+
+      sessionStorage.setItem('active-lang', this.appService.translocoService.getActiveLang());
       
       const content = this.cookieService.getConfig().content;
   
